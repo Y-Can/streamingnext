@@ -1,4 +1,3 @@
-
 // app.use((req, res, next) => {
 // 	cors({ origin: "https://streamingzone.vercel.app" })
 // 	res.setHeader(
