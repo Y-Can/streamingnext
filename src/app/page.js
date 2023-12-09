@@ -7,9 +7,7 @@ import Films from "./../pages/Films";
 
 const  Home = () => {
   return (
-    <div className="app">
       <Films />
-    </div>
   );
 }
 

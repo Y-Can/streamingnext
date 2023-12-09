@@ -8,7 +8,6 @@ const Films = () => {
     const fetchData = async () => {
       try {
         const res = await fetch("./api/films");
-        console.log(res, "la réponse de l'API");
         const data = await res.json();
         console.log(data, "données récupérées de l'API");
         setFilms(data.films || []);
@@ -19,7 +18,6 @@ const Films = () => {
     };
     fetchData();
   }, []);
-  console.log("ça build la page ok", films);
   return (
     <div className="containerCol">
       <div className="rowCenter">

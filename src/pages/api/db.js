@@ -1,10 +1,12 @@
+/* eslint-disable no-undef */
 import { Pool } from "pg";
+
 const pool = new Pool({
-  user: "streamingzone_user",
-  host: "dpg-clkbvs6g1b2c73e8ner0-a.frankfurt-postgres.render.com",
-  database: "streamingzone",
-  password: "3t8PwdHxgzPGXFmhxIlrfokTJkPuNmyO",
-  port: 5432,
+  user: process.env.DATABASE_USER,
+  host: process.env.DATABASE_URL,
+  database: process.env.DATABASE_NAME,
+  password: process.env.DATABASE_PASS,
+  port: process.env.DATABASE_PORT,
   ssl: { rejectUnauthorized: true },
 });
 export default pool;

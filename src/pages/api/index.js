@@ -19,6 +19,8 @@
 // app.use(cors({   origin: 'https://streamingzone.vercel.app',   credentials: true, }));
 // app.options("/api/singup", cors());
 // app.use(express.json());
+
+
 // app.post("/api/singup", async (req, res) => {
 // 	const { email, password, pseudo } = req.body;
 // 	try {
@@ -34,7 +36,6 @@
 // 		res.status(500).json({ error: "Erreur lors de l'inscription" });
 // 	}
 // });
-// app.use(express.json());
 
 // app.post("/login", async (req, res) => {
 // 	const { email, password } = req.body;

@@ -1,7 +1,11 @@
+/* eslint-disable no-undef */
 // pages/inscription.js
 "use client";
 import React, { useState } from "react";
 import axios from "axios";
+
+import styles from "../styles/login.module.css";
+
 const SignupForm = () => {
   const [email, setEmail] = useState("");
   const [pseudo, setPseudo] = useState("");
@@ -18,7 +22,7 @@ const SignupForm = () => {
   const handleSignup = async (e) => {
     e.preventDefault();
     try {
-      const response = await axios.post("/api/signup", {
+      const response = await axios.post("./../pages/api/signup", {
         email,
         password,
         pseudo,
@@ -31,50 +35,53 @@ const SignupForm = () => {
   return (
     <div className="container">
       <div className="login-container">
-        <h1>Inscription</h1>
-        <form onSubmit={handleSignup}>
+        <h1 className={styles.h1}>Inscription</h1>
           {
-            <div className="container">
-              <div className="login-container">
-                <h1>Inscription</h1>
+            <div className={styles.container}>
+              <div className={styles["login-container"]}>
+                <h1 className={styles.h1}>Inscription</h1>
                 <form onSubmit={handleSignup}>
-                  <div className="container-col-left">
-                    <p>Email:</p>
+                  <div className={styles["container-col-left"]}>
+                    <p className={styles.p}>Email:</p>
                     <input
+                    className={styles.input}
                       type="email"
                       value={email}
                       onChange={handleEmailChange}
                       required
                     />
                   </div>
-                  <div className="container-col-left">
-                    <p>Pseudo:</p>
+                  <div className={styles["container-col-left"]}>
+                    <p className={styles.p}>Pseudo:</p>
                     <input
+                      className={styles.input}
                       type="text"
                       value={pseudo}
                       onChange={handlePseudoChange}
                       required
                     />
                   </div>
-                  <div className="container-col-left">
-                    <p>Mot de passe:</p>
+                  <div className={styles["container-col-left"]}>
+                    <p className={styles.p}>Mot de passe:</p>
                     <input
+                       className={styles.input}
                       type="password"
                       value={password}
                       onChange={handlePasswordChange}
                       required
                     />
                   </div>
-                  <div className="container-col-left">
-                    <p>Confirmer le Mot de passe:</p>
+                  <div className={styles["container-col-left"]}>
+                    <p className={styles.p}>Confirmer le Mot de passe:</p>
                     <input
+                    className={styles.input}
                       type="password"
                       value={password}
                       onChange={handlePasswordChange}
                       required
                     />
                   </div>
-                  <div className=" arround">
+                  <div className= {styles.arround}>
                     {/* <Link className="btn" to="/login">
 											
 											<button className="unlink maxwidth" type="button">
@@ -82,8 +89,8 @@ const SignupForm = () => {
 												Se Connecter
 											</button>
 										</Link> */}
-                    <div className="btn">
-                      <button className="unlink maxwidth" type="submit">
+                    <div className={styles.btn}>
+                      <button className={styles["unlink maxwidth"]} type="submit">
                         S'Inscrire
                       </button>
                     </div>
@@ -92,7 +99,6 @@ const SignupForm = () => {
               </div>
             </div>
           }
-        </form>
       </div>
     </div>
   );

@@ -159,8 +159,9 @@ ul {
   display: flex;
   flex-wrap: wrap;
 }
-li {
+.li {
   width: 250px;
+  height: 400px;
   margin: 10px;
   border: 1px solid #ddd;
   border-radius: 8px;
@@ -168,9 +169,7 @@ li {
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   transition: transform 0.3s ease-in-out;
 }
-li:hover {
-  transform: scale(1.1);
-}
+
 img {
   margin-top: -5px;
   width: 100%;
@@ -189,11 +188,23 @@ p {
   white-space: nowrap;
   transition: max-height 0.3s ease-in-out;
 }
-li:hover p {
-  max-height: 1000px; /* Hauteur suffisamment grande pour afficher toute la description */
-  overflow: auto;
-  white-space: normal;
-} /* navbar */ /* App.css */
+.maxheight{
+  min-height: 100vh;
+  max-height:100% ;
+}
+.lihovered{
+  transform: scale(1.1);
+  min-height: 520px;
+   /* Hauteur suffisamment grande pour afficher toute la description */  
+    overflow: auto;   white-space: normal;
+}
+.phover{
+  overflow: auto;   
+  text-overflow: auto;  
+   white-space: wrap;  
+    transition: max-height 0.3s ease-in-out;
+  max-height: 200px;
+}
 .navbar {
   background-color: #333;
   padding: 15px;
@@ -242,8 +253,8 @@ button {
 }
 .searchButton {
   margin-top: -9px;
-  width: 40px;
-  height: 36px;
+  max-width: 40px;
+  max-height: 36px;
   border: 1px solid #00b4cc;
   background: #00b4cc;
   text-align: center;
