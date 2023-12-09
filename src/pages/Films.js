@@ -7,7 +7,7 @@ const Films = () => {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const res = await fetch("http://localhost:3000/api/films");
+        const res = await fetch("./api/films");
         console.log(res, "la réponse de l'API");
         const data = await res.json();
         console.log(data, "données récupérées de l'API");
