@@ -1,16 +1,17 @@
 // pages/index.js
 "use client";
+/* eslint-disable react/react-in-jsx-scope */ 
+/* eslint-disable react/prop-types */
 import "./globals.css";
 import Films from "./../pages/Films";
-import Navbar from "../components/Navbar";
-import { LoginForm, SignupForm } from "./login/page";
-import Footer from "../components/Footer";
 
-function Home() {
+const  Home = () => {
   return (
     <div className="app">
       <Films />
     </div>
   );
 }
+
+
 export default Home;

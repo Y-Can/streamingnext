@@ -1,3 +1,6 @@
+/* eslint-disable react/react-in-jsx-scope */
+/* eslint-disable react/prop-types */
+
 import { Inter } from "next/font/google";
 import "./globals.css";
 import Navbar from "../components/Navbar";
@@ -21,3 +24,4 @@ export default function RootLayout({ children }) {
     </html>
   );
 }
+
