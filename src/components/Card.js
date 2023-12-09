@@ -2,6 +2,8 @@
 "use client";
 import React from "react";
 import "../app/globals.css";
+import PropTypes from "prop-types";
+
 const Card = ({ films }) => (
   console.log("les données", films),
   (
@@ -19,4 +21,9 @@ const Card = ({ films }) => (
     </div>
   )
 );
+
+Card.propTypes = {   
+  films: PropTypes.array.isRequired,
+ };
+ 
 export default Card;
