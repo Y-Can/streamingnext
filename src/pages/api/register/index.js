@@ -1,6 +1,6 @@
 import pool from "../db";
-import { hashPassword } from "./../../utils/passwordUtils";
-import { generateToken } from "./../../utils/authUtils";
+import { hashPassword } from "../../../utils/passwordUtils";
+import { generateToken } from "../../../utils/authUtils";
 
 export default async function handler(req, res) {
 	if (req.method === "POST") {
