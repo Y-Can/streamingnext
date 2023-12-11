@@ -41,6 +41,7 @@
   justify-content: flex-start;
 }
 .btn {
+  margin: auto;
   height: 30px;
   width: 120px;
 }
