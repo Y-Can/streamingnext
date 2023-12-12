@@ -1,5 +1,4 @@
 import pool from "../db";
-import { cors } from "../../../utils/authUtils";
 export default async function handler(req, res) {
 	if (req.method === "GET") {
 		try {
@@ -7,7 +6,6 @@ export default async function handler(req, res) {
 			const films = result.rows;
 			const filmList = films.map((film) => ({
 				id: film.id,
-				nom: film.nom,
 				image: film.image,
 				titre: film.titre,
 				description: film.description,

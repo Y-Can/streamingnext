@@ -70,7 +70,7 @@ const SignupForm = () => {
 											Se connecter
 										</button>
 									</div>
-									<Link className="btn" href="/register">
+									<Link className={styles.btn} href="/register">
 										
 										<button className="unlink maxwidth" type="button">
 											

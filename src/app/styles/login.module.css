@@ -4,6 +4,7 @@
   min-width: 100vh;
   padding-top: 10%;
 }
+
 .login-container,
 .signup-container {
   margin-top: 500px;
@@ -13,11 +14,15 @@
   border: 1px solid #ccc;
   border-radius: 8px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-  background-color: #fff;
+  background-color: #4f4f4f;
   text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 .h1 {
-  color: #333;
+  color: beige;
 }
 .form {
   display: flex;
@@ -43,7 +48,20 @@
 .btn {
   margin: auto;
   height: 30px;
-  width: 120px;
+  width: 180px;
+}
+.btn button:hover{
+  background-color: grey;
+}
+.btn button{
+  margin: auto;   height: 30px;   width: 180px;
+  background-color: black;
+}
+.arround{
+  min-height: 70px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
 }
 .maxwidth {
   min-width: 120px;

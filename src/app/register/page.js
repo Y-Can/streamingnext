@@ -95,7 +95,7 @@ const SignupForm = () => {
                         S'Inscrire
                       </button>
                     </div>
-                    <Link className="btn" href="/login">
+                    <Link className={styles.btn} href="/login">
 											
 											<button className="unlink maxwidth" type="button">
 												
