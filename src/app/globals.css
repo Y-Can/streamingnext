@@ -181,6 +181,13 @@ p {
   white-space: wrap;
   transition: max-height 0.3s ease-in-out;
   max-height: 200px;
+  
+}
+.p{
+  white-space: wrap;         
+  overflow: hidden;              
+  text-overflow: ellipsis;      
+   max-height: 160px;
 }
 .navbar {
   background-color: #333;

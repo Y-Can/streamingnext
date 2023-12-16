@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import "../app/globals.css";
+import Link from "next/link";
 const Card = ({ films, onMouseEnter = null, onMouseLeave = null }) => {
 	const [hoveredItemId, setHoveredItemId] = useState(null);
 	const handleMouseEnter = (filmId) => {
@@ -22,6 +23,7 @@ const Card = ({ films, onMouseEnter = null, onMouseLeave = null }) => {
 				<ul className={"containerRow"}>
 					{" "}
 					{films.map((film) => (
+						<Link  href={{     pathname: '/detail-film',     query: { id: film.id },   }}>
 						<li
 							key={film.id}
 							onMouseEnter={() => handleMouseEnter(film.id)}
@@ -36,6 +38,7 @@ const Card = ({ films, onMouseEnter = null, onMouseLeave = null }) => {
                className={`p ${hoveredItemId === film.id ? "phover" : ""}`}
               >{film.description}</p>{" "}
 						</li>
+						</Link>
 					))}{" "}
 				</ul>{" "}
 			</div>{" "}
