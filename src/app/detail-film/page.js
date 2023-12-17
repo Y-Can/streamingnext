@@ -3,8 +3,11 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
 import styles from "../styles/filmdetail.module.css";
+import { useRouter } from "next/navigation";
 const FilmDetail = () => {
 	const [film, setFilm] = useState(null);
+	const router = useRouter(); 	
+	const id = router.query.id || "";
 	useEffect(() => {
 		const fetchData = async () => {
 			try {
