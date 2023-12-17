@@ -1,5 +1,6 @@
 /* eslint-disable react/react-in-jsx-scope */
 /* eslint-disable react/prop-types */
+"use client"
 
 import { Inter } from "next/font/google";
 import "./globals.css";
