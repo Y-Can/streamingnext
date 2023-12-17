@@ -3,8 +3,8 @@
 import React, { useEffect, useState } from "react";
 import { useRouter } from "next/navigation";
 import axios from "axios";
-import Card from "./../components/Card";
-import "./../app/globals.css";
+import Card from "../../components/Card";
+import "../../app/globals.css";
 const Films = () => {
 	const router = useRouter();
 	const filmId = router.query.id || "";
