@@ -5,7 +5,6 @@ import axios from "axios";
 import styles from "../styles/filmdetail.module.css";
 const FilmDetail = () => {
 	const [film, setFilm] = useState(null);
-const id = "1"
 	useEffect(() => {
 		const fetchData = async () => {
 			try {
