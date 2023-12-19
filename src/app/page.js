@@ -12,6 +12,8 @@ const Home = () => {
 	const search = searchParams.get("search");
 	const [films, setFilms] = useState([]);
 	const [searchTerm, setSearchTerm] = useState(search);
+	const [user, setUser] = useState(null); 
+		
 	useEffect(() => {
 		const fetchData = async () => {
 			try {
@@ -39,10 +41,10 @@ const Home = () => {
 	return (
 		<div className="containerCol">
 			
-			<Navbar
+			{/* <Navbar
 				searchTerm={searchTerm}
 				onSearchTermChange={handleSearchTermChange}
-			/>
+			/> */}
 			<div className="rowCenter">
 				
 				<h1>Liste des Films</h1>
