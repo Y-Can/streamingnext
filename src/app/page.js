@@ -25,7 +25,6 @@ const Home = () => {
 				}
 				const res = await axios.get(apiUrl);
 				const data = res.data;
-				console.log(id, searchTerm);
 				setFilms(data.films || []);
 			} catch (error) {
 				console.error("Erreur lors de la récupération des films", error);
@@ -36,7 +35,6 @@ const Home = () => {
 	}, [id, searchTerm]);
 	const handleSearchTermChange = (newSearchTerm) => {
 		setSearchTerm(newSearchTerm);
-		console.log("les newsearch", newSearchTerm);
 	};
 	return (
 		<div className="containerCol">

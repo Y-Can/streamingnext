@@ -12,7 +12,6 @@ export default async function handler(req, res) {
 			);
 			if (userResult.rows.length > 0) {
 				const user = userResult.rows[0];
-                console.log(user);
 				const hashedPassword = user.password;
 				// Compare the provided password with the stored hashed password using the bcrypt secret
 				const passwordMatch = await bcrypt.compare(password, hashedPassword);

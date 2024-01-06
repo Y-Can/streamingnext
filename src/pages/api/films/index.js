@@ -31,6 +31,7 @@ export default async function handler(req, res) {
 				image: film.image,
 				titre: film.titre,
 				description: film.description,
+				user_id: film.user_id,
 			}));
 			res.status(200).json({ films: filmList });
 		} catch (error) {
@@ -42,7 +43,6 @@ export default async function handler(req, res) {
 	} else {
 		res.status(405).json({ error: "Méthode non autorisée. Utilisez GET." });
 	}
-
 	if (req.method === "POST") {
 		try {
 			const { userId } = req.body;
@@ -52,7 +52,7 @@ export default async function handler(req, res) {
 			if (user === "ADMIN") {
 				const { titre, description, image } = req.body;
 				const result = await pool.query(
-					"INSERT INTO films (titre, description, image) VALUES ($1, $2, $3) RETURNING *",
+					"INSERT INTO films (titre, description, image, user_id) VALUES ($1, $2, $3, $4) RETURNING *",
 					[titre, description, image]
 				);
 				const filmAjoute = result.rows[0];

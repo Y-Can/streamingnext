@@ -4,7 +4,7 @@
 import React, { useState } from "react";
 import axios from "axios";
 import Link from 'next/link';
-import styles from "../styles/login.module.css";
+import styles from "../../styles/login.module.css";
 import { useEffect } from "react"; 
 import { useRouter } from 'next/navigation';
 
@@ -27,12 +27,11 @@ const SignupForm = () => {
     e.preventDefault();
     try {
       await new Promise(resolve => setTimeout(resolve,3000))
-      const response = await axios.post("./../api/register", {
+      const response = await axios.post("./../../api/register", {
         email,
         password,
         pseudo,
       });
-      console.log("Token:", response.data.token);
       localStorage?.setItem("token", response.data.token); 			
       sessionStorage?.setItem("token", response.data.token);
       push('/');

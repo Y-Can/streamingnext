@@ -3,7 +3,7 @@ import { sign, verify } from "jsonwebtoken";
 const secret = "laclésecretemadestreamingzone";
 // Remplacez par une clé secrète réelle et sécurisée
 export function generateToken(payload) {
-	return sign(payload, secret, { expiresIn: "1h" });
+	return sign(payload, secret, { expiresIn: "4h" });
 }
 export function verifyToken(token) {
 	try {

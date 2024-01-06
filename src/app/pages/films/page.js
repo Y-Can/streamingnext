@@ -3,8 +3,8 @@
 import React, { useEffect, useState } from "react";
 import { useSearchParams } from "next/navigation";
 import axios from "axios";
-import Card from "../../components/Card";
-import "../../app/globals.css";
+import Card from "../../../components/Card";
+import "../../../app/globals.css";
 import Navbar from "@/components/Navbar";
 const Home = () => {
 	const searchParams = useSearchParams();
@@ -15,7 +15,7 @@ const Home = () => {
 	useEffect(() => {
 		const fetchData = async () => {
 			try {
-				let apiUrl = "./api/films";
+				let apiUrl = "./../api/films";
 				if (id !== null) {
 					apiUrl += `?id=${encodeURIComponent(id)}`;
 				} else if (searchTerm !== null) {

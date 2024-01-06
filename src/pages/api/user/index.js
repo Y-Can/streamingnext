@@ -7,7 +7,6 @@ export default async function handler(req, res) {
 		// Récupère le token depuis les en-têtes de la requête
 		const authHeader = req.headers.authorization;
         const token = authHeader && authHeader.split(' ')[1];
-        console.log('token de base', token);
 		if (!token) {
 			return res
 				.status(401)

@@ -4,14 +4,14 @@
 	useState,
 } from "react";
 import axios from "axios";
-import styles from "../../styles/filmdetail.module.css";
+import styles from "../../../styles/filmdetail.module.css";
 const FilmDetail = ({ params }) => {
 	const [film, setFilm] = useState(null);
 	console.log(params.id);
 	useEffect(() => {
 		const fetchData = async () => {
 			try {
-				let apiUrl = `./../api/films/?id=${encodeURIComponent(params.id)}`;
+				let apiUrl = `./../../api/films/?id=${encodeURIComponent(params.id)}`;
 				const response = await axios.get(apiUrl);
 				const filmData = response.data;
 				setFilm(filmData.films[0]);
