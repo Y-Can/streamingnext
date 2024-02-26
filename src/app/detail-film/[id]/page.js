@@ -1,4 +1,5 @@
-/* @jsxImportSource client */ import React, {
+"use client"
+import React, {
 	useEffect,
 	useState,
 } from "react";
