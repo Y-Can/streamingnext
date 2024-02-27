@@ -1,9 +1,5 @@
 "use client"
-<<<<<<<< HEAD:src/app/pages/detail-film/[id]/page.js
- import React, {
-========
 import React, {
->>>>>>>> 27c731226cc2708928991b09b09677d876ce3460:src/app/detail-film/[id]/page.js
 	useEffect,
 	useState,
 } from "react";
