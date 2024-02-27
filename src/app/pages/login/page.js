@@ -3,7 +3,7 @@
 "use client";
 import React, { useState } from "react";
 import axios from "axios";
-import styles from "/styles/login.module.css";
+import styles from "./../styles/login.module.css";
 import { useEffect } from "react";
 import { useRouter } from "next/navigation";
 import Link from 'next/link';
