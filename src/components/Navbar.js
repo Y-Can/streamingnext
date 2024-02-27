@@ -21,6 +21,7 @@ const Navbar = () => {
 					setUser(userData);
 				} catch (error) {
 					console.error("Erreur:", error);
+					localStorage.clear("token")
 				}
 			}
 		};

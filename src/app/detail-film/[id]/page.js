@@ -6,6 +6,7 @@ import React, {
 import axios from "axios";
 import styles from "../../styles/filmdetail.module.css";
 const FilmDetail = ({ id }) => {
+
 	const [film, setFilm] = useState(null);
 	useEffect(() => {
 		const fetchData = async () => {
@@ -14,6 +15,7 @@ const FilmDetail = ({ id }) => {
 				const response = await axios.get(apiUrl);
 				const filmData = response.data;
 				setFilm(filmData.films[0]);
+				console.log(filmData);
 			} catch (error) {
 				console.error("Erreur lors de la requête API", error);
 			}
@@ -25,8 +27,8 @@ const FilmDetail = ({ id }) => {
 	return (
 		<div className={styles.container_col}>
 			{" "}
-			{film ? (
-				<>
+{/* 			 
+			
 					{" "}
 					<div className={styles.block}>
 						{" "}
@@ -43,11 +45,8 @@ const FilmDetail = ({ id }) => {
 							</div>{" "}
 						</div>{" "}
 					</div>{" "}
-				</>
-			) : (
-				<p>Chargement en cours...</p>
-			)}{" "}
-			<div className="container-col">{/* Autres éléments de la page */}</div>{" "}
+			
+		 */}
 		</div>
 	);
 };

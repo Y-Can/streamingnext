@@ -4,7 +4,7 @@ import React, {
 	useState,
 } from "react";
 import axios from "axios";
-import styles from "../../../styles/filmdetail.module.css";
+
 const FilmDetail = ({ params }) => {
 	const [film, setFilm] = useState(null);
 	console.log(params.id);

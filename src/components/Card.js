@@ -23,7 +23,7 @@ const Card = ({ films, onMouseEnter = null, onMouseLeave = null }) => {
 				<ul className={"containerRow"}>
 					{" "}
 					{films.map((film) => (
-						<Link  href={{     pathname: '/detail-film/' + film.id,  }}>
+						<Link  href={{     pathname: '/detail-film/' + film.id,  query: { id: film.id } }}>
 						<li
 							key={film.id}
 							onMouseEnter={() => handleMouseEnter(film.id)}
