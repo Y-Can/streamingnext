@@ -1,21 +1,16 @@
 "use client"
-<<<<<<<< HEAD:src/app/pages/detail-film/[id]/page.js
- import React, {
-========
 import React, {
->>>>>>>> 27c731226cc2708928991b09b09677d876ce3460:src/app/detail-film/[id]/page.js
 	useEffect,
 	useState,
 } from "react";
 import axios from "axios";
-import styles from "../../../styles/filmdetail.module.css";
-const FilmDetail = ({ params }) => {
+import styles from "../../styles/filmdetail.module.css";
+const FilmDetail = ({ id }) => {
 	const [film, setFilm] = useState(null);
-	console.log(params.id);
 	useEffect(() => {
 		const fetchData = async () => {
 			try {
-				let apiUrl = `./../../api/films/?id=${encodeURIComponent(params.id)}`;
+				let apiUrl = `./../api/films/?id=${encodeURIComponent(id)}`;
 				const response = await axios.get(apiUrl);
 				const filmData = response.data;
 				setFilm(filmData.films[0]);
@@ -23,10 +18,10 @@ const FilmDetail = ({ params }) => {
 				console.error("Erreur lors de la requête API", error);
 			}
 		};
-		if (params.id) {
+		if (id) {
 			fetchData();
 		}
-	}, [params.id]);
+	}, [id]);
 	return (
 		<div className={styles.container_col}>
 			{" "}
