@@ -3,7 +3,7 @@
 import React, { useEffect, useState } from "react";
 import { useSearchParams } from "next/navigation";
 import axios from "axios";
-import Card from "../../../components/Card";
+import Card from "../../components/Card";
 import "../../app/globals.css";
 import Navbar from "@/components/Navbar";
 const Home = () => {
