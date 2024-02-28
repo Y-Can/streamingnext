@@ -321,25 +321,25 @@ button {
 }
 
 .menu-hamburger {
-    display: none; /* Masqué par défaut */
-    cursor: pointer;
+  display: none; /* Masqué par défaut */
+  cursor: pointer;
 }
 
 .menu-mobile {
-    display: none; /* Masqué par défaut */
-    /* Styles supplémentaires pour votre menu mobile */
+  display: none; /* Masqué par défaut */
+  /* Styles supplémentaires pour votre menu mobile */
 }
 
 @media (max-width: 768px) {
-    .menu-hamburger {
-        display: block; /* Affiche le bouton du menu hamburger sur petits écrans */
-    }
+  .menu-hamburger {
+      display: block; /* Affiche le bouton du menu hamburger sur petits écrans */
+  }
 
-    .navbar > *:not(.menu-hamburger) {
-        display: none; /* Masque les éléments de navigation habituels */
-    }
+  .navbar > *:not(.menu-hamburger) {
+      display: none; /* Masque les éléments de navigation habituels */
+  }
 
-    .menu-mobile {
-        display: block; /* Affiche le menu mobile lorsque isOpen est true */
-    }
+  .menu-mobile {
+      display: block; /* Affiche le menu mobile lorsque isOpen est true */
+  }
 }
