@@ -113,22 +113,24 @@ const Navbar = () => {
 
             {/* Affichage conditionnel du menu basé sur l'état isOpen */}
             {isOpen && (
-                <div className="menu-mobile">
-                                 <li className="option">
-                                    <Link href="/myprofil">Mon Profil</Link>
-                                </li>
-                                <li className="option">
-                                    <Link href="/option1">Mes films</Link>
-                                </li>
-                                {user.type === "ADMIN" && (
-                                    <li className="option">
-                                        <Link href="/add_film">Ajout de film</Link>
-                                    </li>
-                                )}
-                                <li onClick={handleLogout} className="option">
-                                    Se déconnecter
-                                </li>
-                </div>
+                
+					<div className="menu-mobile">
+						{/* Ici, vous pouvez ajouter les éléments que vous souhaitez afficher dans le menu mobile */}
+						<ul>
+							<li><Link href="/">Accueil</Link></li>
+							{/* Ajoutez d'autres éléments de menu ici selon vos besoins */}
+							{user && (
+								<>
+									<li><Link href="/myprofil">Mon Profil</Link></li>
+									<li><Link href="/mesfilms">Mes Films</Link></li>
+									{/* Conditionnellement afficher des éléments supplémentaires pour les admins ou selon d'autres conditions */}
+									{user.type === "ADMIN" && <li><Link href="/admin">Admin</Link></li>}
+								</>
+							)}
+							<li onClick={handleLogout}>Se déconnecter</li>
+						</ul>
+					</div>
+				
             )}
         </nav>
     );
