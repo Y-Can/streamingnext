@@ -189,19 +189,8 @@ p {
   text-overflow: ellipsis;      
    max-height: 160px;
 }
-.navbar {
-  background-color: #333;
-  padding: 15px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  color: white;
-}
-.navbar a {
-  color: white;
-  text-decoration: none;
-  margin: 0 15px;
-}
+
+
 .search-container {
   display: flex;
 }
@@ -329,7 +318,22 @@ button {
   display: none; /* Masqué par défaut */
   /* Styles supplémentaires pour votre menu mobile */
 }
+@media (min-width: 768px) {
 
+  .navbar {
+    background-color: #333;
+    padding: 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: white;
+  }
+  .navbar a {
+    color: white;
+    text-decoration: none;
+    margin: 0 15px;
+  }
+}
 @media (max-width: 768px) {
   .menu-hamburger {
       display: block; /* Affiche le bouton du menu hamburger sur petits écrans */
