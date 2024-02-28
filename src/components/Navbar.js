@@ -114,7 +114,20 @@ const Navbar = () => {
             {/* Affichage conditionnel du menu basé sur l'état isOpen */}
             {isOpen && (
                 <div className="menu-mobile">
-                    {/* Structure de votre menu pour les petits écrans */}
+                                 <li className="option">
+                                    <Link href="/myprofil">Mon Profil</Link>
+                                </li>
+                                <li className="option">
+                                    <Link href="/option1">Mes films</Link>
+                                </li>
+                                {user.type === "ADMIN" && (
+                                    <li className="option">
+                                        <Link href="/add_film">Ajout de film</Link>
+                                    </li>
+                                )}
+                                <li onClick={handleLogout} className="option">
+                                    Se déconnecter
+                                </li>
                 </div>
             )}
         </nav>
