@@ -81,24 +81,24 @@ const Navbar = () => {
             </div>
             <div>
                 {user ? (
-                    <div className="dropdown">
+                    <div className="hamburger-menu">
                         <button onClick={toggleMenu} className="dropdown-toggle">
                             Menu
                         </button>
                         {isOpen && (
-                            <ul className="dropdown-menu" onBlur={closeMenu} tabIndex="0">
-                                <li className="option">
+                            <ul className="menu__box" onBlur={closeMenu} tabIndex="0">
+                                <li className="menu__item">
                                     <Link href="/myprofil">Mon Profil</Link>
                                 </li>
-                                <li className="option">
+                                <li className="menu__item">
                                     <Link href="/option1">Mes films</Link>
                                 </li>
                                 {user.type === "ADMIN" && (
-                                    <li className="option">
+                                    <li className="menu__item">
                                         <Link href="/add_film">Ajout de film</Link>
                                     </li>
                                 )}
-                                <li onClick={handleLogout} className="option">
+                                <li onClick={handleLogout} className="menu__item">
                                     Se déconnecter
                                 </li>
                             </ul>
