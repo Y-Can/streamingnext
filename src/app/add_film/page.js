@@ -7,7 +7,7 @@ const NouvellePage = () => {
 		const fetchData = async () => {
 			if (typeof window !== "undefined") {
 				const token = localStorage.getItem("token");
-					const response = await axios.get("../../../api/add_film", {
+					const response = await axios.get("../../../api/user", {
 						headers: { Authorization: `Bearer ${token}` },
 					});
 					const { id } = response.data;
@@ -27,7 +27,7 @@ const NouvellePage = () => {
 	const handleFormSubmit = async (event) => {
 		event.preventDefault();
 
-			const response = await axios.post("/api/films", {user:user.id,titre:titre,image:image,description:description});
+			const response = await axios.post("/api/add_film", {user:user.id,titre:titre,image:image,description:description});
 			if (response.status === 201) {
 				console.log("Film ajouté :", response.data);
 			} else {
