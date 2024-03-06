@@ -5,7 +5,7 @@ app.post('/api/add_film', async (req, res) => {
         'INSERT INTO films (image, description, titre) VALUES ($1, $2, $3) RETURNING image, description, titre',
         [image, description, titre]
       );
-      const newFilmId = result.rows[0].id;
+      const newFilmId = result.rows[0];
       res.status(201).json({ id: newFilmId, message: 'Film ajouté avec succès' });
     } catch (error) {
       console.error('Erreur lors de l\'ajout du film', error);
