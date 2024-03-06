@@ -7,7 +7,7 @@ const NouvellePage = () => {
 		const fetchData = async () => {
 			if (typeof window !== "undefined") {
 				const token = localStorage.getItem("token");
-					const response = await axios.get("../../../api/user", {
+					const response = await axios.get("../../../api/add_film", {
 						headers: { Authorization: `Bearer ${token}` },
 					});
 					const { id } = response.data;
