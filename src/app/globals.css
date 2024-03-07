@@ -100,9 +100,8 @@ code {
   padding: 15px;
 }
 .containerRow{
-  padding-right: 30vw;
   min-width: 100vw;
-  min-height: 70vh;
+  min-height: 100vh;
   display: flex;
   flex-direction: row;
   justify-content: space-evenly;
