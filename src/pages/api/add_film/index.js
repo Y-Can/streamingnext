@@ -6,7 +6,7 @@ export default async function handler(req, res) {
         [image, description, titre, user_id]
       );
       const newFilmId = result.rows[0];
-      res.status(201).json({ id: newFilmId, message: 'Film ajouté avec succès' });
+      res.status(201).json({   message: 'Film ajouté avec succès' ,newFilmId });
     } catch (error) {
       console.error('Erreur lors de l\'ajout du film', error);
       res.status(500).json({ error: 'Erreur lors de l\'ajout du film' });
