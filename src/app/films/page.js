@@ -48,9 +48,12 @@ const Home = () => {
 				<h1>Liste des Films</h1>{" "}
 			</div>{" "}
 			<div className="containerRow">
+
+			<div className="containerRow">
 				{" "}
 				<Card films={films} />{" "}
 			</div>{" "}
+			</div>
 		</div>
 	);
 };
