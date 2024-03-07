@@ -99,6 +99,15 @@ code {
   justify-content: center;
   padding: 15px;
 }
+.containerRow{
+  padding-right: 30vw;
+  min-width: 100vw;
+  min-height: 70vh;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+}
+
 .arround {
   display: flex;
   justify-content: space-around;
