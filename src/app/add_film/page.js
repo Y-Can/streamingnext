@@ -27,7 +27,7 @@ const NouvellePage = () => {
 	const handleFormSubmit = async (event) => {
 		event.preventDefault();
 
-			const response = await axios.post("/api/add_film", {user:user.id,titre:titre,image:image,description:description});
+			const response = await axios.post("../../../api/add_film", {user:user.id,titre:titre,image:image,description:description});
 			if (response.status === 201) {
 				console.log("Film ajouté :", response.data);
 			} else {
