@@ -47,7 +47,7 @@ const Home = () => {
 				{" "}
 				<h1>Liste des Films</h1>{" "}
 			</div>{" "}
-			<div className="row-center">
+			<div className="rowcenter">
 
 			<div className="containerRow">
 				{" "}

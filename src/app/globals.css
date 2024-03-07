@@ -99,7 +99,7 @@ code {
   justify-content: center;
   padding: 15px;
 }
-.row-center{
+.rowcenter{
   min-width: 100vw;
   min-height: 100vh;
   display: flex;
