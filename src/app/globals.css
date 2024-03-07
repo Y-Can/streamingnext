@@ -98,11 +98,18 @@ code {
   align-items: center;
   justify-content: center;
   padding: 15px;
+}
+.row-center{
   min-width: 100vw;
   min-height: 100vh;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  padding: 15px;
 }
 .containerRow{
-  min-width: 90vw;
+  min-width: 100vw;
   min-height: 100vh;
   display: flex;
   flex-direction: row;
