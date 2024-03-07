@@ -98,9 +98,11 @@ code {
   align-items: center;
   justify-content: center;
   padding: 15px;
+  min-width: 100vw;
+  min-height: 100vh;
 }
 .containerRow{
-  min-width: 100vw;
+  min-width: 90vw;
   min-height: 100vh;
   display: flex;
   flex-direction: row;
