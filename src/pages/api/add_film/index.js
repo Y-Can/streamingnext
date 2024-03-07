@@ -1,4 +1,4 @@
-app.post('/api/add_film', async (req, res) => {
+export default async function handler(req, res) {
     const { image, description, titre } = req.body;
     try {
       const result = await pool.query(
@@ -11,5 +11,5 @@ app.post('/api/add_film', async (req, res) => {
       console.error('Erreur lors de l\'ajout du film', error);
       res.status(500).json({ error: 'Erreur lors de l\'ajout du film' });
     }
-  });
+  };
   
