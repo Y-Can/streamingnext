@@ -1,9 +1,9 @@
 export default async function handler(req, res) {
-    const { image, description, titre } = req.body;
+    const { image, description, titre, user_id } = req.body;
     try {
       const result = await pool.query(
-        'INSERT INTO films (image, description, titre) VALUES ($1, $2, $3) RETURNING image, description, titre',
-        [image, description, titre]
+        'INSERT INTO films (image, description, titre, user_id) VALUES ($1, $2, $3) RETURNING image, description, titre,user_id',
+        [image, description, titre, user_id]
       );
       const newFilmId = result.rows[0];
       res.status(201).json({ id: newFilmId, message: 'Film ajouté avec succès' });
