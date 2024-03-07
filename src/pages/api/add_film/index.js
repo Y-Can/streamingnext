@@ -1,3 +1,5 @@
+import pool from "../db";
+
 export default async function handler(req, res) {
     const { image, description, titre, user } = req.body;
     try {
