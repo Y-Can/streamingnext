@@ -31,7 +31,7 @@ const Navbar = () => {
     }, []);
 
     const toggleMenu = () => {
-        setIsOpen(!isOpen);
+        setIsOpen(isOpen);
     };
 
     const closeMenu = () => {
@@ -137,3 +137,4 @@ const Navbar = () => {
 };
 
 export default Navbar;
+
