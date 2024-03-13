@@ -74,18 +74,17 @@ const Navbar = () => {
                     </div>
                 </form>
             </div>
-            <div>
                 {user ? (
                     
                     <div >
                         
-  { !isOpen &&(         
-     <div className="dropdown-toggle" onClick={toggleMenu}>
-                {/* Icône ou texte pour le bouton du menu hamburger */}
-                <span>Menu</span>
-            </div>)}
+                            { !isOpen &&(         
+                            <div className="dropdown-toggle" onClick={toggleMenu}>
+                                {/* Icône ou texte pour le bouton du menu hamburger */}
+                                <span>Menu</span>
+                            </div>)}
                         {isOpen && (
-                                    <nav className="navbar">
+                                    <nav className="menu">
                                       
                                     <a href="/" className="nav-logo">Logo</a>
                                         <ul className="menu__box" tabIndex="">
@@ -108,22 +107,7 @@ const Navbar = () => {
                                     </li>
                                 </ul>
                                 </nav>
-                            // <ul className="menu__box" onBlur={closeMenu} tabIndex="0">
-                            //     <li className="menu__item">
-                            //         <Link href="/myprofil">Mon Profil</Link>
-                            //     </li>
-                            //     <li className="menu__item">
-                            //         <Link href="/option1">Mes films</Link>
-                            //     </li>
-                            //     {user.type === "ADMIN" && (
-                            //         <li className="menu__item">
-                            //             <Link href="/add_film">Ajout de film</Link>
-                            //         </li>
-                            //     )}
-                            //     <li onClick={handleLogout} className="menu__item">
-                            //         Se déconnecter
-                            //     </li>
-                            // </ul>
+ 
                         )}
                     </div>
                 ) : (
@@ -131,25 +115,6 @@ const Navbar = () => {
                         <Link href="/login">Se Connecter</Link>
                     </div>
                 )}
-            </div>
-
-            {isOpen &&(
-                
-					<div className="menu-mobile">
-						<ul>
-							<li><Link href="/">Accueil</Link></li>
-							{user && (
-								<>
-									<li><Link href="/myprofil">Mon Profil</Link></li>
-									<li><Link href="/mesfilms">Mes Films</Link></li>
-									{user.type === "ADMIN" && <li><Link href="/admin">Admin</Link></li>}
-								</>
-							)}
-							<li onClick={handleLogout}>Se déconnecter</li>
-						</ul>
-					</div>
-				
-            )}
         </nav>
     );
 };
