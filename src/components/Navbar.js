@@ -57,11 +57,6 @@ const Navbar = () => {
 
     return (
         <nav className="navbar">
-            <div className="menu-hamburger" onClick={toggleMenu}>
-                {/* Icône ou texte pour le bouton du menu hamburger */}
-                <span>Menu</span>
-            </div>
-
             <Link href="/">Accueil</Link>
             <div className="wrap">
                 <form onSubmit={handleSearch}>
@@ -83,6 +78,10 @@ const Navbar = () => {
                 {user ? (
                     
                     <div >
+                                    <div className="menu-hamburger" onClick={toggleMenu}>
+                {/* Icône ou texte pour le bouton du menu hamburger */}
+                <span>Menu</span>
+            </div>
                         {isOpen && (
                                     <nav className="navbar">
                                     <a href="/" className="nav-logo">Logo</a>
@@ -90,7 +89,6 @@ const Navbar = () => {
                                         <a href="/about">À propos</a>
                                         <a href="/services">Services</a>
                         
-                                        {/* Dropdown */}
                                         <div className="nav-item dropdown">
                                             <button className="dropbtn" onClick={() => setIsOpen(!isOpen)}>Dropdown</button>
                                             {isOpen && (
