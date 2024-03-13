@@ -137,11 +137,11 @@ const Navbar = () => {
                                                             {/* SEARCHBAR */}
 
                                 <li className="menu-item " ><Link href="/" onClick={toggleClass} activeClassName='is-active' to={`/About`}> About </Link> </li>
-                                <li onClick={toggleSubmenu} className="menu-item sub__menus__arrows" > <Link href="/" to="#"> Shop  </Link>
+                                <li onClick={toggleSubmenu} className="menu-item sub__menus__arrows" > <Link href="/" to="#"> Profil  </Link>
                                     <ul className={boxClassSubMenu.join(' ')} > 
-                                        <li> <Link href="/" onClick={toggleClass} activeClassName='is-active'  to={`/Online`}> Online Shop </Link> </li>
-                                        <li><Link href="/" onClick={toggleClass} activeClassName='is-active' to={`/Offline`}> Offline Shop </Link> </li>
-                                    </ul>
+                                        <li> <Link href="/dashboard" onClick={toggleClass} activeClassName='is-active'  to={`/Online`}> Tableau de bord </Link> </li>
+{user.type === "ADMIN"(                <li ><Link href="/add_film" onClick={toggleClass} activeClassName='is-active' to={`/Offline`}> Add film </Link> </li>
+)}                                    </ul>
                                 </li>
                                 <li className="menu-item " ><Link href="/" onClick={toggleClass} activeClassName='is-active' to={`/Contact`}> Contact </Link> </li>
                                 <li className="menu-item " >
