@@ -126,6 +126,8 @@ code {
   justify-content: center;
 }
 .containerCol{
+  left: 0;
+  top: 0;
   min-width: 100vw;
   min-height: 100vh;
   display: flex;
@@ -316,6 +318,8 @@ button {
 
 
   .navbar {
+    top: 0;
+    left: 0;
     display: flex;
     justify-content: space-around;
     align-items: center;
