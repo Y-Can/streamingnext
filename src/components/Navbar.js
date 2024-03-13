@@ -30,13 +30,38 @@ const Navbar = () => {
         fetchData();
     }, []);
 
-    const toggleMenu = () => {
-        isOpen === true ? setIsOpen(false) : setIsOpen(true);
-    };
+    const [isMenu, setisMenu] = useState(false);
+    const [isResponsiveclose, setResponsiveclose] = useState(false);
+    const toggleClass = () => {
+      setisMenu(isMenu === false ? true : false);
+      setResponsiveclose(isResponsiveclose === false ? true : false);
+  };
+// NAVBAR DROPdown
+    let boxClass = ["main-menu menu-right menuq1"];
+    if(isMenu) {
+        boxClass.push('menuq2');
+    }else{
+        boxClass.push('');
+    }
 
-    const closeMenu = () => {
-        setIsOpen(false);
+    const [isMenuSubMenu, setMenuSubMenu] = useState(false);
+      
+    const toggleSubmenu = () => {
+      setMenuSubMenu(isMenuSubMenu === false ? true : false);
     };
+    
+    let boxClassSubMenu = ["sub__menus"];
+    if(isMenuSubMenu) {
+        boxClassSubMenu.push('sub__menus__Active');
+    }else {
+        boxClassSubMenu.push('');
+    }
+
+   
+    // const toggleMenu = () => {
+    //     isOpen === true ? setIsOpen(false) : setIsOpen(true);
+    // };
+
 
     const handleLogout = () => {
         localStorage.removeItem("token");
@@ -57,7 +82,7 @@ const Navbar = () => {
 
     return (
         <nav className="navbar">
-            <Link href="/">Accueil</Link>
+            {/* <Link href="/">Accueil</Link>
             <div className="wrap-search">
                 <form onSubmit={handleSearch}>
                     <div className="search">
@@ -73,43 +98,57 @@ const Navbar = () => {
                         </button>
                     </div>
                 </form>
-            </div>
+            </div> */}
                 {user ? (
                     
-                    <div >
-                        
-                            { !isOpen &&(         
-                            <div className="dropdown-toggle" onClick={toggleMenu}>
-                                {/* Icône ou texte pour le bouton du menu hamburger */}
-                                <span>Menu</span>
-                            </div>)}
-                        {isOpen && (
-                                    <nav className="menu">
-                                      
-                                    <a href="/" className="nav-logo">Logo</a>
-                                        <ul className="menu__box" tabIndex="">
-                                            <li onClick={toggleMenu} className="menu__item">
-                                                Close
-                                            </li>
-                                    <li className="menu__item">
-                                        <Link href="/myprofil">Mon Profil</Link>
-                                    </li>
-                                    <li className="menu__item">
-                                        <Link href="/option1">Mes films</Link>
-                                    </li>
-                                    {user.type === "ADMIN" && (
-                                        <li className="menu__item">
-                                            <Link href="/add_film">Ajout de film</Link>
-                                        </li>
-                                    )}
-                                    <li onClick={handleLogout} className="menu__item">
-                                        Se déconnecter
-                                    </li>
+                    <header className="header__middle">
+                    <div className="container">
+                        <div className="row">
+            
+                            {/* Add Logo  */}
+                            <div className="header__middle__logo">
+                                <NavLink exact activeClassName='is-active' to="/">
+                                    <img src={logo} alt="logo" /> 
+                                </NavLink>
+                            </div>
+            
+                            <div className="header__middle__menus">
+                                <nav className="main-nav " >
+            
+                                {/* Responsive Menu Button */}
+                                {isResponsiveclose === true ? <> 
+                                    <span className="menubar__button" style={{ display: 'none' }} onClick={toggleClass} > <FiXCircle />   </span>
+                                </> : <> 
+                                    <span className="menubar__button" style={{ display: 'none' }} onClick={toggleClass} > <FiAlignRight />   </span>
+                                </>}
+            
+            
+                                <ul className={boxClass.join(' ')}>
+                                <li  className="menu-item" >
+                                    <NavLink exact activeClassName='is-active' onClick={toggleClass} to={`/`}> Home </NavLink> 
+                                </li>
+                                <li className="menu-item " ><NavLink onClick={toggleClass} activeClassName='is-active' to={`/About`}> About </NavLink> </li>
+                                <li onClick={toggleSubmenu} className="menu-item sub__menus__arrows" > <Link to="#"> Shop <FiChevronDown /> </Link>
+                                    <ul className={boxClassSubMenu.join(' ')} > 
+                                        <li> <NavLink onClick={toggleClass} activeClassName='is-active'  to={`/Online`}> Online Shop </NavLink> </li>
+                                        <li><NavLink onClick={toggleClass} activeClassName='is-active' to={`/Offline`}> Offline Shop </NavLink> </li>
+                                    </ul>
+                                </li>
+                                <li className="menu-item " ><NavLink onClick={toggleClass} activeClassName='is-active' to={`/Contact`}> Contact </NavLink> </li>
+            
                                 </ul>
-                                </nav>
- 
-                        )}
+            
+            
+                                </nav>     
+                            </div>   
+            
+            
+            
+                    
+                    
+                        </div>
                     </div>
+                </header>
                 ) : (
                     <div>
                         <Link href="/login">Se Connecter</Link>
