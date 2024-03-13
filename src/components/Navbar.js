@@ -4,7 +4,7 @@ import Link from "next/link";
 import Image from "next/image";
 import loupe from "/public/loupe.svg";
 import axios from "axios";
-import { User } from './models/user';
+import { User } from '/models/user';
 
 
 const Navbar = () => {
