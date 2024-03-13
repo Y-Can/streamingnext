@@ -5,6 +5,7 @@ import Image from "next/image";
 import loupe from "/public/loupe.svg";
 import axios from "axios";
 import  User  from '../models/user';
+import {FiAlignRight,FiXCircle,FiChevronDown } from "react-icons/fi";
 
 
 const Navbar = () => {
@@ -131,11 +132,11 @@ const Navbar = () => {
                                 {/* Responsive Menu Button */}
                                 {isResponsiveclose === true ? <> 
                                     <span className="menubar__button" style={{ display: 'none' }} onClick={toggleClass} >
-                                         {/* <FiXCircle />  */}
+                                         <FiXCircle /> 
                                            </span>
                                 </> : <> 
                                     <span className="menubar__button" style={{ display: 'none' }} onClick={toggleClass} >
-                                         {/* <FiAlignRight />   */}
+                                         <FiAlignRight />  
                                           </span>
                                 </>}
             

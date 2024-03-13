@@ -481,7 +481,6 @@ li {
   display: flex;
   width: 100%;
   float: left;
-  border-bottom: 1px dashed lavender;
   position: relative;
 }
 .header__middle__logo > a > h1 {
