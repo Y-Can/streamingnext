@@ -97,23 +97,7 @@ const Navbar = () => {
 
     return (
         <nav className="navbar">
-            <Link href="/">Accueil</Link>
-            <div className="wrap-search">
-                <form onSubmit={handleSearch}>
-                    <div className="search">
-                        <input
-                            type="text"
-                            className="searchTerm"
-                            placeholder="What are you looking for?"
-                            value={search}
-                            onChange={(e) => setSearchTerm(e.target.value)}
-                        />
-                        <button type="submit" className="searchButton">
-                            <Image className="loupe" src={loupe} alt="Loupe" />
-                        </button>
-                    </div>
-                </form>
-            </div>
+
                 {user ? (
                     
                     <header className="header__middle">
@@ -125,7 +109,24 @@ const Navbar = () => {
                                 <Link href="/" exact activeClassName='is-active' to="/">
                                 </Link>
                             </div>
-            
+                            {/* SEARCHBAR */}
+                            <div className="wrap-search">
+                                <form onSubmit={handleSearch}>
+                                    <div className="search">
+                                    <input
+                                        type="text"
+                                        className="searchTerm"
+                                        placeholder="What are you looking for?"
+                                        value={search}
+                                        onChange={(e) => setSearchTerm(e.target.value)}
+                                    />
+                                    <button type="submit" className="searchButton">
+                                        <Image className="loupe" src={loupe} alt="Loupe" />
+                                    </button>
+                                    </div>
+                                </form>
+                            </div>
+                            
                             <div className="header__middle__menus">
                                 <nav className="main-nav " >
             
