@@ -85,8 +85,7 @@ const Navbar = () => {
                         {isOpen && (
                                     <nav className="navbar">
                                     <a href="/" className="nav-logo">Logo</a>
-                                    <div className="nav-items">
-                                        <ul className="menu__box" onBlur={closeMenu} tabIndex="0">
+                                        <ul className="menu__box" tabIndex="9999">
                                     <li className="menu__item">
                                         <Link href="/myprofil">Mon Profil</Link>
                                     </li>
@@ -102,7 +101,6 @@ const Navbar = () => {
                                         Se déconnecter
                                     </li>
                                 </ul>
-                                    </div>
                                 </nav>
                             // <ul className="menu__box" onBlur={closeMenu} tabIndex="0">
                             //     <li className="menu__item">
