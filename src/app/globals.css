@@ -240,7 +240,7 @@ button {
   cursor: pointer;
 } /* searchbox */
 .search {
-  margin-top: 15px;
+  margin-top: 25px;
   width: 300px;
   position: relative;
   display: flex;
