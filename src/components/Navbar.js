@@ -116,9 +116,13 @@ const Navbar = () => {
             
                                 {/* Responsive Menu Button */}
                                 {isResponsiveclose === true ? <> 
-                                    <span className="menubar__button" style={{ display: 'none' }} onClick={toggleClass} > <FiXCircle />   </span>
+                                    <span className="menubar__button" style={{ display: 'none' }} onClick={toggleClass} >
+                                         {/* <FiXCircle />  */}
+                                           </span>
                                 </> : <> 
-                                    <span className="menubar__button" style={{ display: 'none' }} onClick={toggleClass} > <FiAlignRight />   </span>
+                                    <span className="menubar__button" style={{ display: 'none' }} onClick={toggleClass} >
+                                         {/* <FiAlignRight />   */}
+                                          </span>
                                 </>}
             
             
@@ -127,7 +131,7 @@ const Navbar = () => {
                                     <Link exact activeClassName='is-active' onClick={toggleClass} to={`/`}> Home </Link> 
                                 </li>
                                 <li className="menu-item " ><Link onClick={toggleClass} activeClassName='is-active' to={`/About`}> About </Link> </li>
-                                <li onClick={toggleSubmenu} className="menu-item sub__menus__arrows" > <Link to="#"> Shop <FiChevronDown /> </Link>
+                                <li onClick={toggleSubmenu} className="menu-item sub__menus__arrows" > <Link to="#"> Shop  </Link>
                                     <ul className={boxClassSubMenu.join(' ')} > 
                                         <li> <Link onClick={toggleClass} activeClassName='is-active'  to={`/Online`}> Online Shop </Link> </li>
                                         <li><Link onClick={toggleClass} activeClassName='is-active' to={`/Offline`}> Offline Shop </Link> </li>
