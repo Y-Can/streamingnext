@@ -472,3 +472,14 @@ button {
 .menu__item:hover {
   background-color: #CFD8DC;
 }
+
+.wrap-search{
+  display: none;
+}
+@media screen and (min-width: 600px) {
+  .wrap-search{
+    display: flex;
+  }
+}
+
+

@@ -58,7 +58,7 @@ const Navbar = () => {
     return (
         <nav className="navbar">
             <Link href="/">Accueil</Link>
-            <div className="wrap">
+            <div className="wrap-search">
                 <form onSubmit={handleSearch}>
                     <div className="search">
                         <input
