@@ -25,7 +25,6 @@ export default async function handler(req, res) {
 				res.status(401).json({ error: "Utilisateur non trouvé" });
 			}
 		} catch (error) {
-			console.error("Erreur lors de la connexion", error);
 			res.status(500).json({ error: "Erreur lors de la connexion" });
 		}
 	} else {

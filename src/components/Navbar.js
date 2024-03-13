@@ -23,9 +23,9 @@ const Navbar = () => {
             
                     if(response.data && response.data.id && response.data.pseudo && response.data.mail && response.data.type){
                         
-                        const { id, pseudo, mail, type } = response.data;
-                        const userData = { id, pseudo, mail: mail, type }; // Simplification
-                        setUser(userData);
+                        // const { id, pseudo, mail, type } = response.data;
+                        // const userData = { id, pseudo, mail: mail, type }; // Simplification
+                        // setUser(userData);
             
                     } else {
                         console.error("Les données de l'utilisateur ne sont pas complètes ou manquantes.");
