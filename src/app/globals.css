@@ -241,7 +241,7 @@ button {
 } /* searchbox */
 .search {
   margin-top: 25px;
-  width: 300px;
+  width: 250px;
   position: relative;
   display: flex;
   align-items: center;
