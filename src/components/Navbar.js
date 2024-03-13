@@ -4,6 +4,8 @@ import Link from "next/link";
 import Image from "next/image";
 import loupe from "/public/loupe.svg";
 import axios from "axios";
+import { User } from './models/user';
+
 
 const Navbar = () => {
     const [search, setSearchTerm] = useState("");
@@ -21,12 +23,13 @@ const Navbar = () => {
             
                     console.log(response.data); // Pour débogage
             
-                    if(response.data && response.data.id && response.data.pseudo && response.data.mail && response.data.type){
-                        
-                        // const { id, pseudo, mail, type } = response.data;
-                        // const userData = { id, pseudo, mail: mail, type }; // Simplification
-                        // setUser(userData);
-            
+                    if(response.data){
+                        try {
+                            const user = new User(response.data);
+                            setUser(user);
+                        } catch (error) {
+                            console.error("Erreur lors de la création de l'instance User :", error);
+                        }
                     } else {
                         console.error("Les données de l'utilisateur ne sont pas complètes ou manquantes.");
                     }
