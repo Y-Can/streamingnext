@@ -78,7 +78,7 @@ const Navbar = () => {
                 {user ? (
                     
                     <div >
-                                    <div className="menu-hamburger" onClick={toggleMenu}>
+                                    <div className="dropdown-toggle" onClick={toggleMenu}>
                 {/* Icône ou texte pour le bouton du menu hamburger */}
                 <span>Menu</span>
             </div>
