@@ -82,7 +82,7 @@ const Navbar = () => {
 
     return (
         <nav className="navbar">
-            {/* <Link href="/">Accueil</Link>
+            <Link href="/">Accueil</Link>
             <div className="wrap-search">
                 <form onSubmit={handleSearch}>
                     <div className="search">
@@ -98,7 +98,7 @@ const Navbar = () => {
                         </button>
                     </div>
                 </form>
-            </div> */}
+            </div>
                 {user ? (
                     
                     <header className="header__middle">
