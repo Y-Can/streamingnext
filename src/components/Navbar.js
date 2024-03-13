@@ -141,7 +141,6 @@ const Navbar = () => {
                                 </li>
                                 <li className="menu-item " ><Link href="/" onClick={toggleClass} activeClassName='is-active' to={`/Contact`}> Contact </Link> </li>
                                 <li className="menu-item " >
-                                <div className="wrap-search">
                                 <form onSubmit={handleSearch}>
                                     <div className="search">
                                     <input
@@ -156,7 +155,6 @@ const Navbar = () => {
                                     </button>
                                     </div>
                                 </form>
-                            </div>
                             </li>
                                 </ul>
             
