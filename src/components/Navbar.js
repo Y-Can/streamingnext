@@ -31,7 +31,7 @@ const Navbar = () => {
     }, []);
 
     const toggleMenu = () => {
-        setIsOpen(isOpen);
+        setIsOpen(true);
     };
 
     const closeMenu = () => {
@@ -85,7 +85,7 @@ const Navbar = () => {
                         <button onClick={toggleMenu} className="dropdown-toggle">
                             Menu
                         </button>
-                        {isOpen && (
+                        {!isOpen && (
                             <ul className="menu__box" onBlur={closeMenu} tabIndex="0">
                                 <li className="menu__item">
                                     <Link href="/myprofil">Mon Profil</Link>
@@ -111,7 +111,6 @@ const Navbar = () => {
                 )}
             </div>
 
-            {/* Affichage conditionnel du menu basé sur l'état isOpen */}
             {isOpen && (
                 
 					<div className="menu-mobile">

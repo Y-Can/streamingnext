@@ -29,6 +29,7 @@ const SignupForm = () => {
 			localStorage?.setItem("token", response.data.token);
 			sessionStorage?.setItem("token", response.data.token);
 			push("/");
+			window.reload();
 		} catch (error) {
 			console.error("Erreur lors de la connexion:", error);
 		}
