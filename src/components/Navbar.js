@@ -81,31 +81,47 @@ const Navbar = () => {
             </div>
             <div>
                 {user ? (
-                    <div className="hamburger-menu">
+                    
+                    <div >
                         <button onClick={toggleMenu} className="dropdown-toggle">
                             Menu
                         </button>
-                        {isOpen ? (
-                            <ul className="menu__box" onBlur={closeMenu} tabIndex="0">
-                                <li className="menu__item">
-                                    <Link href="/myprofil">Mon Profil</Link>
-                                </li>
-                                <li className="menu__item">
-                                    <Link href="/option1">Mes films</Link>
-                                </li>
-                                {user.type === "ADMIN" && (
-                                    <li className="menu__item">
-                                        <Link href="/add_film">Ajout de film</Link>
-                                    </li>
-                                )}
-                                <li onClick={handleLogout} className="menu__item">
-                                    Se déconnecter
-                                </li>
-                            </ul>
-                        ) : (
-                            <div> 
-                                
-                            </div>
+                        {isOpen && (
+                                    <nav className="navbar">
+                                    <a href="/" className="nav-logo">Logo</a>
+                                    <div className="nav-items">
+                                        <a href="/about">À propos</a>
+                                        <a href="/services">Services</a>
+                        
+                                        {/* Dropdown */}
+                                        <div className="nav-item dropdown">
+                                            <button className="dropbtn" onClick={() => setIsOpen(!isOpen)}>Dropdown</button>
+                                            {isOpen && (
+                                                <div className="dropdown-content">
+                                                    <a href="/link1">Lien 1</a>
+                                                    <a href="/link2">Lien 2</a>
+                                                    <a href="/link3">Lien 3</a>
+                                                </div>
+                                            )}
+                                        </div>
+                                    </div>
+                                </nav>
+                            // <ul className="menu__box" onBlur={closeMenu} tabIndex="0">
+                            //     <li className="menu__item">
+                            //         <Link href="/myprofil">Mon Profil</Link>
+                            //     </li>
+                            //     <li className="menu__item">
+                            //         <Link href="/option1">Mes films</Link>
+                            //     </li>
+                            //     {user.type === "ADMIN" && (
+                            //         <li className="menu__item">
+                            //             <Link href="/add_film">Ajout de film</Link>
+                            //         </li>
+                            //     )}
+                            //     <li onClick={handleLogout} className="menu__item">
+                            //         Se déconnecter
+                            //     </li>
+                            // </ul>
                         )}
                     </div>
                 ) : (
