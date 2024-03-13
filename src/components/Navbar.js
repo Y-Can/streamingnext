@@ -13,22 +13,22 @@ const Navbar = () => {
     useEffect(() => {
         const fetchData = async () => {
             const token = localStorage.getItem("token");
-            if (token) {
-                try {
-                    const response = await axios.get("/api/user", {
-                        headers: { Authorization: `Bearer ${token}` },
-                    });
-                    if(response.data){
+            // if (token) {
+            //     try {
+            //         const response = await axios.get("/api/user", {
+            //             headers: { Authorization: `Bearer ${token}` },
+            //         });
+            //         if(response.data){
                         
-                        const { id, pseudo, mail, type } = response.data;
-                        const userData = { id: id, pseudo: pseudo, email: mail, type: type };
-                        setUser(userData);
-                    }
-                } catch (error) {
-                    console.error("Erreur:", error);
-                    localStorage.clear("token");
-                }
-            }
+            //             const { id, pseudo, mail, type } = response.data;
+            //             const userData = { id: id, pseudo: pseudo, email: mail, type: type };
+            //             setUser(userData);
+            //         }
+            //     } catch (error) {
+            //         console.error("Erreur:", error);
+            //         localStorage.clear("token");
+            //     }
+            // }
         };
         fetchData();
     }, []);
