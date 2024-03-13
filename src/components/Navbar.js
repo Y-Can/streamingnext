@@ -141,7 +141,7 @@ const Navbar = () => {
                                 </li>
                                 <li className="menu-item " ><Link href="/" onClick={toggleClass} activeClassName='is-active' to={`/Contact`}> Contact </Link> </li>
                                 <li className="menu-item " >
-                                <form onSubmit={handleSearch}>
+                                <form className="formwidth" onSubmit={handleSearch}>
                                     <div className="search">
                                     <input
                                         type="text"
