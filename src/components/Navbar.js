@@ -107,9 +107,9 @@ const Navbar = () => {
             
                             {/* Add Logo  */}
                             <div className="header__middle__logo">
-                                <NavLink exact activeClassName='is-active' to="/">
+                                <Link exact activeClassName='is-active' to="/">
                                     <img src={logo} alt="logo" /> 
-                                </NavLink>
+                                </Link>
                             </div>
             
                             <div className="header__middle__menus">
@@ -125,16 +125,16 @@ const Navbar = () => {
             
                                 <ul className={boxClass.join(' ')}>
                                 <li  className="menu-item" >
-                                    <NavLink exact activeClassName='is-active' onClick={toggleClass} to={`/`}> Home </NavLink> 
+                                    <Link exact activeClassName='is-active' onClick={toggleClass} to={`/`}> Home </Link> 
                                 </li>
-                                <li className="menu-item " ><NavLink onClick={toggleClass} activeClassName='is-active' to={`/About`}> About </NavLink> </li>
+                                <li className="menu-item " ><Link onClick={toggleClass} activeClassName='is-active' to={`/About`}> About </Link> </li>
                                 <li onClick={toggleSubmenu} className="menu-item sub__menus__arrows" > <Link to="#"> Shop <FiChevronDown /> </Link>
                                     <ul className={boxClassSubMenu.join(' ')} > 
-                                        <li> <NavLink onClick={toggleClass} activeClassName='is-active'  to={`/Online`}> Online Shop </NavLink> </li>
-                                        <li><NavLink onClick={toggleClass} activeClassName='is-active' to={`/Offline`}> Offline Shop </NavLink> </li>
+                                        <li> <Link onClick={toggleClass} activeClassName='is-active'  to={`/Online`}> Online Shop </Link> </li>
+                                        <li><Link onClick={toggleClass} activeClassName='is-active' to={`/Offline`}> Offline Shop </Link> </li>
                                     </ul>
                                 </li>
-                                <li className="menu-item " ><NavLink onClick={toggleClass} activeClassName='is-active' to={`/Contact`}> Contact </NavLink> </li>
+                                <li className="menu-item " ><Link onClick={toggleClass} activeClassName='is-active' to={`/Contact`}> Contact </Link> </li>
             
                                 </ul>
             
