@@ -537,6 +537,13 @@ li {
 @media (max-width:767px) { 
   .header__middle .active {color: #ff3d00!important;}
 }
+@media  (min-width:560px) {
+  .formwidth{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+}
 
 @media (min-width:992px) { 
   .sub__menus__arrows:hover .sub__menus{
