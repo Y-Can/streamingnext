@@ -94,6 +94,7 @@ const Navbar = () => {
                 const data = res.data;
                 console.log(data);
              router.push(`/?search=${encodeURIComponent(search)}`);
+             window.location.href = window.location.href;
         } catch (error) {
             console.error("Error fetching search results", error);
         }

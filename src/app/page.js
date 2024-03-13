@@ -26,7 +26,6 @@ const Home = () => {
 				const res = await axios.get(apiUrl);
 				const data = res.data;
 				setFilms(data.films || []);
-				window.location.href = window.location.href;
 			} catch (error) {
 				console.error("Erreur lors de la récupération des films", error);
 				setFilms([]);
