@@ -251,6 +251,7 @@ button {
   display: flex;
   align-items: center;
   justify-content: center;
+  margin-left: -50px;
 }
 .searchTerm {
   min-width: 100%;
