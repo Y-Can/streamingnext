@@ -479,7 +479,7 @@ button {
 @media screen and (min-width: 600px) {
   .wrap-search{
     display: flex;
-  }
+  } 
 }
 
 
