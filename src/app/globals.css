@@ -118,6 +118,13 @@ code {
   flex-direction: row;
   justify-content: flex-start;
 }
+.containerRowUl{
+  min-width: 80vw;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+}
 .containerCol{
   min-width: 100vw;
   min-height: 100vh;
