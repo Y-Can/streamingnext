@@ -415,9 +415,7 @@ button {
   top: 0;
   transform: rotate(90deg);
 }
-#menu__toggle:checked ~ .menu__box {
-  left: 0 !important;
-}
+
 .menu__btn {
   position: fixed;
   top: 20px;
@@ -449,7 +447,6 @@ button {
   display: block;
   position: fixed;
   top: 0;
-  left: -100%;
   width: 300px;
   height: 100%;
   margin: 0;

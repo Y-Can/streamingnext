@@ -85,7 +85,7 @@ const Navbar = () => {
                         {isOpen && (
                                     <nav className="navbar">
                                     <a href="/" className="nav-logo">Logo</a>
-                                        <ul className="menu__box" tabIndex="9999">
+                                        <ul className="menu__box" tabIndex="">
                                     <li className="menu__item">
                                         <Link href="/myprofil">Mon Profil</Link>
                                     </li>
