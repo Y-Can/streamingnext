@@ -85,7 +85,7 @@ const Navbar = () => {
                         <button onClick={toggleMenu} className="dropdown-toggle">
                             Menu
                         </button>
-                        {!isOpen && (
+                        {isOpen ? (
                             <ul className="menu__box" onBlur={closeMenu} tabIndex="0">
                                 <li className="menu__item">
                                     <Link href="/myprofil">Mon Profil</Link>
@@ -102,6 +102,10 @@ const Navbar = () => {
                                     Se déconnecter
                                 </li>
                             </ul>
+                        ) : (
+                            <div> 
+                                
+                            </div>
                         )}
                     </div>
                 ) : (
@@ -111,18 +115,15 @@ const Navbar = () => {
                 )}
             </div>
 
-            {isOpen && (
+            {isOpen &&(
                 
 					<div className="menu-mobile">
-						{/* Ici, vous pouvez ajouter les éléments que vous souhaitez afficher dans le menu mobile */}
 						<ul>
 							<li><Link href="/">Accueil</Link></li>
-							{/* Ajoutez d'autres éléments de menu ici selon vos besoins */}
 							{user && (
 								<>
 									<li><Link href="/myprofil">Mon Profil</Link></li>
 									<li><Link href="/mesfilms">Mes Films</Link></li>
-									{/* Conditionnellement afficher des éléments supplémentaires pour les admins ou selon d'autres conditions */}
 									{user.type === "ADMIN" && <li><Link href="/admin">Admin</Link></li>}
 								</>
 							)}
