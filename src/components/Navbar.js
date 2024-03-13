@@ -109,23 +109,7 @@ const Navbar = () => {
                                 <Link href="/" exact activeClassName='is-active' to="/">
                                 </Link>
                             </div>
-                            {/* SEARCHBAR */}
-                            <div className="wrap-search">
-                                <form onSubmit={handleSearch}>
-                                    <div className="search">
-                                    <input
-                                        type="text"
-                                        className="searchTerm"
-                                        placeholder="What are you looking for?"
-                                        value={search}
-                                        onChange={(e) => setSearchTerm(e.target.value)}
-                                    />
-                                    <button type="submit" className="searchButton">
-                                        <Image className="loupe" src={loupe} alt="Loupe" />
-                                    </button>
-                                    </div>
-                                </form>
-                            </div>
+
                             
                             <div className="header__middle__menus">
                                 <nav className="main-nav " >
@@ -146,6 +130,23 @@ const Navbar = () => {
                                 <li  className="menu-item" >
                                     <Link href="/" exact activeClassName='is-active' onClick={toggleClass} to={`/`}> Home </Link> 
                                 </li>
+                                                            {/* SEARCHBAR */}
+                            <div className="wrap-search">
+                                <form onSubmit={handleSearch}>
+                                    <div className="search">
+                                    <input
+                                        type="text"
+                                        className="searchTerm"
+                                        placeholder="What are you looking for?"
+                                        value={search}
+                                        onChange={(e) => setSearchTerm(e.target.value)}
+                                    />
+                                    <button type="submit" className="searchButton">
+                                        <Image className="loupe" src={loupe} alt="Loupe" />
+                                    </button>
+                                    </div>
+                                </form>
+                            </div>
                                 <li className="menu-item " ><Link href="/" onClick={toggleClass} activeClassName='is-active' to={`/About`}> About </Link> </li>
                                 <li onClick={toggleSubmenu} className="menu-item sub__menus__arrows" > <Link href="/" to="#"> Shop  </Link>
                                     <ul className={boxClassSubMenu.join(' ')} > 
