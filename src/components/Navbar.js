@@ -24,7 +24,7 @@ const Navbar = () => {
                     if(response.data && response.data.id && response.data.pseudo && response.data.mail && response.data.type){
                         
                         const { id, pseudo, mail, type } = response.data;
-                        const userData = { id, pseudo, email: mail, type }; // Simplification
+                        const userData = { id, pseudo, mail: mail, type }; // Simplification
                         setUser(userData);
             
                     } else {
