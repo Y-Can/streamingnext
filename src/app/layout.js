@@ -23,7 +23,6 @@ export default function RootLayout({ children }) {
 	const search = searchParams.get("search");
 	const [films, setFilms] = useState([]);
 	const [searchTerm, setSearchTerm] = useState(search);
-	const [user, setUser] = useState(null); 
 		
 	useEffect(() => {
 		const fetchData = async () => {
@@ -50,7 +49,10 @@ export default function RootLayout({ children }) {
   return (
     <html lang="fr">
       <body className={inter.className}>
-      <Navbar />
+      <Navbar
+				searchTerm={searchTerm}
+				onSearchTermChange={handleSearchTermChange}
+			/>
         {children}
         <Footer />
       </body>
