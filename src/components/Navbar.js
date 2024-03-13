@@ -86,10 +86,11 @@ const Navbar = () => {
                         {isOpen && (
                                     <nav className="navbar">
                                       
+                                    <a href="/" className="nav-logo">Logo</a>
                                         <ul className="menu__box" tabIndex="">
-                                        <div className="dropdown-toggle" onClick={toggleMenu}>
-                <span>Menu</span>
-                </div>
+                                            <li onClick={toggleMenu} className="menu__item">
+                                                Close
+                                            </li>
                                     <li className="menu__item">
                                         <Link href="/myprofil">Mon Profil</Link>
                                     </li>
