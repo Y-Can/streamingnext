@@ -79,7 +79,8 @@ const Navbar = () => {
                     
                     <div >
                         
-  { !isOpen &&(          <div className="dropdown-toggle" onClick={toggleMenu}>
+  { !isOpen &&(         
+     <div className="dropdown-toggle" onClick={toggleMenu}>
                 {/* Icône ou texte pour le bouton du menu hamburger */}
                 <span>Menu</span>
             </div>)}
