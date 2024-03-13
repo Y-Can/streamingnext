@@ -131,7 +131,17 @@ const Navbar = () => {
                                     <Link href="/" exact activeClassName='is-active' onClick={toggleClass} to={`/`}> Home </Link> 
                                 </li>
                                                             {/* SEARCHBAR */}
-                            <div className="wrap-search">
+
+                                <li className="menu-item " ><Link href="/" onClick={toggleClass} activeClassName='is-active' to={`/About`}> About </Link> </li>
+                                <li onClick={toggleSubmenu} className="menu-item sub__menus__arrows" > <Link href="/" to="#"> Shop  </Link>
+                                    <ul className={boxClassSubMenu.join(' ')} > 
+                                        <li> <Link href="/" onClick={toggleClass} activeClassName='is-active'  to={`/Online`}> Online Shop </Link> </li>
+                                        <li><Link href="/" onClick={toggleClass} activeClassName='is-active' to={`/Offline`}> Offline Shop </Link> </li>
+                                    </ul>
+                                </li>
+                                <li className="menu-item " ><Link href="/" onClick={toggleClass} activeClassName='is-active' to={`/Contact`}> Contact </Link> </li>
+                                <li className="menu-item " >
+                                <div className="wrap-search">
                                 <form onSubmit={handleSearch}>
                                     <div className="search">
                                     <input
@@ -147,15 +157,7 @@ const Navbar = () => {
                                     </div>
                                 </form>
                             </div>
-                                <li className="menu-item " ><Link href="/" onClick={toggleClass} activeClassName='is-active' to={`/About`}> About </Link> </li>
-                                <li onClick={toggleSubmenu} className="menu-item sub__menus__arrows" > <Link href="/" to="#"> Shop  </Link>
-                                    <ul className={boxClassSubMenu.join(' ')} > 
-                                        <li> <Link href="/" onClick={toggleClass} activeClassName='is-active'  to={`/Online`}> Online Shop </Link> </li>
-                                        <li><Link href="/" onClick={toggleClass} activeClassName='is-active' to={`/Offline`}> Offline Shop </Link> </li>
-                                    </ul>
-                                </li>
-                                <li className="menu-item " ><Link href="/" onClick={toggleClass} activeClassName='is-active' to={`/Contact`}> Contact </Link> </li>
-            
+                            </li>
                                 </ul>
             
             
