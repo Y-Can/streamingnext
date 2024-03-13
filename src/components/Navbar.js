@@ -31,7 +31,7 @@ const Navbar = () => {
     }, []);
 
     const toggleMenu = () => {
-        setIsOpen(true);
+        isOpen === true ? setIsOpen(false) : setIsOpen(true);
     };
 
     const closeMenu = () => {
@@ -78,7 +78,7 @@ const Navbar = () => {
                 {user ? (
                     
                     <div >
-                                    <div className="dropdown-toggle" onClick={toggleMenu}>
+            <div className="dropdown-toggle" onClick={toggleMenu}>
                 {/* Icône ou texte pour le bouton du menu hamburger */}
                 <span>Menu</span>
             </div>
@@ -90,9 +90,8 @@ const Navbar = () => {
                                         <a href="/services">Services</a>
                         
                                         <div className="nav-item dropdown">
-                                            <button className="dropbtn" onClick={() => setIsOpen(!isOpen)}>Dropdown</button>
+                                            {/* <button className="dropbtn" onClick={() => setIsOpen(!isOpen)}>Dropdown</button> */}
                                             {isOpen && (
-                                                <div className="dropdown-content">
                                                                   <ul className="menu__box" onBlur={closeMenu} tabIndex="0">
                                 <li className="menu__item">
                                     <Link href="/myprofil">Mon Profil</Link>
@@ -110,7 +109,6 @@ const Navbar = () => {
                                 </li>
                             </ul>
                                       
-                                                </div>
                                             )}
                                         </div>
                                     </div>
