@@ -22,7 +22,7 @@ const Card = ({ films, onMouseEnter = null, onMouseLeave = null }) => {
   return (
     <div className="containerRow">
       <div className="containerCol maxheight">
-        <ul className="containerRow">
+        <ul className="containerRowUl">
           {films.map((film) => (
             <li
               key={film.id}
