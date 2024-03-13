@@ -37,7 +37,7 @@ const Home = () => {
 		setSearchTerm(newSearchTerm);
 	};
 	return (
-		<body>
+
 			<div className="containerCol">
 				<Navbar
 					searchTerm={searchTerm}
@@ -51,7 +51,7 @@ const Home = () => {
 					<Card films={films} />
 				</div>
 			</div>
-		</body>
+
 	);
 };
 export default Home;
