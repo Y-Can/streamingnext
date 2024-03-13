@@ -1,6 +1,5 @@
 "use client"
 import React, { useState, useEffect } from "react";
-import router from "react-router";
 import Link from "next/link";
 import Image from "next/image";
 import loupe from "/public/loupe.svg";
@@ -89,8 +88,9 @@ const Navbar = () => {
         e.preventDefault();
         try {
             const res = await axios.get(`/api/films?search=${encodeURIComponent(search)}`);
-            const data = res.data;
-            router.push(`/?search=${encodeURIComponent(search)}`);
+                const data = res.data;
+                console.log(data);
+            // router.push(`/?search=${encodeURIComponent(search)}`);
         } catch (error) {
             console.error("Error fetching search results", error);
         }

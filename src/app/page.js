@@ -5,7 +5,6 @@ import { useSearchParams } from "next/navigation";
 import axios from "axios";
 import Card from "./../components/Card";
 import "./../app/globals.css";
-import Navbar from "@/components/Navbar";
 const Home = () => {
 	const searchParams = useSearchParams();
 	const id = searchParams.get("id");
@@ -45,7 +44,7 @@ const Home = () => {
 			/> */}
 			<div className="rowCenter">
 				
-				<h1>Liste des Films</h1>
+				<h1>Liste des Films fonctionne</h1>
 			</div>
 			<div className="containerRow">
 				<Card films={films} />
