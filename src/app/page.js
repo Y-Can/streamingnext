@@ -37,20 +37,21 @@ const Home = () => {
 		setSearchTerm(newSearchTerm);
 	};
 	return (
-		<div className="containerCol">
-			
-			<Navbar
-				searchTerm={searchTerm}
-				onSearchTermChange={handleSearchTermChange}
-			/>
-			<div className="rowCenter">
-				
-				<h1>Liste des Films</h1>
+		<body>
+			<div className="containerCol">
+				<Navbar
+					searchTerm={searchTerm}
+					onSearchTermChange={handleSearchTermChange}
+				/>
+				<div className="rowCenter">
+					
+					<h1>Liste des Films</h1>
+				</div>
+				<div className="containerRow">
+					<Card films={films} />
+				</div>
 			</div>
-			<div className="containerRow">
-				<Card films={films} />
-			</div>
-		</div>
+		</body>
 	);
 };
 export default Home;
