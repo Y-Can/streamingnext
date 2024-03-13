@@ -108,7 +108,6 @@ const Navbar = () => {
                             {/* Add Logo  */}
                             <div className="header__middle__logo">
                                 <Link exact activeClassName='is-active' to="/">
-                                    <img src={logo} alt="logo" /> 
                                 </Link>
                             </div>
             
