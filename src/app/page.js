@@ -7,12 +7,15 @@ import Card from "./../components/Card";
 import "./globals.css";
 import Navbar from "@/components/Navbar";
 const Home = () => {
+	const router = useRouter();
+
 	const searchParams = useSearchParams();
 	const id = searchParams.get("id");
 	const search = searchParams.get("search");
 	const [films, setFilms] = useState([]);
 	const [searchTerm, setSearchTerm] = useState(search);
 	const [user, setUser] = useState(null); 
+	
 		
 	useEffect(() => {
 		const fetchData = async () => {
