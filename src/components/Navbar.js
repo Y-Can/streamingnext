@@ -70,6 +70,33 @@ const Navbar = () => {
 		};
 		fetchData();
 	}, [id, searchTerm]);
+    const [isMenu, setisMenu] = useState(false);
+    const [isResponsiveclose, setResponsiveclose] = useState(false);
+    const toggleClass = () => {
+      setisMenu(isMenu === false ? true : false);
+      setResponsiveclose(isResponsiveclose === false ? true : false);
+  };
+// NAVBAR DROPdown
+    let boxClass = ["main-menu menu-right menuq1"];
+    if(isMenu) {
+        boxClass.push('menuq2');
+    }else{
+        boxClass.push('');
+    }
+
+    const [isMenuSubMenu, setMenuSubMenu] = useState(false);
+      
+    const toggleSubmenu = () => {
+      setMenuSubMenu(isMenuSubMenu === false ? true : false);
+    };
+    
+    let boxClassSubMenu = ["sub__menus"];
+    if(isMenuSubMenu) {
+        boxClassSubMenu.push('sub__menus__Active');
+    }else {
+        boxClassSubMenu.push('');
+    }
+
 	const handleSearchTermChange = (newSearchTerm) => {
 		setSearchTerm(newSearchTerm);
 	};
