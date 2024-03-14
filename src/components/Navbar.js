@@ -1,6 +1,7 @@
 // Navbar.js
+"use client"
 import React, { useState, useEffect } from "react";
-import { useRouter } from 'next/router';
+import { useRouter } from 'next/navigation';
 import Link from "next/link";
 import Image from "next/image";
 import loupe from "/public/loupe.svg";
