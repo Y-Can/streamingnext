@@ -60,7 +60,6 @@ const Navbar = () => {
 				const res = await axios.get(apiUrl);
 				const data = res.data;
 				setFilms(data.films || []);
-                router.push('/')
 			} catch (error) {
 				console.error("Erreur lors de la récupération des films", error);
 				setFilms([]);
@@ -114,6 +113,7 @@ const Navbar = () => {
                 const data = res.data;
                 console.log(data);
              router.push(`/?search=${encodeURIComponent(search)}`);
+             window.location.reload();
         } catch (error) {
             console.error("Error fetching search results", error);
         }
