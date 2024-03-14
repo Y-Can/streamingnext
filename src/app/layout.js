@@ -17,12 +17,12 @@ export const metadata = {
 };
 
 export default function RootLayout({ children }) {
-  const searchParams = useSearchParams();
-	const id = searchParams.get("id");
-	const search = searchParams.get("search");
-	const [films, setFilms] = useState([]);
-	const [searchTerm, setSearchTerm] = useState(search);
-	const [user, setUser] = useState(null); 
+  // const searchParams = useSearchParams();
+	// const id = searchParams.get("id");
+	// const search = searchParams.get("search");
+	// const [films, setFilms] = useState([]);
+	// const [searchTerm, setSearchTerm] = useState(search);
+	// const [user, setUser] = useState(null); 
 		
 	useEffect(() => {
   const fetchData = async () => {
