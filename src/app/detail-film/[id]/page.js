@@ -10,7 +10,7 @@ const FilmDetail = ({ id }) => {
 	const [film, setFilm] = useState(null);
 	useEffect(() => {
 		const fetchData = async () => {
-			console.log(id); // Accès direct à `id` qui est une prop du composant
+			console.log(id); 
 			try {
 				console.log(id, 'second');
 				let apiUrl = `./../api/films/?id=${encodeURIComponent(id)}`;

@@ -39,10 +39,6 @@ const Home = () => {
 	return (
 
 			<div className="containerCol">
-				<Navbar
-					searchTerm={searchTerm}
-					onSearchTermChange={handleSearchTermChange}
-				/>
 				<div className="rowCenter">
 					
 					<h1>Liste des Films</h1>
