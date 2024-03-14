@@ -14,7 +14,6 @@ const FilmDetail = ({ id }) => {
 				let apiUrl = `./../api/films/?id=${encodeURIComponent(id)}`;
 				const response = await axios.get(apiUrl);
 				const filmData = response.data;
-				console.log(response.data);
 				setFilm(filmData.films[0]);
 				console.log(filmData);
 			} catch (error) {
@@ -28,7 +27,7 @@ const FilmDetail = ({ id }) => {
 	return (
 		<div className={styles.container_col}>
 			
-{ 
+
 			
 					
 					<div className={styles.block}>
@@ -47,7 +46,7 @@ const FilmDetail = ({ id }) => {
 						</div>
 					</div>
 			
-		 }
+		 
 		</div>
 	);
 };
