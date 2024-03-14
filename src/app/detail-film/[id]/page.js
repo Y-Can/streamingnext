@@ -26,7 +26,7 @@ const FilmDetail = ({ id }) => {
 		if (id) {
 			fetchData();
 		}
-	}, [filmData]); 
+	}, [film]); 
 	
 	return (
 		<div className={styles.container_col}>
@@ -38,14 +38,14 @@ const FilmDetail = ({ id }) => {
 						
 						<div className={styles.titre}>
 							
-							<h1 className={styles.title}>{filmData?.titre}</h1>
+							<h1 className={styles.title}>{film?.titre}</h1>
 						</div>
 						<div className={styles.containermax}>
 							
 							<div className={styles.containerRow}>
 								
-								<img src={filmData?.image} className={styles.img} alt="" />
-								<p className={styles.p}>{filmData?.description}</p>
+								<img src={film?.image} className={styles.img} alt="" />
+								<p className={styles.p}>{film?.description}</p>
 							</div>
 						</div>
 					</div>
