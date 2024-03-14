@@ -10,7 +10,9 @@ const FilmDetail = ({ id }) => {
 	const [film, setFilm] = useState(null);
 	useEffect((id) => {
 		const fetchData = async () => {
+			console.log(id);
 			try {
+				console.log(id,'second');
 				let apiUrl = `./../api/films/?id=${encodeURIComponent(id)}`;
 				const response = await axios.get(apiUrl);
 				const filmData = response.data;
