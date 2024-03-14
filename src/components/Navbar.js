@@ -60,6 +60,7 @@ const Navbar = () => {
 				const res = await axios.get(apiUrl);
 				const data = res.data;
 				setFilms(data.films || []);
+                router.push('/')
 			} catch (error) {
 				console.error("Erreur lors de la récupération des films", error);
 				setFilms([]);
