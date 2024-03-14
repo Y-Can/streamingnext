@@ -106,6 +106,17 @@ const Navbar = () => {
         setUser(null);
         router.push("/");
     };
+    const handleSearch = async (e) => {
+        e.preventDefault();
+        try {
+            const res = await axios.get(`/api/films?search=${encodeURIComponent(search)}`);
+                const data = res.data;
+                console.log(data);
+             router.push(`/?search=${encodeURIComponent(search)}`);
+        } catch (error) {
+            console.error("Error fetching search results", error);
+        }
+    };
 
     return (
         <nav className="navbar">
