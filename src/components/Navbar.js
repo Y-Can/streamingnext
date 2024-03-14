@@ -8,13 +8,9 @@ import loupe from "/public/loupe.svg";
 import axios from "axios";
 import { FiAlignRight, FiXCircle, FiChevronDown } from "react-icons/fi";
 import User from '../models/user';
-import { useSearchParams } from 'next/navigation'
 
 
 const Navbar = () => {
-    const searchParams = useSearchParams()
-    const id = searchParams.get("id");
-	const searchTerm = searchParams.get("search");
     const router = useRouter();
     const [search, setSearchTerm ] = useState("");
     const [user, setUser] = useState(null);
@@ -49,27 +45,9 @@ const Navbar = () => {
                         }
                     }
                 }
-		const fetchFilm = async () => {
-			try {
-				let apiUrl = "/../api/films";
-				if (id !== null) {
-					apiUrl += `?id=${encodeURIComponent(id)}`;
-				} else if (searchTerm !== null) {
-					apiUrl += `?search=${encodeURIComponent(searchTerm)}`;
-				}
-				const res = await axios.get(apiUrl);
-				const data = res.data;
-				setFilms(data.films || []);
-			} catch (error) {
-				console.error("Erreur lors de la récupération des films", error);
-				setFilms([]);
-			}
-            
-            fetchData();
-            fetchFilm();
-		};
+
 		fetchData();
-	}, [id, searchTerm]);
+	}, []);
     const [isMenu, setisMenu] = useState(false);
     const [isResponsiveclose, setResponsiveclose] = useState(false);
     const toggleClass = () => {
@@ -112,8 +90,7 @@ const Navbar = () => {
             const res = await axios.get(`/api/films?search=${encodeURIComponent(search)}`);
                 const data = res.data;
                 console.log(data);
-           await  router.push(`/?search=${encodeURIComponent(search)}`);
-             window.location.reload();
+             router.push(`/?search=${encodeURIComponent(search)}`);
         } catch (error) {
             console.error("Error fetching search results", error);
         }
