@@ -56,7 +56,7 @@ const Home = () => {
 			};
 		fetchFilm()
 		fetchData();
-		router.replace(router.asPath)
+		router.refresh()
 	}, [id, searchTerm]);
 	const handleSearchTermChange = (newSearchTerm) => {
 		setSearchTerm(newSearchTerm);
