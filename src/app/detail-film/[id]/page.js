@@ -14,6 +14,7 @@ const FilmDetail = ({ id }) => {
 				let apiUrl = `./../api/films/?id=${encodeURIComponent(id)}`;
 				const response = await axios.get(apiUrl);
 				const filmData = response.data;
+				console.log(response.data);
 				setFilm(filmData.films[0]);
 				console.log(filmData);
 			} catch (error) {
