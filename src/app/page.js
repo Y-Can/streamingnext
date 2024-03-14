@@ -1,7 +1,7 @@
 // pages/index.js
 "use client"
 import React, { useEffect, useState } from "react";
-import { useSearchParams, router } from "next/navigation";
+import { useSearchParams, useRouter } from "next/navigation";
 import axios from "axios";
 import Card from "./../components/Card";
 import "./globals.css";
