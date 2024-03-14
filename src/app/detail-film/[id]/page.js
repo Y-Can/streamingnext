@@ -26,27 +26,27 @@ const FilmDetail = ({ id }) => {
 	}, [id]);
 	return (
 		<div className={styles.container_col}>
-			{" "}
-{/* 			 
 			
-					{" "}
+{ 
+			
+					
 					<div className={styles.block}>
-						{" "}
+						
 						<div className={styles.titre}>
-							{" "}
-							<h1 className={styles.title}>{film.titre}</h1>{" "}
-						</div>{" "}
+							
+							<h1 className={styles.title}>{film.titre}</h1>
+						</div>
 						<div className={styles.containermax}>
-							{" "}
+							
 							<div className={styles.containerRow}>
-								{" "}
-								<img src={film.image} className={styles.img} alt="" />{" "}
-								<p className={styles.p}>{film.description}</p>{" "}
-							</div>{" "}
-						</div>{" "}
-					</div>{" "}
+								
+								<img src={film.image} className={styles.img} alt="" />
+								<p className={styles.p}>{film.description}</p>
+							</div>
+						</div>
+					</div>
 			
-		 */}
+		 }
 		</div>
 	);
 };
