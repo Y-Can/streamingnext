@@ -21,7 +21,35 @@ const Navbar = () => {
     const [isOpen, setIsOpen] = useState(false);
 
 	useEffect(() => {
-		const fetchData = async () => {
+                    // tets
+                const fetchData = async () => {
+                    const token = localStorage.getItem("token");
+                    if (token) {
+                        try {
+                            const response = await axios.get("/api/user", {
+                                headers: { Authorization: `Bearer ${token}` },
+                            });
+                    
+                            console.log(response.data); // Pour débogage
+                    
+                            if(response.data){
+                                try {
+                                    const user = new User(response.data);
+                                    setUser(user);
+                                } catch (error) {
+                                    console.error("Erreur lors de la création de l'instance User :", error);
+                                }
+                            } else {
+                                console.error("Les données de l'utilisateur ne sont pas complètes ou manquantes.");
+                            }
+                            
+                        } catch (error) {
+                            console.error("Erreur lors de la récupération des données utilisateur:", error.response || error);
+                            localStorage.clear("token");
+                        }
+                    }
+                }
+		const fetchFilm = async () => {
 			try {
 				let apiUrl = "/../api/films";
 				if (id !== null) {
@@ -36,6 +64,9 @@ const Navbar = () => {
 				console.error("Erreur lors de la récupération des films", error);
 				setFilms([]);
 			}
+            
+            fetchData();
+            fetchFilm();
 		};
 		fetchData();
 	}, [id, searchTerm]);
