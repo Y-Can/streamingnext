@@ -50,8 +50,7 @@ const handleSearchTermChange = (newSearchTerm) => {
     <html lang="fr">
       <body className={inter.className}>
       <Navbar
-					searchTerm={searchTerm}
-					onSearchTermChange={handleSearchTermChange}
+
 				/>        {children}
         <Footer />
       </body>
