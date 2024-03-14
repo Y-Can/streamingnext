@@ -8,11 +8,11 @@ import styles from "../../styles/filmdetail.module.css";
 const FilmDetail = ({ id }) => {
 
 	const [film, setFilm] = useState(null);
-	useEffect((id) => {
+	useEffect(() => {
 		const fetchData = async () => {
-			console.log(id);
+			console.log(id); // Accès direct à `id` qui est une prop du composant
 			try {
-				console.log(id,'second');
+				console.log(id, 'second');
 				let apiUrl = `./../api/films/?id=${encodeURIComponent(id)}`;
 				const response = await axios.get(apiUrl);
 				const filmData = response.data;
@@ -22,10 +22,12 @@ const FilmDetail = ({ id }) => {
 				console.error("Erreur lors de la requête API", error);
 			}
 		};
+	
 		if (id) {
 			fetchData();
 		}
-	}, [id]);
+	}, [filmData]); 
+	
 	return (
 		<div className={styles.container_col}>
 			
@@ -36,14 +38,14 @@ const FilmDetail = ({ id }) => {
 						
 						<div className={styles.titre}>
 							
-							<h1 className={styles.title}>{film?.titre}</h1>
+							<h1 className={styles.title}>{filmData?.titre}</h1>
 						</div>
 						<div className={styles.containermax}>
 							
 							<div className={styles.containerRow}>
 								
-								<img src={film?.image} className={styles.img} alt="" />
-								<p className={styles.p}>{film?.description}</p>
+								<img src={filmData?.image} className={styles.img} alt="" />
+								<p className={styles.p}>{filmData?.description}</p>
 							</div>
 						</div>
 					</div>
