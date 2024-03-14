@@ -75,9 +75,7 @@ const Navbar = () => {
         boxClassSubMenu.push('');
     }
 
-	const handleSearchTermChange = (newSearchTerm) => {
-		setSearchTerm(newSearchTerm);
-	};
+
 
     const handleLogout = () => {
         localStorage.removeItem("token");
@@ -94,6 +92,7 @@ const Navbar = () => {
         } catch (error) {
             console.error("Error fetching search results", error);
         }
+        router.refresh()
     };
 
     return (

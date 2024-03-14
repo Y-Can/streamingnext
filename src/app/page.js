@@ -56,7 +56,6 @@ const Home = () => {
 			};
 		fetchFilm()
 		fetchData();
-		router.refresh()
 	}, [id, searchTerm]);
 	const handleSearchTermChange = (newSearchTerm) => {
 		setSearchTerm(newSearchTerm);
