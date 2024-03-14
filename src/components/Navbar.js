@@ -8,8 +8,11 @@ import loupe from "/public/loupe.svg";
 import axios from "axios";
 import { FiAlignRight, FiXCircle, FiChevronDown } from "react-icons/fi";
 import User from '../models/user';
+import { useSearchParams } from 'next/navigation'
+
 
 const Navbar = () => {
+    const searchParams = useSearchParams()
     const id = searchParams.get("id");
 	const searchTerm = searchParams.get("search");
     const router = useRouter();
@@ -20,7 +23,7 @@ const Navbar = () => {
 	useEffect(() => {
 		const fetchData = async () => {
 			try {
-				let apiUrl = "./api/films";
+				let apiUrl = "/../api/films";
 				if (id !== null) {
 					apiUrl += `?id=${encodeURIComponent(id)}`;
 				} else if (searchTerm !== null) {
