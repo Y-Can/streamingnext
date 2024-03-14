@@ -10,8 +10,10 @@ import { FiAlignRight, FiXCircle, FiChevronDown } from "react-icons/fi";
 import User from '../models/user';
 
 const Navbar = () => {
+    const id = searchParams.get("id");
+	const searchTerm = searchParams.get("search");
     const router = useRouter();
-    const [search, setSearch] = useState("");
+    // const [search, setSearch] = useState("");
     const [user, setUser] = useState(null);
     const [isOpen, setIsOpen] = useState(false);
 
