@@ -8,7 +8,7 @@ import styles from "../../styles/filmdetail.module.css";
 const FilmDetail = ({ id }) => {
 
 	const [film, setFilm] = useState(null);
-	useEffect(() => {
+	useEffect((id) => {
 		const fetchData = async () => {
 			try {
 				let apiUrl = `./../api/films/?id=${encodeURIComponent(id)}`;
