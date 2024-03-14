@@ -45,32 +45,89 @@ const Navbar = () => {
 
     return (
         <nav className="navbar">
-            {/* Contenu de la Navbar, y compris les liens de navigation, le logo, etc. */}
-            <form onSubmit={handleSearch}>
-                <input
-                    type="text"
-                    placeholder="Recherche..."
-                    value={search}
-                    onChange={(e) => setSearch(e.target.value)}
-                />
-                <button type="submit">
-                    <Image src={loupe} alt="Search" />
-                </button>
-            </form>
-            {user ? (
-                <>
-                    {/* Liens utilisateurs connectés */}
-                    <Link href="/dashboard">Tableau de bord</Link>
-                    {user.type === "ADMIN" && <Link href="/add_film">Ajouter un film</Link>}
-                    <button onClick={handleLogout}>Déconnexion</button>
-                </>
-            ) : (
-                <>
-                    {/* Liens utilisateurs non connectés */}
-                    <Link href="/login">Connexion</Link>
-                    <Link href="/register">Inscription</Link>
-                </>
-            )}
+
+                {user ? (
+                    
+                    <header className="header__middle">
+                    <div className="container">
+                        <div className="row">
+            
+                            {/* Add Logo  */}
+                            <div className="header__middle__logo">
+                                <Link href="/" exact activeClassName='is-active' to="/">
+                                </Link>
+                            </div>
+
+                            
+                            <div className="header__middle__menus">
+                                <nav className="main-nav " >
+            
+                                {/* Responsive Menu Button */}
+                                {isResponsiveclose === true ? <> 
+                                    <span className="menubar__button" style={{ display: 'none' }} onClick={toggleClass} >
+                                         <FiXCircle /> 
+                                           </span>
+                                </> : <> 
+                                    <span className="menubar__button" style={{ display: 'none' }} onClick={toggleClass} >
+                                         <FiAlignRight />  
+                                          </span>
+                                </>}
+            
+            
+                                <ul className={boxClass.join(' ')}>
+                                <li  className="menu-item" >
+                                    <Link href="/" exact activeClassName='is-active' onClick={toggleClass} to={`/`}> Home </Link> 
+                                </li>
+                                                            {/* SEARCHBAR */}
+
+                                <li className="menu-item " ><Link href="/" onClick={toggleClass} activeClassName='is-active' to={`/About`}> About </Link> </li>
+                                <li onClick={toggleSubmenu} className="menu-item sub__menus__arrows" > <Link href="/" to="#"> Profil  </Link>
+                                    <ul className={boxClassSubMenu.join(' ')} > 
+                                        <li> <Link href="/dashboard" onClick={toggleClass} activeClassName='is-active'  to={`/Online`}> Tableau de bord </Link> </li>
+                                        {user && user.type === "ADMIN" && (
+                                            <li>
+                                            <Link href="/add_film">
+                                                <a onClick={toggleClass}>Add film</a>
+                                            </Link>
+                                            </li>
+                                        )}                           
+                                    </ul>
+                                </li>
+                                <li className="menu-item " ><Link href="/" onClick={toggleClass} activeClassName='is-active' to={`/Contact`}> Contact </Link> </li>
+                                <li className="menu-item " >
+                                <form className="formwidth" onSubmit={handleSearch}>
+                                    <div className="search">
+                                    <input
+                                        type="text"
+                                        className="searchTerm"
+                                        placeholder="What are you looking for?"
+                                        value={search}
+                                        onChange={(e) => setSearchTerm(e.target.value)}
+                                    />
+                                    <button type="submit" className="searchButton">
+                                        <Image className="loupe" src={loupe} alt="Loupe" />
+                                    </button>
+                                    </div>
+                                </form>
+                            </li>
+                                </ul>
+            
+            
+                                </nav>     
+                            </div>   
+            
+            
+            
+                    
+                    
+                        </div>
+                    </div>
+                </header>
+                ) : (
+                    <div>
+                        <Link href="/login">Se Connecter</Link>
+                    </div>
+                )}
         </nav>
     );
 };
