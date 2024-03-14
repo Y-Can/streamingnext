@@ -93,6 +93,7 @@ const Navbar = () => {
             console.error("Error fetching search results", error);
         }
         router.replace(`/?search=${encodeURIComponent(search)}`)
+        console.log('cette fonction est appelé');
     };
 
     return (
