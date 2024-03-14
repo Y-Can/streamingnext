@@ -88,7 +88,8 @@ const Navbar = () => {
             const res = await axios.get(`/api/films?search=${encodeURIComponent(search)}`);
                 const data = res.data;
                 console.log(data);
-             router.push(`/?search=${encodeURIComponent(search)} `, undefined, { shallow: true });
+             router.push(`/?search=${encodeURIComponent(search)}`);
+             window.location.href = `/?search=$${encodeURIComponent(search)}`
         } catch (error) {
             console.error("Error fetching search results", error);
         }
