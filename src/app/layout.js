@@ -3,7 +3,7 @@
 "use client"
 import { Inter } from "next/font/google";
 import "./globals.css";
-import React, { useEffect, useState } from "react";
+// import React, { useEffect, useState } from "react";
 import { useSearchParams } from "next/navigation";
 import axios from "axios";
 import Footer from "../components/Footer";
