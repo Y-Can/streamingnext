@@ -47,7 +47,7 @@ const FilmDetail = ({ params }) => {
 								
 								<img src={film?.image} className={styles.img} alt="" />
 								<div className={styles.container_col}>
-									<iframe width="560" height="315"  src="https://www.youtube.com/watch?v=VaOijhK3CRU" frameborder="0"></iframe>
+									<iframe width="560" height="315"  src="https://www.dailymotion.com/video/x3azt1f" frameborder="0"></iframe>
 								<p className={styles.p}>{film?.description}</p>
 								</div>
 							</div>
