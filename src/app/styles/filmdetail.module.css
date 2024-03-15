@@ -41,6 +41,12 @@
     max-width: 550px;
     white-space: wrap;margin-top: auto;
 }
+.video{
+    max-width: 1000px;
+    max-height: 600px;
+    min-width: 100%;
+    min-height: 100%;
+}
 .containermax{
     display: flex;
     justify-content: center;

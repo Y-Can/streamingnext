@@ -47,7 +47,7 @@ const FilmDetail = ({ params }) => {
 								<img src={film?.image} className={styles.img} alt="" />
 								<div className={styles.containerCol}>
 								<div className={styles.videoContainer}>
-									<video width={1000} height={600} className={styles.videoPlayer} controls>
+									<video  className={styles.video} controls>
 										<source src="/inter.mp4" type="video/mp4" />
 										Votre navigateur ne prend pas en charge la balise vidéo.
 									</video>
