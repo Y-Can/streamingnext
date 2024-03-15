@@ -4,7 +4,7 @@
     align-items: left;
     justify-content: center;
     min-height: 130vh;
-    margin-top: 0vh;
+    margin-top: 0;
 }
 .block{
     display: flex;
