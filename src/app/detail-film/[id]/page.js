@@ -46,7 +46,7 @@ const FilmDetail = ({ params }) => {
 							<div className={styles.containerRow}>
 								
 								<img src={film?.image} className={styles.img} alt="" />
-								<div className={styles.container_col}>
+								<div className={styles.containerCol}>
 								<div className={styles.videoContainer}>
 									<video width={500} height={300} className={styles.videoPlayer} controls>
 										<source src="/inter.mp4" type="video/mp4" />
