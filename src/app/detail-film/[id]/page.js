@@ -1,32 +1,30 @@
-"use client"
-import React, {
-	useEffect,
-	useState,
-} from "react";
+"use client";
+import React, { useEffect, useState } from "react";
 import axios from "axios";
 import styles from "../../styles/filmdetail.module.css";
-const FilmDetail = ({ id }) => {
 
-	const [film, setFilm] = useState(null);
-	useEffect(() => {
-		const fetchData = async () => {
-			console.log(id); 
-			try {
-				console.log(id, 'second');
-				let apiUrl = `./../api/films/?id=${encodeURIComponent(id)}`;
-				const response = await axios.get(apiUrl);
-				const filmData = response.data;
-				setFilm(filmData.films[0]);
-				console.log(filmData);
-			} catch (error) {
-				console.error("Erreur lors de la requête API", error);
-			}
-		};
-	
-		if (id) {
-			fetchData();
-		}
-	}, [film]); 
+const FilmDetail = ({ id }) => {
+  const [film, setFilm] = useState(null);
+
+  useEffect(() => {
+    const fetchData = async () => {
+      if (id) {
+        try {
+          console.log(id, 'second');
+          let apiUrl = `/api/films/?id=${encodeURIComponent(id)}`; // Ajustez selon la structure de votre projet
+          const response = await axios.get(apiUrl);
+          const filmData = response.data;
+          setFilm(filmData.films[0]); // Assurez-vous que cela correspond à la structure de la réponse de votre API
+          console.log(filmData);
+        } catch (error) {
+          console.error("Erreur lors de la requête API", error);
+        }
+      }
+    };
+
+    fetchData();
+  }, [id]); 
+
 	
 	return (
 		<div className={styles.container_col}>
@@ -57,5 +55,6 @@ const FilmDetail = ({ id }) => {
 FilmDetail.getInitialProps = async (context) => {
 	const { query } = context;
 	return { id: query.id || "" };
-};
+  };
+  
 export default FilmDetail;
