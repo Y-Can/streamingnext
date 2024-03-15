@@ -48,11 +48,12 @@ const FilmDetail = ({ params }) => {
 								<img src={film?.image} className={styles.img} alt="" />
 								<div className={styles.container_col}>
 								<div className={styles.videoContainer}>
-      <video className={styles.videoPlayer} controls>
-        <source src="/inter.mp4" type="video/mp4" />
-        Votre navigateur ne prend pas en charge la balise vidéo.
-      </video>
-    </div>								<p className={styles.p}>{film?.description}</p>
+									<video width={500} height={300} className={styles.videoPlayer} controls>
+										<source src="/inter.mp4" type="video/mp4" />
+										Votre navigateur ne prend pas en charge la balise vidéo.
+									</video>
+									</div>								
+								<p className={styles.p}>{film?.description}</p>
 								</div>
 							</div>
 						</div>
