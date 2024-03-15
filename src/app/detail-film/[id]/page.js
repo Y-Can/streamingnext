@@ -3,7 +3,8 @@ import React, { useEffect, useState } from "react";
 import axios from "axios";
 import styles from "../../styles/filmdetail.module.css";
 
-const FilmDetail = ({ id }) => {
+const FilmDetail = ({ params }) => {
+	console.log(params.id);
   const [film, setFilm] = useState(null);
 
   useEffect(() => {
@@ -11,10 +12,10 @@ const FilmDetail = ({ id }) => {
       if (id) {
         try {
           console.log(id, 'second');
-          let apiUrl = `/api/films/?id=${encodeURIComponent(id)}`; // Ajustez selon la structure de votre projet
+          let apiUrl = `/api/films/?id=${encodeURIComponent(id)}`; 
           const response = await axios.get(apiUrl);
           const filmData = response.data;
-          setFilm(filmData.films[0]); // Assurez-vous que cela correspond à la structure de la réponse de votre API
+          setFilm(filmData.films[0]); 
           console.log(filmData);
         } catch (error) {
           console.error("Erreur lors de la requête API", error);
