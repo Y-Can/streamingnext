@@ -4,7 +4,7 @@ import axios from "axios";
 import styles from "../../styles/filmdetail.module.css";
 
 const FilmDetail = ({ params }) => {
-	console.log(params.id);
+	console.log(params);
   const [film, setFilm] = useState(null);
 
   useEffect(() => {
