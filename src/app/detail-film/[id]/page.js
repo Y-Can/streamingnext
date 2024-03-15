@@ -4,10 +4,12 @@ import axios from "axios";
 import styles from "../../styles/filmdetail.module.css";
 
 const FilmDetail = ({ params }) => {
-	console.log(params);
+	console.log(params.id);
+	
   const [film, setFilm] = useState(null);
 
   useEffect(() => {
+	const id = params.id;
     const fetchData = async () => {
       if (id) {
         try {
