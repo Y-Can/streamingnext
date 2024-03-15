@@ -41,7 +41,6 @@ const FilmDetail = ({ params }) => {
 							
 							<h1 className={styles.title}>{film?.titre}</h1>
 						</div>
-						<div className={styles.containermax}>
 							
 							<div className={styles.containerRow}>
 								
@@ -56,7 +55,6 @@ const FilmDetail = ({ params }) => {
 								<p className={styles.p}>{film?.description}</p>
 								</div>
 							</div>
-						</div>
 					</div>
 			
 		 
