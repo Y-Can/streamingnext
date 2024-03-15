@@ -204,7 +204,7 @@ p {
   max-height: 100%;
 }
 .lihovered {
-  transform: scale(1.1);
+  transform: scale(2s, 1.1);
   min-height: 520px;
   /* Hauteur suffisamment grande pour afficher toute la description */
   overflow: auto;
