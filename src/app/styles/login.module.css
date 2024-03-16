@@ -78,3 +78,25 @@
 .button:hover {
   background-color: #007bb5;
 }
+
+
+@media (max-width: 768px) {
+  .container {
+    padding-top: 5%;
+    min-width: 100%;
+  }
+
+  .login-container,
+  .signup-container {
+    margin-top: 100px;
+    width: 90%;
+  }
+
+  .input {
+    width: 90%;
+  }
+
+  .btn button {
+    width: 100%;
+  }
+}
