@@ -1,7 +1,7 @@
 "use client"
 import React, { useState } from 'react';
 import axios from 'axios';
-import styles from '../styles/notation.module.css';
+import styles from '../../styles/notation.module.css';
 
 const VotingComponent = ({params}) => {
   const [loading, setLoading] = useState(false);
