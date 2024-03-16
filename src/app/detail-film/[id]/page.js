@@ -46,10 +46,7 @@ const FilmDetail = ({ params }) => {
 								
 								<img src={film?.image} className={styles.img} alt="" />
 								<div className={styles.containerCol}>
-									<video  className={styles.video} controls>
-										<source src={film?.url} type="video/mp4" />
-										Votre navigateur ne prend pas en charge la balise vidéo.
-									</video>
+								<div style="padding:41.86% 0 0 0;position:relative;"><iframe src="https://player.vimeo.com/video/924121008?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479" frameborder="0" allow="autoplay; fullscreen; picture-in-picture; clipboard-write" style="position:absolute;top:0;left:0;width:100%;height:100%;" title="@VoirSerieFilm Snowden (2016)"></iframe></div><script src="https://player.vimeo.com/api/player.js"></script>
 							
 								<p className={styles.p}>{film?.description}</p>
 								</div>
