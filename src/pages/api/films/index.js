@@ -31,6 +31,7 @@ export default async function handler(req, res) {
 				image: film.image,
 				titre: film.titre,
 				description: film.description,
+				url:film.url,
 				user_id: film.user_id,
 			}));
 			res.status(200).json({ films: filmList });
