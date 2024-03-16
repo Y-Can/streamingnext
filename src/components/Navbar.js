@@ -31,6 +31,8 @@ const Navbar = () => {
                             if(response.data){
                                 try {
                                     const user = new User(response.data);
+                                    const userString = JSON.stringify(user);
+                                    sessionStorage.setItem('user', userString);
                                     setUser(user);
                                 } catch (error) {
                                     console.error("Erreur lors de la création de l'instance User :", error);
