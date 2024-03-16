@@ -46,10 +46,7 @@ const FilmDetail = ({ params }) => {
 								
 								<img src={film?.image} className={styles.img} alt="" />
 								<div className={styles.containerCol}>
-									<video  className={styles.video} controls>
-										<source src={"https://vidmoly.me/w/ybb53306o1kr"} type="video/mp4" />
-										Votre navigateur ne prend pas en charge la balise vidéo.
-									</video>
+								<iframe src="//vidmoly.to/embed-ybb53306o1kr.html" scrolling="no" frameborder="0" width="640" height="360" allowfullscreen="true" webkitallowfullscreen="true" mozallowfullscreen="true"></iframe>
 							
 								<p className={styles.p}>{film?.description}</p>
 								</div>
