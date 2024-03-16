@@ -1,7 +1,7 @@
 "use client"
 import React, { useState } from 'react';
 import axios from 'axios';
-import '../styles/notation.module.css';
+import styles from '../styles/notation.module.css';
 
 const VotingComponent = ({params}) => {
   const [loading, setLoading] = useState(false);
@@ -37,7 +37,7 @@ const user = userString ? JSON.parse(userString) : null;
     
     <div>
       {/* Interface utilisateur pour le vote */}
-      <div className="star-rating">
+      <div className={styles["star-rating"]}>
       {[...Array(5)].map((star, index) => {
         index += 1;
         return (
@@ -49,7 +49,7 @@ const user = userString ? JSON.parse(userString) : null;
             onMouseEnter={() => setHover(index)}
             onMouseLeave={() => setHover(rating)}
           >
-            <span className="star">&#9733;</span>
+            <span className={styles["star"]}>&#9733;</span>
           </button>
         );
       })}
