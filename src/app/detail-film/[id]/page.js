@@ -56,7 +56,7 @@ const FilmDetail = ({ params }) => {
 													Noter le film 
 												</button>
 											</Link>
-										<div className={styles.container_col}>
+										<div className={styles.container_col_min}>
 												<div>{votes}</div>
 												<div className={styles["star-rating"]}>
 													
