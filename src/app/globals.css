@@ -225,6 +225,7 @@ p {
 }
 .phover {
   position: relative;
+  margin-top: 15px;
   height: 150px; /* Hauteur fixe pour le paragraphe au survol */
 }
 
@@ -234,6 +235,7 @@ p {
   bottom: 0;
   left: 0;
   width: 100%;
+  margin-top: 15px;
   height: 20px; /* Hauteur du dégradé simulant l'ellipsis */
   background: linear-gradient(to bottom, rgba(0, 0, 0, 0), black); /* Adaptez les couleurs à votre design */
 }
