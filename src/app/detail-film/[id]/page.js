@@ -49,7 +49,7 @@ const FilmDetail = ({ params }) => {
 							
 							<div className={styles.containerRow}>
 								
-								<div className={styles.container_col}>
+								<div className={styles.card}>
 									<div className={styles.row}>
 										<Link className={styles.btn} href={`/notation/${film?.id}`}>
 												<button className="unlink maxwidth" type="button">
