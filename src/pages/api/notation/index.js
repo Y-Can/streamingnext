@@ -30,7 +30,7 @@ async function handleGetRequest(req, res) {
     const totalNotation = votes.rows.reduce((acc, currentVote) => acc + currentVote.notation, 0);
     console.log(`La somme totale des notations pour le film ${id} est : ${totalNotation}`);
 
-    res.status(200).json(votes.rows);
+    res.status(200).json(totalNotation);
   } catch (error) {
     res.status(500).json({ message: 'Erreur du serveur', error: error.message });
   }
