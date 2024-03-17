@@ -218,8 +218,8 @@ p {
   text-overflow: auto;
   white-space: wrap;
   transition: max-height 0.3s ease-in-out;
-  max-height: 200px;
-  
+  max-height: 150px;
+  text-overflow: ellipsis;
 }
 .p{
   white-space: wrap;         
