@@ -74,6 +74,7 @@
     width: 100px;
   }
   .unlink {
+    background-color: black;
     color: white;
     text-decoration: none;
   }
