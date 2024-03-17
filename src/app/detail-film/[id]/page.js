@@ -45,7 +45,7 @@ const FilmDetail = ({ params }) => {
 							<div className={styles.containerRow}>
 								
 								<img src={film?.image} className={styles.img} alt="" />
-								<a href="https://uqload.to/5gpwdhlx14ja.html" target={_blank}><img src="https://en8.uqload.to/i/01/02383/5gpwdhlx14ja_t.jpg" />@VoirSerieFilm See You Yesterday (2019)</a>[664x384, 01:27:12]
+								<a href="https://uqload.to/5gpwdhlx14ja.html" ><img src="https://en8.uqload.to/i/01/02383/5gpwdhlx14ja_t.jpg" />@VoirSerieFilm See You Yesterday (2019)</a>[664x384, 01:27:12]
 								<div className={styles.containerCol}>
 									
 									{/* <video  className={styles.video} controls>
