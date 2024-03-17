@@ -81,6 +81,7 @@ const Navbar = () => {
 
     const handleLogout = () => {
         localStorage.removeItem("token");
+        sessionStorage.removeItem(user);
         setUser(null);
         router.push("/");
     };
@@ -136,6 +137,7 @@ const Navbar = () => {
                                 <li onClick={toggleSubmenu} className="menu-item sub__menus__arrows" > <Link href="/" to="#"> Profil  </Link>
                                     <ul className={boxClassSubMenu.join(' ')} > 
                                         <li> <Link href="/dashboard" onClick={toggleClass} activeClassName='is-active'  to={`/Online`}> Tableau de bord </Link> </li>
+                                        <li> <Link href="/" onClick={handleLogout} activeClassName='is-active'  to={`/Offline`}> Tableau de bord </Link> </li>
                                         {user && user.type === "ADMIN" && (
                                             <li>
                                             <Link href="/add_film">
