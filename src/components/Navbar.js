@@ -133,8 +133,6 @@ const Navbar = () => {
                                     <Link href="/" exact activeClassName='is-active' onClick={toggleClass} to={`/`}> Home </Link> 
                                 </li>
                                                             {/* SEARCHBAR */}
-
-                                <li className="menu-item " ><Link href="/" onClick={toggleClass} activeClassName='is-active' to={`/About`}> About </Link> </li>
                                 <li onClick={toggleSubmenu} className="menu-item sub__menus__arrows" > <Link href="/" to="#"> Profil  </Link>
                                     <ul className={boxClassSubMenu.join(' ')} > 
                                         <li> <Link href="/dashboard" onClick={toggleClass} activeClassName='is-active'  to={`/Online`}> Tableau de bord </Link> </li>
