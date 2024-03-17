@@ -19,17 +19,22 @@ const FilmDetail = ({ params }) => {
           let apiUrl = `/api/films/?id=${encodeURIComponent(id)}`; 
           const response = await axios.get(apiUrl);
           const filmData = response.data;
-		  const responseVotes = await axios.get(`/api/notation/?id=${encodeURIComponent(id)}`);
-		  const votes = responseVotes.data;
-		  setVotes(votes)
+
           setFilm(filmData.films[0]);
-          console.log(responseVotes);
         } catch (error) {
           console.error("Erreur lors de la requête API", error);
         }
+		// Requete votes
+		const fetchNote = async () => {
+			if(id){
+				const responseVotes = await axios.get(`/api/notation/?id=${encodeURIComponent(id)}`);
+				const votes = responseVotes.data;
+				setVotes(votes)
+			}
+		}
       }
     };
-
+	fetchNote();
     fetchData();
   }, []); 
 
