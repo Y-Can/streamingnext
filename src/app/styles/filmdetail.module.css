@@ -73,7 +73,12 @@
 .btn {
     width: 100px;
   }
-  .unlink.maxwidth {
+  .unlink{
+    background-color: #086c67;
+    color: white;
+    text-decoration: none;
+  }
+  .maxwidth {
     background-color: #086c67;
     color: white;
     text-decoration: none;
