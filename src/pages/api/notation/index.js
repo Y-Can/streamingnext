@@ -20,10 +20,10 @@ export default async function handler(req, res) {
 }
 
   if (req.method === "GET") {
-    
+    const { id } = req.body;
       try {
         // Remplacez la requête suivante par la requête appropriée à votre base de données
-        const votes = await pool.query('SELECT * FROM votes WHERE film_id = $1', [filmId]);
+        const votes = await pool.query('SELECT * FROM votes WHERE film_id = $1', [id]);
         
         const totalNotation = votes.reduce((acc, currentVote) => acc + currentVote.notation, 0);
         console.log(`La somme totale des notations pour le film ${filmId} est : ${totalNotation}`);
