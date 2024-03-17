@@ -27,10 +27,12 @@ async function handleGetRequest(req, res) {
       return res.status(404).json({ message: 'Aucun vote trouvé pour cet ID de film.' });
     }
 
-    const totalNotation = votes.rows.reduce((acc, currentVote) => acc + currentVote.notation, 0);
-    console.log(`La somme totale des notations pour le film ${id} est : ${totalNotation}`);
+const totalNotation = votes.rows.reduce((acc, currentVote) => acc + currentVote.notation, 0);
+// Calculez la moyenne des notations
+const moyenneNotation = votes.rows.length > 0 ? totalNotation / votes.rows.length : 0;
+console.log(`La moyenne des notations pour le film ${id} est : ${moyenneNotation.toFixed(1)}`);
 
-    res.status(200).json(totalNotation);
+    res.status(200).json(moyenneNotation.toFixed(1));
   } catch (error) {
     res.status(500).json({ message: 'Erreur du serveur', error: error.message });
   }
