@@ -46,11 +46,11 @@ const FilmDetail = ({ params }) => {
 								
 								<img src={film?.image} className={styles.img} alt="" />
 								<div className={styles.containerCol}>
-									
-									<video  className={styles.video} controls>
+								<iframe   src="https://uqload.to/embed-5gpwdhlx14ja.html"   frameBorder="0"   marginWidth="0"   marginHeight="0"   scrolling="no"   width="640"   height="360"   allowFullScreen ></iframe>
+									{/* <video  className={styles.video} controls>
 										<source src="/inter.mp4" type="video/mp4" />
 										Votre navigateur ne prend pas en charge la balise vidéo.
-									</video>
+									</video> */}
 							
 								<p className={styles.p}>{film?.description}</p>
 								</div>
