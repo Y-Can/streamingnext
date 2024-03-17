@@ -3,6 +3,9 @@
     min-height: 100vh;
     min-width: 100vh;
     padding-top: 10%;
+    display: flex;
+    justify-content: center;
+    
   }
   
   .login-container,

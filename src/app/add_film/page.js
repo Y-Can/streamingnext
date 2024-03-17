@@ -52,7 +52,7 @@ const NouvellePage = () => {
     };
 
     return (
-        <div className={styles.container_row}>
+        <div className={styles.container}>
             <div className={styles.form}>
                 <h1>Ajout de film</h1>
                 <form className={styles.form} onSubmit={handleFormSubmit} encType="multipart/form-data">
