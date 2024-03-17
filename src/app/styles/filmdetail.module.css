@@ -40,6 +40,11 @@
     flex-direction: row;
     justify-content: space-evenly;
 }
+.row{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
 
 .p{
     min-height: 100px;
