@@ -2,6 +2,7 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
 import styles from "../../styles/filmdetail.module.css";
+import Link from 'next/link';
 
 const FilmDetail = ({ params }) => {
 	console.log(params.id);
