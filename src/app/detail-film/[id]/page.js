@@ -44,7 +44,15 @@ const FilmDetail = ({ params }) => {
 							
 							<div className={styles.containerRow}>
 								
+								<div className={styles.containerCol}>
+								<Link className={styles.btn} href="/notation">
+										<button className="unlink maxwidth" type="button">
+											Noter le film 
+										</button>
+									</Link>
 								<img src={film?.image} className={styles.img} alt="" />
+								</div>
+								
 								<div className={styles.containerCol}>
 									<video  className={styles.video} controls>
 										<source src="/inter.mp4" type="video/mp4" />

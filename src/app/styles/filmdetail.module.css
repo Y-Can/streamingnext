@@ -52,6 +52,13 @@
     min-width: 100vw;
     min-height: 100vh;
 }
+.btn {
+    width: 100px;
+  }
+  .unlink {
+    color: white;
+    text-decoration: none;
+  }
 @media (max-width: 768px) {
     .container_col, .containerRow {
       flex-direction: column;
