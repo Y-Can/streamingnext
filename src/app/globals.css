@@ -213,7 +213,7 @@ p {
 }
 .phover {
   position: relative;
-  max-height: 150px; /* Hauteur fixe pour le paragraphe au survol */
+  height: 150px; /* Hauteur fixe pour le paragraphe au survol */
 }
 
 .phover::after {
