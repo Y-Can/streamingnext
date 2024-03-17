@@ -48,11 +48,28 @@ const FilmDetail = ({ params }) => {
 							<div className={styles.containerRow}>
 								
 								<div className={styles.containerCol}>
-								<Link className={styles.btn} href={`/notation/${film?.id}`}>
-										<button className="unlink maxwidth" type="button">
-											Noter le film 
-										</button>
-									</Link>
+									<div className={styles.containerRow}>
+										<Link className={styles.btn} href={`/notation/${film?.id}`}>
+												<button className="unlink maxwidth" type="button">
+													Noter le film 
+												</button>
+											</Link>
+										<div className={styles.containerCol}>
+												<div>{votes}</div>
+												<div className={styles["star-rating"]}>
+													
+												<div className={styles.containerCol}>	
+												<button
+													type="button"
+													className={styles["star-button"]}
+													>
+													<span className={styles["star-on"]}>&#9733;</span>
+												</button>
+												</div>
+											</div>
+										</div>
+									</div>
+									
 								<img src={film?.image} className={styles.img} alt="" />
 								</div>
 								
