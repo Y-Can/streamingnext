@@ -21,7 +21,7 @@ const FilmDetail = ({ params }) => {
 		  const responseVotes = await axios.get(`/api/notation/?id=${encodeURIComponent(id)}`);
 		  const votes = responseVotes.data;
           setFilm(filmData.films[0]);
-          console.log(filmData, 'votes', votes);
+          console.log(responseVotes);
         } catch (error) {
           console.error("Erreur lors de la requête API", error);
         }
