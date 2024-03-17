@@ -26,7 +26,7 @@ export default async function handler(req, res) {
         const votes = await pool.query('SELECT * FROM votes WHERE film_id = $1', [id]);
         
         const totalNotation = votes.reduce((acc, currentVote) => acc + currentVote.notation, 0);
-        console.log(`La somme totale des notations pour le film ${filmId} est : ${totalNotation}`);
+        console.log(`La somme totale des notations pour le film ${id} est : ${totalNotation}`);
         if (votes.rows.length === 0) {
           return res.status(404).json({ message: 'Aucun vote trouvé pour cet ID de film.' });
         }
