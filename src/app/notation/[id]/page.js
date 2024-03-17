@@ -8,7 +8,7 @@ const VotingComponent = ({ params }) => {
   const [error, setError] = useState(null);
   const [rating, setRating] = useState(0);
   const [hover, setHover] = useState(0);
-
+const filmId = params.id
   const userString = sessionStorage.getItem('user');
   // Convertir la chaîne en objet JavaScript
   const user = userString ? JSON.parse(userString) : null;
@@ -18,7 +18,7 @@ const VotingComponent = ({ params }) => {
     setError(null);
     try {
       const response = await axios.post('/api/notation', {  
-        filmId: params.id,
+        filmId: filmId,
         notation: rating,
         userId: user.id,
       });
