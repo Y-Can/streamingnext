@@ -38,7 +38,7 @@
     min-height: 70vh;
     display: flex;
     flex-direction: row;
-    justify-content: space-evenly;
+    justify-content: space-around;
 }
 .row{
     display: flex;
