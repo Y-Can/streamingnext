@@ -178,6 +178,7 @@ ul {
   background-color: black;
   border: 1px solid #ddd;
   overflow: hidden;
+  overflow-y: hidden;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   transition: transform 0.5s ease-in-out;
   
@@ -200,6 +201,7 @@ p {
   text-overflow: ellipsis;
   white-space: nowrap;
   transition: max-height 0.3s ease-in-out;
+  overflow-y: hidden;
 }
 .maxheight {
   min-height: 100vh;
@@ -212,6 +214,8 @@ p {
   overflow: auto;
   white-space: normal;
   z-index: 999;
+  overflow-y: hidden;
+
 }
 .phover {
   overflow: auto;
