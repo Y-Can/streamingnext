@@ -76,7 +76,7 @@ const FilmDetail = ({ params }) => {
 													type="button"
 													className={styles["star-button"]}
 													>
-													<span className={styles["star-on"]}>&#9733;</span>
+													<span className={votes ? styles["star-on"] : styles["star-off"]}>&#9733;</span>
 												</button>
 												</div>
 											</div>

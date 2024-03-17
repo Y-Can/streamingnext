@@ -94,6 +94,9 @@
     font-size: 25px;
     transition: color 200ms;
   }
+  .star-off {
+    color: gray;
+  }
   
   .star-on {
     color: gold;
