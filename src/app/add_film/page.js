@@ -55,7 +55,7 @@ const NouvellePage = () => {
         <div className={styles.container}>
             <div className={styles.signupContainer}>
                 <h1>Ajout de film</h1>
-                <form onSubmit={handleFormSubmit} encType="multipart/form-data">
+                <form className={styles.signupContainer} onSubmit={handleFormSubmit} encType="multipart/form-data">
                     <div className={styles.form}>
                         <div className={styles.label}>Titre</div>
                         <input
