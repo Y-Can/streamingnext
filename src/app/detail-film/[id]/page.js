@@ -18,7 +18,7 @@ const FilmDetail = ({ params }) => {
           let apiUrl = `/api/films/?id=${encodeURIComponent(id)}`; 
           const response = await axios.get(apiUrl);
           const filmData = response.data;
-		  const responseVotes = await axios.get(`/api/votes/${filmId}`);
+		  const responseVotes = await axios.get(`/api/votes/${id}`);
 		  const votes = responseVotes.data;
           setFilm(filmData.films[0]); 
           console.log(filmData, 'votes', votes);
