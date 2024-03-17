@@ -16,20 +16,19 @@ const VotingComponent = ({ params }) => {
   const submitVote = async () => {
     setLoading(true);
     setError(null);
-console.log(rating);
-    // try {
-    //   const response = await axios.post('/api/notation', {  // Assurez-vous que l'URL est correcte
-    //     filmId: params.id,
-    //     notation: rating,
-    //     userId: user.id,
-    //   });
+    try {
+      const response = await axios.post('/api/notation', {  
+        filmId: params.id,
+        notation: rating,
+        userId: user.id,
+      });
 
-    //   console.log('Vote réussi:', response.data);
-    // } catch (e) {
-    //   setError(e.response ? e.response.data : e.message);
-    // } finally {
-    //   setLoading(false);
-    // }
+      console.log('Vote réussi:', response.data);
+    } catch (e) {
+      setError(e.response ? e.response.data : e.message);
+    } finally {
+      setLoading(false);
+    }
   };
 
   return (
