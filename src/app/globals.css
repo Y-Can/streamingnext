@@ -171,17 +171,7 @@ ul {
 .option:hover{  
    background-color: rgb(101, 97, 97);
    }
-.li {
-  width: 250px;
-  height: 400px;
-  margin: 10px;
-  background-color: black;
-  border: 1px solid #ddd;
-  overflow: hidden;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  transition: transform 0.5s ease-in-out;
-  
-}
+
 
 img {
   margin-top: -5px;
@@ -205,27 +195,42 @@ p {
   min-height: 100vh;
   max-height: 100%;
 }
+.li {
+  width: 250px;
+  height: 400px;
+  margin: 10px;
+  background-color: black;
+  border: 1px solid #ddd;
+  overflow: hidden;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.5s ease-in-out;
+}
+
 .lihovered {
   transform: scale(1.1);
-  min-height: 520px;
-  /* Hauteur suffisamment grande pour afficher toute la description */
-  overflow: auto;
-  white-space: normal;
   z-index: 999;
+  overflow: hidden; /* Masquer le contenu débordant et la barre de défilement */
 }
 .phover {
-  overflow: auto;
-  text-overflow: auto;
-  white-space: wrap;
-  transition: max-height 0.3s ease-in-out;
-  max-height: 150px;
-  text-overflow: ellipsis;
+  position: relative;
+  max-height: 150px; /* Hauteur fixe pour le paragraphe au survol */
 }
-.p{
-  white-space: wrap;         
-  overflow: hidden;              
-  text-overflow: ellipsis;      
-   max-height: 160px;
+
+.phover::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 20px; /* Hauteur du dégradé simulant l'ellipsis */
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0), black); /* Adaptez les couleurs à votre design */
+}
+
+.p {
+  white-space: normal;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-height: 160px; /* Hauteur maximale du paragraphe pour afficher l'ellipsis */
 }
 
 
