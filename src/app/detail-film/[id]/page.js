@@ -49,14 +49,14 @@ const FilmDetail = ({ params }) => {
 							
 							<div className={styles.containerRow}>
 								
-								<div className={styles.containerCol}>
+								<div className={styles.container_col}>
 									<div className={styles.containerRow}>
 										<Link className={styles.btn} href={`/notation/${film?.id}`}>
 												<button className="unlink maxwidth" type="button">
 													Noter le film 
 												</button>
 											</Link>
-										<div className={styles.containerCol}>
+										<div className={styles.container_col}>
 												<div>{votes}</div>
 												<div className={styles["star-rating"]}>
 													
