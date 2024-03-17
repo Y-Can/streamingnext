@@ -219,6 +219,7 @@ p {
 .lihovered {
   transform: scale(1.1);
   z-index: 999;
+  height: 500px;
   overflow: hidden; /* Masquer le contenu débordant et la barre de défilement */
 }
 .phover {
