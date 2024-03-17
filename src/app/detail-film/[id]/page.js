@@ -24,16 +24,22 @@ const FilmDetail = ({ params }) => {
         } catch (error) {
           console.error("Erreur lors de la requête API", error);
         }
-		// Requete votes
-		const fetchNote = async () => {
-			if(id){
-				const responseVotes = await axios.get(`/api/notation/?id=${encodeURIComponent(id)}`);
-				const votes = responseVotes.data;
-				setVotes(votes)
-			}
-		}
+
       }
     };
+			// Requete votes
+			const fetchNote = async () => {
+				if(id){
+					try{
+						const responseVotes = await axios.get(`/api/notation/?id=${encodeURIComponent(id)}`);
+						const votes = responseVotes.data;
+						setVotes(votes)
+					}
+					catch(error){
+					    console.error("Erreur lors de la requête API", error);
+					}
+				}
+			}
 	fetchNote();
     fetchData();
   }, []); 
