@@ -20,6 +20,7 @@ export default async function handler(req, res) {
 }
 
   if (req.method === "GET") {
+    console.log('log de la requete note get',req.body);
     const { id } = req.body;
       try {
         // Remplacez la requête suivante par la requête appropriée à votre base de données
