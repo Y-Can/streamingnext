@@ -184,8 +184,7 @@ h3 {
   font-size: 1.2em;
 } /* Style pour la description au survol */
 p {
-  display: none;
-  margin: 15px 10px 10px;
+  margin: 0 10px 10px;
   font-size: 0.9em;
   overflow: hidden;
   text-overflow: ellipsis;
@@ -206,26 +205,14 @@ p {
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   transition: transform 0.5s ease-in-out;
 }
-.li:hover .p {
-  display: flex;
-
-  justify-content: center;
-  align-items: center;
-  height: 100px;
-  margin-top: 15px;
-  transition: transform 0.5s ease-in-out;
-
-}
 
 .lihovered {
   transform: scale(1.1);
   z-index: 999;
-  height: 500px;
   overflow: hidden; /* Masquer le contenu débordant et la barre de défilement */
 }
 .phover {
   position: relative;
-  margin-top: 15px;
   height: 150px; /* Hauteur fixe pour le paragraphe au survol */
 }
 
@@ -235,7 +222,6 @@ p {
   bottom: 0;
   left: 0;
   width: 100%;
-  margin-top: 15px;
   height: 20px; /* Hauteur du dégradé simulant l'ellipsis */
   background: linear-gradient(to bottom, rgba(0, 0, 0, 0), black); /* Adaptez les couleurs à votre design */
 }
