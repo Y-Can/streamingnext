@@ -1,11 +1,13 @@
 .container_col{
     display: flex;
     flex-direction: column;
-    align-items: left;
+    align-items: center;
     justify-content: center;
-    min-height: 130vh;
-    margin-top: 0;
-    max-width: 100vw;
+}
+.container_row{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
 }
 .block{
     display: flex;
