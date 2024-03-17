@@ -52,10 +52,10 @@ const NouvellePage = () => {
     };
 
     return (
-        <div className={styles.container}>
-            <div className={styles.signupContainer}>
+        <div className={styles.form}>
+            <div className={styles.form}>
                 <h1>Ajout de film</h1>
-                <form className={styles.signupContainer} onSubmit={handleFormSubmit} encType="multipart/form-data">
+                <form className={styles.form} onSubmit={handleFormSubmit} encType="multipart/form-data">
                     <div className={styles.form}>
                         <div className={styles.label}>Titre</div>
                         <input
