@@ -8,6 +8,7 @@ const FilmDetail = ({ params }) => {
 	console.log(params.id);
 	
   const [film, setFilm] = useState(null);
+  const [votes, setVotes] = useState(null);
 
   useEffect(() => {
 	const id = params.id;
@@ -20,6 +21,7 @@ const FilmDetail = ({ params }) => {
           const filmData = response.data;
 		  const responseVotes = await axios.get(`/api/notation/?id=${encodeURIComponent(id)}`);
 		  const votes = responseVotes.data;
+		  setVotes(votes)
           setFilm(filmData.films[0]);
           console.log(responseVotes);
         } catch (error) {
