@@ -1,3 +1,4 @@
+"use client"
 import React, { useState, useEffect } from "react";
 import axios from "axios";
 // Assurez-vous d'importer votre fichier CSS ici pour qu'il soit pris en compte
