@@ -46,7 +46,6 @@ const Card = ({ films, onMouseEnter = null, onMouseLeave = null }) => {
                 key={film.id}
               onMouseEnter={() => handleMouseEnter(film.id)}
               onMouseLeave={handleMouseLeave}
-              className={`li ${hoveredItemId === film.id ? "lihovered" : ""}`}
               id={`li-${film.id}`}
   >
     <Link href={`/detail-film/${film.id}`}>
