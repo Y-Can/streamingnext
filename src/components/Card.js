@@ -40,7 +40,6 @@ const Card = ({ films, onMouseEnter = null, onMouseLeave = null }) => {
             //       </p>
             //   </Link>
             // </li>
-            <div class="content-wrapper">
   
   <div class="news-card"
                 key={film.id}
@@ -62,7 +61,6 @@ const Card = ({ films, onMouseEnter = null, onMouseLeave = null }) => {
     </Link>
   </div>
 
-</div>
           ))}
         </div>
       </div>
