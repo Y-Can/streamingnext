@@ -19,31 +19,30 @@ const Card = ({ films, onMouseEnter = null, onMouseLeave = null }) => {
     }
   };
 
- 
   return (
-    <div className="container">
-      {films.map((film) => (
-        <div
-          key={film.id}
-          className={`card ${hoveredItemId === film.id ? "hovered" : ""}`}
-          onMouseEnter={() => setHoveredItemId(film.id)}
-          onMouseLeave={() => setHoveredItemId(null)}
-        >
-          <div className="card_circle"></div> {/* Cercle décoratif */}
-          <h2>{film.titre}</h2>
-          <p>{film.description}</p>
-          <div className="cta-container">
-            <Link href={`/detail-film/${film.id}`}>
-              <a className="cta">En savoir plus</a>
-            </Link>
-          </div>
-          <Link href={`/detail-film/${film.id}`}>
-            <a>
-              <img src={film.image} alt={film.titre} />
-            </a>
-          </Link>
-        </div>
-      ))}
+    <div className="containerRowUl">
+      <div className="containerCol maxheight">
+        <ul className="containerRowUl">
+          {films.map((film) => (
+            <li
+              key={film.id}
+              onMouseEnter={() => handleMouseEnter(film.id)}
+              onMouseLeave={handleMouseLeave}
+              className={`li ${hoveredItemId === film.id ? "lihovered" : ""}`}
+              id={`li-${film.id}`}
+            >
+              <Link href={`/detail-film/${film.id}`}>
+                {/* Assurez-vous qu'il n'y a qu'un seul élément <a> ici, et pas d'autres éléments <a> imbriqués */}
+                  <img src={film.image} alt={film.titre} />
+                  <h3>{film.titre}</h3>
+                  <p className={`p ${hoveredItemId === film.id ? "phover" : ""}`}>
+                    {film.description}
+                  </p>
+              </Link>
+            </li>
+          ))}
+        </ul>
+      </div>
     </div>
   );
 };
