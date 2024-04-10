@@ -28,16 +28,18 @@ const Card = ({ films, onMouseEnter = null, onMouseLeave = null }) => {
               key={film.id}
               onMouseEnter={() => handleMouseEnter(film.id)}
               onMouseLeave={handleMouseLeave}
-              className={`li ${hoveredItemId === film.id ? "lihovered" : ""}`}
+              className={`card transition`}
               id={`li-${film.id}`}
             >
               <Link href={`/detail-film/${film.id}`}>
                 {/* Assurez-vous qu'il n'y a qu'un seul élément <a> ici, et pas d'autres éléments <a> imbriqués */}
                   <img src={film.image} alt={film.titre} />
-                  <h3>{film.titre}</h3>
-                  <p className={`p ${hoveredItemId === film.id ? "phover" : ""}`}>
+                  <h3 className={'transition'}>{film.titre}</h3>
+                  <p >
                     {film.description}
                   </p>
+                  <div class="cta-container transition"><a href="#" class="cta">Call to action</a></div>
+  <div class="card_circle transition"></div>
               </Link>
             </li>
           ))}
