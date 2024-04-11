@@ -101,9 +101,6 @@ const FilmDetail = ({ params }) => {
 	return (
 		<div className={styles.container_col}>
 			
-
-			
-					
 					<div className={styles.block}>
 							
 							<div className={styles.containerRow}>
@@ -140,14 +137,12 @@ const FilmDetail = ({ params }) => {
 									</div>
 									<video controls
 									  className={`${styles.video} ${isPlaying ? styles.videoPlaying : styles.videoPaused}`}
-
 									>
-										
 										<source src="/inter.mp4" type="video/mp4" />
 									</video>
 									<div className={isPlaying ? "info playing" : "info"}>
-        {isPlaying ? "Playing" : "Paused"}
-      </div>
+										{isPlaying ? "Playing" : "Paused"}
+									</div>
 							</div>
 					</div>
 			
