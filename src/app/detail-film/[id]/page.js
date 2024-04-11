@@ -13,19 +13,23 @@ const FilmDetail = ({ params }) => {
 	const [showControls, setShowControls] = useState(true);
 
 	useEffect(() => {
-		const video = videoContainerRef.current;
-		const handlePlay = () => setIsPlaying(true);
-		const handlePause = () => setIsPlaying(false);
+		// Assurez-vous que l'élément video est monté
+		const video = videoRef.current;
+		if (video) {
+		  const handlePlay = () => setIsPlaying(true);
+		  const handlePause = () => setIsPlaying(false);
 	
-		video.addEventListener('play', handlePlay);
-		video.addEventListener('pause', handlePause);
+		  // Ajout des écouteurs d'événements
+		  video.addEventListener('play', handlePlay);
+		  video.addEventListener('pause', handlePause);
 	
-		return () => {
-		  video.removeEventListener('play', handlePlay);
-		  video.removeEventListener('pause', handlePause);
-		};
+		  // Nettoyage des écouteurs d'événements au démontage
+		  return () => {
+			video.removeEventListener('play', handlePlay);
+			video.removeEventListener('pause', handlePause);
+		  };
+		}
 	  }, []);
-	  
 	
   const [film, setFilm] = useState(null);
   const [votes, setVotes] = useState(null);
