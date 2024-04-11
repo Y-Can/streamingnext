@@ -7,7 +7,11 @@ import { Helmet } from 'react-helmet';
 const VideoPlayer = ({title, videoSrc, description, image}) => {
 
 return (
+    
     <main className={styles.wrapper}>
+        <Helmet>
+        <script src="../js/index.js" crossorigin="anonymous" async></script>
+      </Helmet>
       <div className={styles.player}>
         <div className={styles.playerOverlay} data-fullscreen="false">
           <div className={styles.container}>
@@ -48,9 +52,7 @@ return (
         </div>
         <video className={styles.video} poster={image} src={videoSrc}></video>
       </div>
-      <Helmet>
-        <script src="./js/index.js" crossorigin="anonymous" async></script>
-      </Helmet>
+
     </main>
   );
 };
