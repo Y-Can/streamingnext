@@ -90,7 +90,7 @@ const FilmDetail = ({ params }) => {
 								<div className={styles.containerCol}>
 									<VideoPlayer
 									            title={film?.titre}
-												videoSrc="../../public/inter.mp4"
+												videoSrc="../../../public/inter.mp4"
 												image={film?.image}
 												description={film?.description}
 									/>
