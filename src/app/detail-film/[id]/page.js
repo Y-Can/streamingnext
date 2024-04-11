@@ -105,10 +105,6 @@ const FilmDetail = ({ params }) => {
 			
 					
 					<div className={styles.block}>
-						
-						<div className={styles.titre}>
-							
-						</div>
 							
 							<div className={styles.containerRow}>
 								
