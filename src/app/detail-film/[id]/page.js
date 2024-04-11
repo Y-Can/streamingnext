@@ -165,7 +165,7 @@ const FilmDetail = ({ params }) => {
           <div className={styles.playerContainer}>
             <video
             
-            //  ref={videoRef} 
+              ref={videoRef} 
             className={styles.video} 
             controls src="/inter.mp4" 
             poster={'/icons/posterimitation.webp'}
