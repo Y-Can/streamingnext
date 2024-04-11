@@ -9,6 +9,8 @@ const FilmDetail = ({ params }) => {
 	const [isPlaying, setIsPlaying] = useState(false);
 	const [volume, setVolume] = useState(0.5);
 	const [playbackRate, setPlaybackRate] = useState(1.0);
+	const [film, setFilm] = useState(null);
+	const [votes, setVotes] = useState(null);
 
 	useEffect(() => {
 		if (videoRef.current) {
@@ -37,8 +39,6 @@ const FilmDetail = ({ params }) => {
 		setPlaybackRate(rate);
 	};
 
-	const [film, setFilm] = useState(null);
-
 	useEffect(() => {
 		const fetchData = async () => {
 			if (params.id) {
@@ -51,7 +51,19 @@ const FilmDetail = ({ params }) => {
 			}
 		};
 
+		const fetchNote = async () => {
+			if (params.id) {
+				try {
+					const responseVotes = await axios.get(`/api/notation/?id=${encodeURIComponent(params.id)}`);
+					setVotes(responseVotes.data);
+				} catch (error) {
+					console.error("Erreur lors de la requête API", error);
+				}
+			}
+		};
+
 		fetchData();
+		fetchNote();
 	}, [params.id]);
 
 	return (
@@ -63,7 +75,21 @@ const FilmDetail = ({ params }) => {
 				<div className={styles.containerRow}>
 					<div className={styles.card}>
 						<img src={film?.image} className={styles.img} alt="" />
+						<div className={styles.row}>
+							<Link className={styles.btn} href={`/notation/${film?.id}`}>
+								<a className="unlink maxwidth">Noter le film</a>
+							</Link>
+							<div className={styles.container_col_min}>
+								<div>{votes}</div>
+								<div className={styles["star-rating"]}>
+									<button type="button" className={styles["star-button"]}>
+										<span className={votes ? styles["star-on"] : styles["star-off"]}>&#9733;</span>
+									</button>
+								</div>
+							</div>
+						</div>
 					</div>
+
 					<div className={styles.videoPlayer}>
 						<video ref={videoRef} className={styles.video} controls>
 							<source src={film?.videoUrl} type="video/mp4" />
@@ -75,6 +101,7 @@ const FilmDetail = ({ params }) => {
 							<button onClick={() => changePlaybackRate(1.5)}>1.5x</button>
 							<button onClick={() => changePlaybackRate(2.0)}>2x</button>
 						</div>
+						<p className={styles.p}>{film?.description}</p>
 					</div>
 				</div>
 			</div>
