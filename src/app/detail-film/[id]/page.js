@@ -3,7 +3,7 @@ import React, { useEffect, useState } from "react";
 import axios from "axios";
 import styles from "../../styles/filmdetail.module.css";
 import Link from 'next/link';
-import VideoPlayer from "@/components/Videoplayer";
+import {videoPlay} from "@/components/Videoplayer";
 
 const FilmDetail = ({ params }) => {
 	console.log(params.id);
