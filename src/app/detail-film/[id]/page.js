@@ -18,6 +18,17 @@ const FilmDetail = ({ params }) => {
 			videoRef.current.playbackRate = playbackRate;
 		}
 	}, [volume, playbackRate]);
+	useEffect(() => {
+		const fetchData = async () => {
+			if (params.id) {
+				try {
+					const response = await axios.get(`/api/films/?id=${encodeURIComponent(params.id)}`);
+					setFilm(response.data.films[0]);
+				} catch (error) {
+					console.error("Erreur lors de la requête API", error);
+				}
+			}
+		};
 
 	const togglePlay = () => {
 		if (videoRef.current) {
@@ -39,17 +50,6 @@ const FilmDetail = ({ params }) => {
 		setPlaybackRate(rate);
 	};
 
-	useEffect(() => {
-		const fetchData = async () => {
-			if (params.id) {
-				try {
-					const response = await axios.get(`/api/films/?id=${encodeURIComponent(params.id)}`);
-					setFilm(response.data.films[0]);
-				} catch (error) {
-					console.error("Erreur lors de la requête API", error);
-				}
-			}
-		};
 
 		const fetchNote = async () => {
 			if (params.id) {
