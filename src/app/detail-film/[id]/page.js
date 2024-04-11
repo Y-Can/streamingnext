@@ -54,7 +54,7 @@ const FilmDetail = ({ params }) => {
 					
 					<div className={styles.block}>
 						
-						<div className={styles.titre}>
+						{/* <div className={styles.titre}>
 							
 							<h1 className={styles.title}>{film?.titre}</h1>
 						</div>
@@ -85,7 +85,7 @@ const FilmDetail = ({ params }) => {
 									</div>
 									
 								<img src={film?.image} className={styles.img} alt="" />
-								</div>
+								</div> */}
 								
 								<div className={styles.containerCol}>
 									<VideoPlayer
@@ -98,7 +98,7 @@ const FilmDetail = ({ params }) => {
 								<p className={styles.p}>{film?.description}</p>
 								</div>
 							</div>
-					</div>
+					{/* </div> */}
 			
 		 
 		</div>
