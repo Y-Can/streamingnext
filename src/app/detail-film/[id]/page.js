@@ -87,12 +87,11 @@ const FilmDetail = ({ params }) => {
 						
 						<div className={styles.titre}>
 							
-							<h1 className={styles.title}>{film?.titre}</h1>
 						</div>
 							
 							<div className={styles.containerRow}>
 								
-								<div className={styles.card}>
+								{/* <div className={styles.card}>
 									<div className={styles.row}>
 										<Link className={styles.btn} href={`/notation/${film?.id}`}>
 												<button className="unlink maxwidth" type="button">
@@ -116,14 +115,17 @@ const FilmDetail = ({ params }) => {
 									</div>
 									
 								<img src={film?.image} className={styles.img} alt="" />
-								</div>
+								</div> */}
 								
 								<div className={styles.containerCol}>
+									<div>
+										<h1 className={styles.title}>{film?.titre}</h1>
+										<p className={styles.p}>{film?.description}</p>
+									</div>
 									<video  className={styles.video} controls>
 										<source src="/inter.mp4" type="video/mp4" />
 									</video>
 							
-								<p className={styles.p}>{film?.description}</p>
 								</div>
 							</div>
 					</div>
