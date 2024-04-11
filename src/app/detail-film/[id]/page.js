@@ -8,6 +8,8 @@ const FilmDetail = ({ params }) => {
 	console.log(params.id);
 	const videoContainerRef = useRef(null);
 	const timeoutRef = useRef(null);
+	const [isPlaying, setIsPlaying] = useState(false);
+
 	const [showControls, setShowControls] = useState(true);
 
 	useEffect(() => {
