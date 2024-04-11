@@ -13,7 +13,7 @@ const FilmDetail = ({ params }) => {
 	const [showControls, setShowControls] = useState(true);
 
 	useEffect(() => {
-		const video = videoRef.current;
+		const video = videoContainerRef.current;
 		const handlePlay = () => setIsPlaying(true);
 		const handlePause = () => setIsPlaying(false);
 	
