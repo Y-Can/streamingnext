@@ -10,7 +10,7 @@ return (
       <div className={styles.player}>
         <div className={styles.playerOverlay} data-fullscreen="false">
           <div className={styles.container}>
-            <div className={styles + 'information-container'}>
+            <div className={styles.informationContainer}>
               <h1 className={styles.title}>{titre}</h1>
               <p className={styles.description}>
                 {description}
