@@ -49,7 +49,7 @@ return (
         <video className={styles.video} poster={image} src={videoSrc}></video>
       </div>
       <Helmet>
-        <script src="../js/index.js" crossorigin="anonymous" async></script>
+        <script src="./js/index.js" crossorigin="anonymous" async></script>
       </Helmet>
     </main>
   );
