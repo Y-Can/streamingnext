@@ -1,5 +1,5 @@
 "use client";
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState, useRef  } from "react";
 import axios from "axios";
 import styles from "../../styles/filmdetail.module.css";
 import Link from 'next/link';
