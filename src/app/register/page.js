@@ -34,7 +34,11 @@ const SignupForm = () => {
       });
       localStorage?.setItem("token", response.data.token); 			
       sessionStorage?.setItem("token", response.data.token);
-      push('/');
+      push("/");
+			setTimeout(() => {
+				push("/");
+				window.reload();
+			}, 3000);
     } catch (error) {
       console.error("Erreur lors de l'inscription:", error);
     }
