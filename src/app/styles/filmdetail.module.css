@@ -166,6 +166,10 @@
   .p {
     margin-top: 10px;
   }
+  .containerFixed{
+    position: relative;
+    z-index: 999;
+  }
   
   /* Ajoutez des styles supplémentaires pour les autres éléments si nécessaire */
   

@@ -117,7 +117,7 @@ const FilmDetail = ({ params }) => {
 								<img src={film?.image} className={styles.img} alt="" />
 								</div> */}
 								
-									<div>
+									<div className={styles.containerFixed}>
 										<h1 className={styles.title}>{film?.titre}</h1>
 										<p className={styles.p}>{film?.description}</p>
 									</div>
