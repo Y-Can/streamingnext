@@ -158,7 +158,7 @@ const FilmDetail = ({ params }) => {
       <div className={styles.playerOverlay} data-fullscreen="false">
         <div className={styles.container}>
           <div className={styles.informationContainer}>
-            <h1 className={styles.title}>{title}</h1>
+            <h1 className={styles.title}>{titre}</h1>
             <p className={styles.description}>{description}</p>
           </div>
           <div className={styles.playerContainer}>
