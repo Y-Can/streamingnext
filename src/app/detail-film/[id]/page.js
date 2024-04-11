@@ -22,19 +22,22 @@ const FilmDetail = ({ params }) => {
 	  setShowControls(false);
 	}, 5000); // Cache les contrôles après 5 secondes d'inactivité
   };
+  
   useEffect(() => {
 	const videoContainer = videoContainerRef.current;
+	if (videoContainer) {
+		videoContainer.addEventListener('mousemove', handleActivity);
+		videoContainer.addEventListener('keypress', handleActivity);
+	}
 
-	videoContainer.addEventListener('mousemove', handleActivity);
-	videoContainer.addEventListener('keypress', handleActivity);
-
-	// Réinitialisation du décompte lorsque le composant est démonté pour éviter des effets secondaires.
 	return () => {
-	  clearTimeout(timeoutRef.current);
-	  videoContainer.removeEventListener('mousemove', handleActivity);
-	  videoContainer.removeEventListener('keypress', handleActivity);
+		if (videoContainer) {
+			clearTimeout(timeoutRef.current);
+			videoContainer.removeEventListener('mousemove', handleActivity);
+			videoContainer.removeEventListener('keypress', handleActivity);
+		}
 	};
-  }, [showControls]);
+}, [showControls]);
   
 
   useEffect(() => {
