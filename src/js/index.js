@@ -9,6 +9,7 @@ const useVideoPlayer = (videoSrc) => {
   const [isFullScreen, setIsFullScreen] = useState(false);
 
   useEffect(() => {
+    console.log(videoRef);
     if (videoRef.current) {
       videoRef.current.volume = volume;
     }

@@ -34,9 +34,14 @@ return (
             <p className={styles.description}>{description}</p>
           </div>
           <div className={styles.playerContainer}>
-            <video ref={videoRef} className={styles.video} controls src={"./../../public/inter.mp4"} />
+            <video
+            
+             ref={videoRef} 
+            className={styles.video} 
+            controls src={videoSrc} 
+            ></video>
 
-            {/* <div className={styles.playerControls}>
+            <div className={styles.playerControls}>
               <button onClick={togglePlay} className={styles.button + ' ' + (isPlaying ? styles.pause : styles.play)} aria-label={isPlaying ? 'Pause' : 'Play'}></button>
               <button onClick={toggleMute} className={styles.button + ' ' + (isMuted ? styles.silence : styles.volume)} aria-label={isMuted ? 'Unmute' : 'Mute'}></button>
               <button onClick={() => skipTime(-10)} className={styles.button + ' ' + styles.backward} aria-label="Backward 10 seconds"></button>
@@ -47,7 +52,7 @@ return (
                 <span className={styles.currentTime}>0:00</span> / <span className={styles.durationVideo}>0:00</span>
               </div>
               <div className={styles.videoProgress} style={{ width: `${playbackProgress}%` }}></div>
-            </div> */}
+            </div>
           </div>
         </div>
       </div>
