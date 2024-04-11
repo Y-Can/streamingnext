@@ -6,7 +6,8 @@ import Link from 'next/link';
 
 const FilmDetail = ({ params }) => {
 	console.log(params.id);
-	
+	const [showControls, setShowControls] = useState(true);
+
   const [film, setFilm] = useState(null);
   const [votes, setVotes] = useState(null);
 
