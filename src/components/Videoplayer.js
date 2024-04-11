@@ -3,7 +3,7 @@ import React from "react";
 import "../app/globals.css";
 import styles from '../app/styles/videoplayer.module.css';
 // Créez un fichier Footer.module.css pour les styles
-const VideoPlayer = ({title, videoSrc, description}) => {
+const VideoPlayer = ({title, videoSrc, description, image}) => {
 
 return (
     <main className={styles.wrapper}>
@@ -45,7 +45,7 @@ return (
             </div>
           </div>
         </div>
-        <video className={styles.video} poster="./assets/poster.png" src={videoSrc}></video>
+        <video className={styles.video} poster={image} src={videoSrc}></video>
       </div>
       <script src="./js/index.js"></script>
     </main>
