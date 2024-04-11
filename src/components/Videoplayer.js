@@ -42,18 +42,18 @@ return (
             poster={'../../public/icons/posterimitation.webp'}
             ></video>
 
-            <div className={styles.playerControls}>
+            {/* <div className={styles.playerControls}>
               <button onClick={togglePlay} className={styles.button + ' ' + (isPlaying ? styles.pause : styles.play)} aria-label={isPlaying ? 'Pause' : 'Play'}></button>
               <button onClick={toggleMute} className={styles.button + ' ' + (isMuted ? styles.silence : styles.volume)} aria-label={isMuted ? 'Unmute' : 'Mute'}></button>
               <button onClick={() => skipTime(-10)} className={styles.button + ' ' + styles.backward} aria-label="Backward 10 seconds"></button>
               <button onClick={() => skipTime(10)} className={styles.button + ' ' + styles.forward} aria-label="Forward 10 seconds"></button>
               <input type="range" min="0" max="1" step="0.01" value={volume} onChange={(e) => handleVolumeChange(parseFloat(e.target.value))} className={styles.volumeProgress} />
-              <button onClick={toggleFullScreen} className={styles.button + ' ' + styles.expand} aria-label="Full Screen"></button>
+              <button onClick={toggleFullScreen} className={styles.button + ' ' + styles.expandContainer} aria-label="Full Screen"></button>
               <div className={styles.timeContainer}>
                 <span className={styles.currentTime}>0:00</span> / <span className={styles.durationVideo}>0:00</span>
               </div>
               <div className={styles.videoProgress} style={{ width: `${playbackProgress}%` }}></div>
-            </div>
+            </div> */}
           </div>
         </div>
       </div>
