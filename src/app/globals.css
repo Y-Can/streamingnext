@@ -652,18 +652,21 @@ body {
   padding: 0.5rem;
 }
 
-.news-card__excerpt {
-  font-weight: 300;
-  white-space: normal; /* Assure que le texte suit les règles normales de retour à la ligne */
-  overflow-wrap: break-word; /* Permet de casser les mots longs qui dépasseraient du conteneur */
-  word-wrap: break-word; /* Ancien nom pour overflow-wrap pour une meilleure compatibilité */
-  overflow: hidden; /* Masque le texte qui dépasse du conteneur */
-  text-overflow: ellipsis; /* Ajoute des points de suspension si le texte est tronqué */
-  display: -webkit-box; /* Nécessaire pour la propriété -webkit-line-clamp ci-dessous */
-  -webkit-line-clamp: 3; /* Limite l'affichage à 3 lignes */
-  -webkit-box-orient: vertical; /* Orientation verticale pour -webkit-line-clamp */
+.news-card {
+  border: 0px solid aqua;
+  margin: 0.5rem;
+  position: relative;
+  height: var(--card-height-mobile);
+  overflow: hidden;
+  border-radius: 0.5rem;
+  flex: 1;
+  min-width: 290px;
+  box-shadow: 0 0 1rem rgba(0, 0, 0, 0.5);
+  -webkit-backface-visibility: hidden;
+  -moz-backface-visibility: hidden;
+  -webkit-transform: translate3d(0, 0, 0);
+  -moz-transform: translate3d(0, 0, 0);
 }
-
 
 .news-card::before {
   content: '';
@@ -674,6 +677,17 @@ body {
   height: 100%;
   background: rgba(0, 0, 0, 0) linear-gradient(to bottom, rgba(0, 0, 0, 0) 50%, rgba(0, 0, 0, 0.7) 80%);
   z-index: 0;
+}
+.news-card__excerpt {
+  font-weight: 300;
+  white-space: normal; /* Assure que le texte suit les règles normales de retour à la ligne */
+  overflow-wrap: break-word; /* Permet de casser les mots longs qui dépasseraient du conteneur */
+  word-wrap: break-word; /* Ancien nom pour overflow-wrap pour une meilleure compatibilité */
+  overflow: hidden; /* Masque le texte qui dépasse du conteneur */
+  text-overflow: ellipsis; /* Ajoute des points de suspension si le texte est tronqué */
+  display: -webkit-box; /* Nécessaire pour la propriété -webkit-line-clamp ci-dessous */
+  -webkit-line-clamp: 3; /* Limite l'affichage à 3 lignes */
+  -webkit-box-orient: vertical; /* Orientation verticale pour -webkit-line-clamp */
 }
 
 .news-card__card-link {
@@ -722,9 +736,7 @@ body {
   transition: max-height 1.5s ease, opacity 1s ease;
 }
 
-.news-card__excerpt {
-  font-weight: 300;
-}
+card__excerpt
 
 .news-card__read-more {
   background: black;
