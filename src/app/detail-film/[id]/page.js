@@ -91,7 +91,7 @@ const FilmDetail = ({ params }) => {
 									<VideoPlayer
 									            title={film?.titre}
 												videoSrc="/inter.mp4"
-												img={film?.image}
+												image={film?.image}
 												description={film?.description}
 									/>
 							
