@@ -3,9 +3,74 @@ import React, { useEffect, useState } from "react";
 import axios from "axios";
 import styles from "../../styles/filmdetail.module.css";
 import Link from 'next/link';
-import VideoPlayer from "@/components/Videoplayer";
 
 const FilmDetail = ({ params }) => {
+	const videoRef = useRef(null);
+	const [isPlaying, setIsPlaying] = useState(false);
+	const [isMuted, setIsMuted] = useState(false);
+	const [volume, setVolume] = useState(0.5);
+	const [playbackProgress, setPlaybackProgress] = useState(0);
+	const [isFullScreen, setIsFullScreen] = useState(false);
+  
+	useEffect(() => {
+	  console.log(videoRef);
+	  if (videoRef.current) {
+		videoRef.current.volume = volume;
+	  }
+	}, [volume]);
+  
+	useEffect(() => {
+	  const video = videoRef.current;
+  
+	  const updateProgress = () => {
+		if (videoRef.current) {
+		  const progress = (videoRef.current.currentTime / videoRef.current.duration) * 100;
+		  setPlaybackProgress(progress);
+		}
+	  };
+  
+	  video.addEventListener('timeupdate', updateProgress);
+  
+	  return () => video.removeEventListener('timeupdate', updateProgress);
+	}, []);
+  
+	const togglePlay = () => {
+	  if (videoRef.current.paused) {
+		videoRef.current.play();
+		setIsPlaying(true);
+	  } else {
+		videoRef.current.pause();
+		setIsPlaying(false);
+	  }
+	};
+  
+	const toggleMute = () => {
+	  const newMutedState = !isMuted;
+	  videoRef.current.muted = newMutedState;
+	  setIsMuted(newMutedState);
+	};
+  
+	const handleVolumeChange = (newVolume) => {
+	  setVolume(newVolume);
+	  setIsMuted(newVolume === 0);
+	};
+  
+	const skipTime = (time) => {
+	  videoRef.current.currentTime += time;
+	};
+  
+	const toggleFullScreen = () => {
+	  if (!document.fullscreenElement) {
+		videoRef.current.requestFullscreen();
+		setIsFullScreen(true);
+	  } else {
+		document.exitFullscreen();
+		setIsFullScreen(false);
+	  }
+	};
+  
+
+	
 	console.log(params.id);
 	
   const [film, setFilm] = useState(null);
@@ -41,6 +106,7 @@ const FilmDetail = ({ params }) => {
 					}
 				}
 			}
+			
 	fetchNote();
     fetchData();
   }, []); 
@@ -54,7 +120,7 @@ const FilmDetail = ({ params }) => {
 					
 					<div className={styles.block}>
 						
-						{/* <div className={styles.titre}>
+						<div className={styles.titre}>
 							
 							<h1 className={styles.title}>{film?.titre}</h1>
 						</div>
@@ -85,28 +151,51 @@ const FilmDetail = ({ params }) => {
 									</div>
 									
 								<img src={film?.image} className={styles.img} alt="" />
-								</div> */}
+								</div>
 								
-								<div className={styles.containerCol}>
-								<video
-									            title={film?.titre}
-												videoSrc={"./../../../../public/inter.mp4"}
-												image={film?.image}
-												description={film?.description}
-									/>
-									{/* <VideoPlayer
-									            title={film?.titre}
-												videoSrc={"./../../../../public/inter.mp4"}
-												image={film?.image}
-												description={film?.description}
-									/> */}
-							
+								<main className={styles.wrapper}>
+
+    <div className={styles.player}>
+      <div className={styles.playerOverlay} data-fullscreen="false">
+        <div className={styles.container}>
+          <div className={styles.informationContainer}>
+            <h1 className={styles.title}>{title}</h1>
+            <p className={styles.description}>{description}</p>
+          </div>
+          <div className={styles.playerContainer}>
+            <video
+            
+            //  ref={videoRef} 
+            className={styles.video} 
+            controls src="/inter.mp4" 
+            poster={'/icons/posterimitation.webp'}
+            >
+				<source src="/inter.mp4" type="video/mp4" />
+			</video>
+
+            <div className={styles.playerControls}>
+              <button onClick={togglePlay} className={styles.button + ' ' + (isPlaying ? styles.pause : styles.play)} aria-label={isPlaying ? 'Pause' : 'Play'}></button>
+              <button onClick={toggleMute} className={styles.button + ' ' + (isMuted ? styles.silence : styles.volume)} aria-label={isMuted ? 'Unmute' : 'Mute'}></button>
+              <button onClick={() => skipTime(-10)} className={styles.button + ' ' + styles.backward} aria-label="Backward 10 seconds"></button>
+              <button onClick={() => skipTime(10)} className={styles.button + ' ' + styles.forward} aria-label="Forward 10 seconds"></button>
+              <input type="range" min="0" max="1" step="0.01" value={volume} onChange={(e) => handleVolumeChange(parseFloat(e.target.value))} className={styles.volumeProgress} />
+              <button onClick={toggleFullScreen} className={styles.button + ' ' + styles.expandContainer} aria-label="Full Screen"></button>
+              <div className={styles.timeContainer}>
+                <span className={styles.currentTime}>0:00</span> / <span className={styles.durationVideo}>0:00</span>
+              </div>
+              <div className={styles.videoProgress} style={{ width: `${playbackProgress}%` }}></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
 								</div>
 							</div>
-					{/* </div> */}
+					</div>
 			
 		 
-		</div>
+
 	);
 };
 FilmDetail.getInitialProps = async (context) => {

@@ -7,25 +7,25 @@ import * as script from '../js/index.js'
 import useVideoPlayer from '../js/index.js';
 
 // Créez un fichier Footer.module.css pour les styles
- const VideoPlayer = ({title, videoSrc, description, image}) => {
-//     const {
-//         videoRef,
-//         isPlaying,
-//         togglePlay,
-//         isMuted,
-//         toggleMute,
-//         volume,
-//         playbackProgress,
-//         handleVolumeChange,
-//         skipTime,
-//         toggleFullScreen,
-//       } = useVideoPlayer("./../../public/inter.mp4");
+const VideoPlayer = ({title, videoSrc, description, image}) => {
+    const {
+        videoRef,
+        isPlaying,
+        togglePlay,
+        isMuted,
+        toggleMute,
+        volume,
+        playbackProgress,
+        handleVolumeChange,
+        skipTime,
+        toggleFullScreen,
+      } = useVideoPlayer("./../../public/inter.mp4");
 return (
     
     <main className={styles.wrapper}>
-    {/* <Helmet>
+    <Helmet>
       <script src="./js/index.js" crossorigin="anonymous" async></script>
-    </Helmet> */}
+    </Helmet>
     <div className={styles.player}>
       <div className={styles.playerOverlay} data-fullscreen="false">
         <div className={styles.container}>
@@ -36,13 +36,13 @@ return (
           <div className={styles.playerContainer}>
             <video
             
-            //  ref={videoRef} 
+             ref={videoRef} 
             className={styles.video} 
             controls src={videoSrc} 
             poster={'../../public/icons/posterimitation.webp'}
-            />
+            ></video>
 
-            {/* <div className={styles.playerControls}>
+            <div className={styles.playerControls}>
               <button onClick={togglePlay} className={styles.button + ' ' + (isPlaying ? styles.pause : styles.play)} aria-label={isPlaying ? 'Pause' : 'Play'}></button>
               <button onClick={toggleMute} className={styles.button + ' ' + (isMuted ? styles.silence : styles.volume)} aria-label={isMuted ? 'Unmute' : 'Mute'}></button>
               <button onClick={() => skipTime(-10)} className={styles.button + ' ' + styles.backward} aria-label="Backward 10 seconds"></button>
@@ -53,7 +53,7 @@ return (
                 <span className={styles.currentTime}>0:00</span> / <span className={styles.durationVideo}>0:00</span>
               </div>
               <div className={styles.videoProgress} style={{ width: `${playbackProgress}%` }}></div>
-            </div> */}
+            </div>
           </div>
         </div>
       </div>
