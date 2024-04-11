@@ -87,7 +87,7 @@ const FilmDetail = ({ params }) => {
 								<img src={film?.image} className={styles.img} alt="" />
 								</div> */}
 								
-									<VideoPlayer
+									<video
 									            title={film?.titre}
 												videoSrc={"./../../../../public/inter.mp4"}
 												image={film?.image}
