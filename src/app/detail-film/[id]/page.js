@@ -6,6 +6,8 @@ import Link from 'next/link';
 
 const FilmDetail = ({ params }) => {
 	console.log(params.id);
+	const videoContainerRef = useRef(null);
+	const timeoutRef = useRef(null);
 	const [showControls, setShowControls] = useState(true);
 
   const [film, setFilm] = useState(null);
