@@ -40,7 +40,7 @@ return (
             className={styles.video} 
             controls src={videoSrc} 
             poster={'../../public/icons/posterimitation.webp'}
-            ></video>
+            />
 
             {/* <div className={styles.playerControls}>
               <button onClick={togglePlay} className={styles.button + ' ' + (isPlaying ? styles.pause : styles.play)} aria-label={isPlaying ? 'Pause' : 'Play'}></button>
