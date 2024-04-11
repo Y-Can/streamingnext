@@ -7,7 +7,7 @@ import * as script from '../js/index.js'
 import useVideoPlayer from '../js/index.js';
 
 // Créez un fichier Footer.module.css pour les styles
-// const VideoPlayer = ({title, videoSrc, description, image}) => {
+ const VideoPlayer = ({title, videoSrc, description, image}) => {
 //     const {
 //         videoRef,
 //         isPlaying,
