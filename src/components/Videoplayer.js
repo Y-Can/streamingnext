@@ -22,12 +22,12 @@ return (
               </div>
               <div className={styles.playerControls}>
                 <div className={styles.playerButtons}>
-                  <button aria-label="play" className={styles.button + ' ' + styles.play} title="play" type="button"></button>
-                  <button aria-label="pause" className={styles.button + ' ' + styles.pause} hidden title="pause" type="button"></button>
-                  <button aria-label="backward" className={styles.button + ' ' + styles.backward} title="backward" type="button"></button>
-                  <button aria-label="forward" className={styles.button + ' ' + styles.forward} title="forward" type="button"></button>
-                  <button aria-label="volume" className={styles.button + ' ' + styles.volume} title="volume" type="button"></button>
-                  <button aria-label="silence" className={styles.button + ' ' + styles.silence} hidden title="silence" type="button"></button>
+                  <button aria-label="play" className={styles.button  + styles.play} title="play" type="button"></button>
+                  <button aria-label="pause" className={styles.button  + styles.pause} hidden title="pause" type="button"></button>
+                  <button aria-label="backward" className={styles.button + styles.backward} title="backward" type="button"></button>
+                  <button aria-label="forward" className={styles.button  + styles.forward} title="forward" type="button"></button>
+                  <button aria-label="volume" className={styles.button + styles.volume} title="volume" type="button"></button>
+                  <button aria-label="silence" className={styles.button + styles.silence} hidden title="silence" type="button"></button>
                   <div className={styles.volumeProgress}>
                     <div className={styles.volumeProgressFilled}></div>
                   </div>
