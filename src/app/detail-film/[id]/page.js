@@ -10,6 +10,21 @@ const FilmDetail = ({ params }) => {
 	const timeoutRef = useRef(null);
 	const [showControls, setShowControls] = useState(true);
 
+	useEffect(() => {
+		const video = videoRef.current;
+		const handlePlay = () => setIsPlaying(true);
+		const handlePause = () => setIsPlaying(false);
+	
+		video.addEventListener('play', handlePlay);
+		video.addEventListener('pause', handlePause);
+	
+		return () => {
+		  video.removeEventListener('play', handlePlay);
+		  video.removeEventListener('pause', handlePause);
+		};
+	  }, []);
+	  
+	
   const [film, setFilm] = useState(null);
   const [votes, setVotes] = useState(null);
   
@@ -20,7 +35,7 @@ const FilmDetail = ({ params }) => {
 	clearTimeout(timeoutRef.current);
 	timeoutRef.current = setTimeout(() => {
 	  setShowControls(false);
-	}, 5000); // Cache les contrôles après 5 secondes d'inactivité
+	}, 5000); 
   };
   
   useEffect(() => {
@@ -121,10 +136,16 @@ const FilmDetail = ({ params }) => {
 										<h1 className={styles.title}>{film?.titre}</h1>
 										<p className={styles.p}>{film?.description}</p>
 									</div>
-									<video  className={styles.video} controls>
+									<video controls
+									  className={`${styles.video} ${isPlaying ? styles.videoPlaying : styles.videoPaused}`}
+
+									>
+										
 										<source src="/inter.mp4" type="video/mp4" />
 									</video>
-							
+									<div className={isPlaying ? "info playing" : "info"}>
+        {isPlaying ? "Playing" : "Paused"}
+      </div>
 							</div>
 					</div>
 			

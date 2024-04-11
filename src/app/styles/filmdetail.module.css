@@ -169,6 +169,8 @@
   .containerFixed{
     position: relative;
     z-index: 999;
+    margin-top: 10vh;
+    margin-left: -200px;
   }
   
   /* Ajoutez des styles supplémentaires pour les autres éléments si nécessaire */
