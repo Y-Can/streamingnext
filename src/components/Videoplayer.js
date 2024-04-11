@@ -39,6 +39,7 @@ return (
              ref={videoRef} 
             className={styles.video} 
             controls src={videoSrc} 
+            poster={'../../public/icons/posterimitation.webp'}
             ></video>
 
             <div className={styles.playerControls}>
