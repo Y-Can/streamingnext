@@ -5,7 +5,6 @@ import styles from "../../styles/filmdetail.module.css";
 import Link from 'next/link';
 
 const FilmDetail = ({ params }) => {
-	const videoRef = useRef(null);
 	const [isPlaying, setIsPlaying] = useState(false);
 	const [isMuted, setIsMuted] = useState(false);
 	const [volume, setVolume] = useState(0.5);
