@@ -7,25 +7,25 @@ import * as script from '../js/index.js'
 import useVideoPlayer from '../js/index.js';
 
 // Créez un fichier Footer.module.css pour les styles
-const VideoPlayer = ({title, videoSrc, description, image}) => {
-    const {
-        videoRef,
-        isPlaying,
-        togglePlay,
-        isMuted,
-        toggleMute,
-        volume,
-        playbackProgress,
-        handleVolumeChange,
-        skipTime,
-        toggleFullScreen,
-      } = useVideoPlayer("./../../public/inter.mp4");
+// const VideoPlayer = ({title, videoSrc, description, image}) => {
+//     const {
+//         videoRef,
+//         isPlaying,
+//         togglePlay,
+//         isMuted,
+//         toggleMute,
+//         volume,
+//         playbackProgress,
+//         handleVolumeChange,
+//         skipTime,
+//         toggleFullScreen,
+//       } = useVideoPlayer("./../../public/inter.mp4");
 return (
     
     <main className={styles.wrapper}>
-    <Helmet>
+    {/* <Helmet>
       <script src="./js/index.js" crossorigin="anonymous" async></script>
-    </Helmet>
+    </Helmet> */}
     <div className={styles.player}>
       <div className={styles.playerOverlay} data-fullscreen="false">
         <div className={styles.container}>
