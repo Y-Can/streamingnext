@@ -15,37 +15,37 @@
 }
 
 .backward {
-  background-image: url('../icons/backward.svg');
+  background-image: url('../../../public/icons/backward.svg');
 }
 
 .expand {
-  background-image: url('../icons/expandd.svg');
+  background-image: url('../../../public/icons/expandd.svg');
   margin-right: 0;
 }
 
 .forward {
-  background-image: url('../icons/forward.svg');
+  background-image: url('../../../public/icons/forward.svg');
 }
 
 .pause {
-  background-image: url('../icons/pause.svg');
+  background-image: url('../../../public/icons/pause.svg');
 }
 
 .play {
-  background-image: url('../icons/play.svg');
+  background-image: url('../../../public/icons/play.svg');
 }
 
 .reduce {
-  background-image: url('../icons/reduce.svg');
+  background-image: url('../../../public/icons/reduce.svg');
   margin-right: 0;
 }
 
 .silence {
-  background-image: url('../icons/silence.svg');
+  background-image: url('../../../public/icons/silence.svg');
 }
 
 .volume {
-  background-image: url('../icons/volume.svg');
+  background-image: url('../../../public/icons/volume.svg');
 }
 .description {
   font-size: 18px;
@@ -57,25 +57,7 @@
   font-size: 96px;
   margin: 0;
 }
-@import url('./buttons.css');
-@import url('./player.css');
-@import url('./texts.css');
 
-html {
-  box-sizing: border-box;
-}
-
-*,
-*:before,
-*:after {
-  box-sizing: inherit;
-}
-
-body {
-  font-family: 'Inter', sans-serif;
-  margin: 0;
-  color: white;
-}
 
 .wrapper {
   width: 100vw;

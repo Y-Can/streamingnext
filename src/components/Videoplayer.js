@@ -1,7 +1,7 @@
 // Footer.js
 import React from "react";
 import "../app/globals.css";
-import styles from "../styles/videoplayer.module.css";
+import styles from '../app/styles/videoplayer.module.css';
 // Créez un fichier Footer.module.css pour les styles
 const VideoPlayer = ({titre, videoSrc, description}) => {
     // Dom elements, global constants
