@@ -14,11 +14,11 @@ const Footer = () => {
       </div>
       {/* ... (autres colonnes) */}
       <div className="column">
-        <h4>Contact</h4> <p>Email: info@votresite.com</p>
+        <h4>Contact</h4> <p>Email: contact@ZoneStream.com</p>
         <p>Téléphone: +1 234 567 890</p>
       </div>
       <div className="copyRight">
-        <p>&copy; 2023 Votre Site. Tous droits réservés.</p>
+        <p>&copy; 2023 ZoneStream. Tous droits réservés.</p>
       </div>
     </footer>
   );
