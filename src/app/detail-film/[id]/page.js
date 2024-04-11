@@ -132,7 +132,7 @@ const FilmDetail = ({ params }) => {
 								</div> */}
 								
 									<div className={styles.containerFixed}>
-										<h1 className={styles.title}>{film?.titre}</h1>
+										<h1 className={styles.titre}>{film?.titre}</h1>
 										<p className={styles.p}>{film?.description}</p>
 									</div>
 									<video controls
@@ -140,9 +140,9 @@ const FilmDetail = ({ params }) => {
 									>
 										<source src="/inter.mp4" type="video/mp4" />
 									</video>
-									<div className={isPlaying ? "info playing" : "info"}>
+									{/* <div className={isPlaying ? "info playing" : "info"}>
 										{isPlaying ? "Playing" : "Paused"}
-									</div>
+									</div> */}
 							</div>
 					</div>
 			
