@@ -10,18 +10,34 @@ const FilmDetail = ({ params }) => {
 
   const [film, setFilm] = useState(null);
   const [votes, setVotes] = useState(null);
+  
+  const handleActivity = () => {
+	if (!showControls) {
+	  setShowControls(true);
+	}
+	clearTimeout(timeoutRef.current);
+	timeoutRef.current = setTimeout(() => {
+	  setShowControls(false);
+	}, 5000); // Cache les contrôles après 5 secondes d'inactivité
+  };
+  useEffect(() => {
+	const videoContainer = videoContainerRef.current;
+
+	videoContainer.addEventListener('mousemove', handleActivity);
+	videoContainer.addEventListener('keypress', handleActivity);
+
+	// Réinitialisation du décompte lorsque le composant est démonté pour éviter des effets secondaires.
+	return () => {
+	  clearTimeout(timeoutRef.current);
+	  videoContainer.removeEventListener('mousemove', handleActivity);
+	  videoContainer.removeEventListener('keypress', handleActivity);
+	};
+  }, [showControls]);
+  
 
   useEffect(() => {
 	const id = params.id;
-	const handleActivity = () => {
-		if (!showControls) {
-		  setShowControls(true);
-		}
-		clearTimeout(timeoutRef.current);
-		timeoutRef.current = setTimeout(() => {
-		  setShowControls(false);
-		}, 5000); // Cache les contrôles après 5 secondes d'inactivité
-	  };
+
 	
     const fetchData = async () => {
       if (id) {
@@ -38,20 +54,6 @@ const FilmDetail = ({ params }) => {
 
       }
     };
-	useEffect(() => {
-		const videoContainer = videoContainerRef.current;
-	
-		videoContainer.addEventListener('mousemove', handleActivity);
-		videoContainer.addEventListener('keypress', handleActivity);
-	
-		// Réinitialisation du décompte lorsque le composant est démonté pour éviter des effets secondaires.
-		return () => {
-		  clearTimeout(timeoutRef.current);
-		  videoContainer.removeEventListener('mousemove', handleActivity);
-		  videoContainer.removeEventListener('keypress', handleActivity);
-		};
-	  }, [showControls]);
-	
 			// Requete votes
 			const fetchNote = async () => {
 				if(id){
