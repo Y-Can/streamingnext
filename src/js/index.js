@@ -1,21 +1,21 @@
     // Dom elements, global constants
     const backward = document.querySelector('.backward');
-    const currentTime = document.querySelector('.current-time');
-    const durationVideo = document.querySelector('.duration-video');
+    const currentTime = document.querySelector('.currentTime');
+    const durationVideo = document.querySelector('.durationVideo');
     const expand = document.querySelector('.expand');
     const forward = document.querySelector('.forward');
-    const informationContainer = document.querySelector('.information-container');
+    const informationContainer = document.querySelector('.informationContainer');
     const pause = document.querySelector('.pause');
     const play = document.querySelector('.play');
-    const progress = document.querySelector('.video-progress');
-    const progressBar = document.querySelector('.video-progress-filled');
+    const progress = document.querySelector('.videoProgress');
+    const progressBar = document.querySelector('.videoProgressFilled');
     const reduce = document.querySelector('.reduce');
     const silence = document.querySelector('.silence');
     const video = document.querySelector('.video');
     const volume = document.querySelector('.volume');
-    const volumeProgress = document.querySelector('.volume-progress');
-    const volumeProgressBar = document.querySelector('.volume-progress-filled');
-    const playerHover = document.querySelector('.player-overlay');
+    const volumeProgress = document.querySelector('.volumeProgress');
+    const volumeProgressBar = document.querySelector('.volumeProgressFilled');
+    const playerHover = document.querySelector('.playerOverlay');
     
     /**
     // global functions
