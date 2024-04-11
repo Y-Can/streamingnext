@@ -14,7 +14,7 @@ const FilmDetail = ({ params }) => {
 
 	useEffect(() => {
 		// Assurez-vous que l'élément video est monté
-		const video = videoRef.current;
+		const video = videoContainerRef.current;
 		if (video) {
 		  const handlePlay = () => setIsPlaying(true);
 		  const handlePause = () => setIsPlaying(false);
