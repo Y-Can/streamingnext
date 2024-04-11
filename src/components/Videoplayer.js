@@ -19,7 +19,7 @@ const VideoPlayer = ({title, videoSrc, description, image}) => {
         handleVolumeChange,
         skipTime,
         toggleFullScreen,
-      } = useVideoPlayer(videoSrc);
+      } = useVideoPlayer("./../../public/inter.mp4");
 return (
     
     <main className={styles.wrapper}>
@@ -35,7 +35,7 @@ return (
           </div>
           <div className={styles.playerContainer}>
             <video ref={videoRef} className={styles.video} poster={image} src="./../../public/inter.mp4">
-                <source  src={videoSrc} type="video/mp4"/>
+                <source  src="./../../public/inter.mp4" type="video/mp4"/>
             </video>
             <div className={styles.playerControls}>
               <button onClick={togglePlay} className={styles.button + ' ' + (isPlaying ? styles.pause : styles.play)} aria-label={isPlaying ? 'Pause' : 'Play'}></button>
