@@ -68,8 +68,8 @@ const FilmDetail = ({ params }) => {
             {/* Votre contenu supplémentaire ici */}
           </div>
           <div className={styles.containerCol}>
-            <video ref='/inter.mp4' src='/inter.mp4' className={styles.video} controls>
-              <source src='/inter.mp4' type="video/mp4" />
+            <video ref='../inter.mp4' src='../inter.mp4' className={styles.video} controls>
+              <source src='../inter.mp4' type="video/mp4" />
             </video>
             <div className={styles.videoControls}>
               <button onClick={togglePlayPause}>
