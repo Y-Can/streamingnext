@@ -117,7 +117,6 @@ const FilmDetail = ({ params }) => {
 								<img src={film?.image} className={styles.img} alt="" />
 								</div> */}
 								
-								<div className={styles.containerCol}>
 									<div>
 										<h1 className={styles.title}>{film?.titre}</h1>
 										<p className={styles.p}>{film?.description}</p>
@@ -126,7 +125,6 @@ const FilmDetail = ({ params }) => {
 										<source src="/inter.mp4" type="video/mp4" />
 									</video>
 							
-								</div>
 							</div>
 					</div>
 			
