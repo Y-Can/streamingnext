@@ -3,6 +3,7 @@ import React, { useEffect, useState, useRef } from "react";
 import axios from "axios";
 import styles from "../../styles/filmdetail.module.css";
 import Link from 'next/link';
+import video from '../../../../public/inter.mp4'
 
 const FilmDetail = ({ params }) => {
   const [film, setFilm] = useState(null);
@@ -68,7 +69,7 @@ const FilmDetail = ({ params }) => {
             {/* Votre contenu supplémentaire ici */}
           </div>
           <div className={styles.containerCol}>
-            <video ref='../../../../public/inter.mp4' src='../../../../public/inter.mp4' className={styles.video} controls>
+            <video src='../../../../public/inter.mp4' className={styles.video} controls>
               <source src='../../../../public/inter.mp4' type="video/mp4" />
             </video>
             <div className={styles.videoControls}>
