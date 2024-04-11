@@ -3,7 +3,7 @@ import React, { useEffect, useState, useRef } from "react";
 import axios from "axios";
 import styles from "../../styles/filmdetail.module.css";
 import Link from 'next/link';
-import video from '../../../../public/inter.mp4'
+import video from './public/inter.mp4'
 
 const FilmDetail = ({ params }) => {
   const [film, setFilm] = useState(null);
