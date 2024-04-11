@@ -3,6 +3,7 @@ import React, { useEffect, useState } from "react";
 import axios from "axios";
 import styles from "../../styles/filmdetail.module.css";
 import Link from 'next/link';
+import VideoPlayer from "@/components/Videoplayer";
 
 const FilmDetail = ({ params }) => {
 	console.log(params.id);
@@ -87,9 +88,11 @@ const FilmDetail = ({ params }) => {
 								</div>
 								
 								<div className={styles.containerCol}>
-									<video  className={styles.video} controls>
-										<source src="/inter.mp4" type="video/mp4" />
-									</video>
+									<VideoPlayer
+									            title={film?.titre}
+												videoSrc="/inter.mp4"
+												description={film?.description}
+									/>
 							
 								<p className={styles.p}>{film?.description}</p>
 								</div>
