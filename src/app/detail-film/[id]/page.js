@@ -101,7 +101,6 @@ const FilmDetail = ({ params }) => {
 	return (
 		<div className={styles.container_col}>
 			
-					<div className={styles.block}>
 							
 							<div className={styles.containerRow}>
 								
@@ -148,7 +147,6 @@ const FilmDetail = ({ params }) => {
 					</div>
 			
 		 
-		</div>
 	);
 };
 FilmDetail.getInitialProps = async (context) => {
