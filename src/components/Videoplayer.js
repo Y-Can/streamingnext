@@ -34,7 +34,7 @@ return (
             <p className={styles.description}>{description}</p>
           </div>
           <div className={styles.playerContainer}>
-            <video  className={styles.video} controls poster={image} src="./../../public/inter.mp4" />
+            <video ref={videoRef} className={styles.video} controls src="./../../public/inter.mp4" />
 
             <div className={styles.playerControls}>
               <button onClick={togglePlay} className={styles.button + ' ' + (isPlaying ? styles.pause : styles.play)} aria-label={isPlaying ? 'Pause' : 'Play'}></button>
