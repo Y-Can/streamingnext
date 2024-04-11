@@ -18,8 +18,10 @@ const useVideoPlayer = (videoSrc) => {
     const video = videoRef.current;
 
     const updateProgress = () => {
-      const progress = (video.currentTime / video.duration) * 100;
-      setPlaybackProgress(progress);
+      if (videoRef.current) {
+        const progress = (videoRef.current.currentTime / videoRef.current.duration) * 100;
+        setPlaybackProgress(progress);
+      }
     };
 
     video.addEventListener('timeupdate', updateProgress);

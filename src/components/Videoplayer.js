@@ -15,6 +15,7 @@ const VideoPlayer = ({title, videoSrc, description, image}) => {
         isMuted,
         toggleMute,
         volume,
+        playbackProgress,
         handleVolumeChange,
         skipTime,
         toggleFullScreen,
