@@ -3,7 +3,7 @@ import React from "react";
 import "../app/globals.css";
 import styles from '../app/styles/videoplayer.module.css';
 // Créez un fichier Footer.module.css pour les styles
-const VideoPlayer = ({titre, videoSrc, description}) => {
+const VideoPlayer = ({title, videoSrc, description}) => {
 
 return (
     <main className={styles.wrapper}>
@@ -11,7 +11,7 @@ return (
         <div className={styles.playerOverlay} data-fullscreen="false">
           <div className={styles.container}>
             <div className={styles.informationContainer}>
-              <h1 className={styles.title}>{titre}</h1>
+              <h1 className={styles.title}>{title}</h1>
               <p className={styles.description}>
                 {description}
               </p>
