@@ -34,9 +34,8 @@ return (
             <p className={styles.description}>{description}</p>
           </div>
           <div className={styles.playerContainer}>
-            <video ref={videoRef} className={styles.video} controls poster={image} src="./../../public/inter.mp4">
-                <source  src="./../../public/inter.mp4" type="video/mp4"/>
-            </video>
+            <video  className={styles.video} controls poster={image} src="./../../public/inter.mp4" />
+
             <div className={styles.playerControls}>
               <button onClick={togglePlay} className={styles.button + ' ' + (isPlaying ? styles.pause : styles.play)} aria-label={isPlaying ? 'Pause' : 'Play'}></button>
               <button onClick={toggleMute} className={styles.button + ' ' + (isMuted ? styles.silence : styles.volume)} aria-label={isMuted ? 'Unmute' : 'Mute'}></button>
