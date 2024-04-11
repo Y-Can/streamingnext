@@ -4,7 +4,7 @@ import "../app/globals.css";
 import styles from '../app/styles/videoplayer.module.css';
 import { Helmet } from 'react-helmet';
 import * as script from '../js/index.js'
-import useVideoPlayer from '../useVideoPlayer'
+import useVideoPlayer from '../js/index.js';
 
 // Créez un fichier Footer.module.css pour les styles
 const VideoPlayer = ({title, videoSrc, description, image}) => {
