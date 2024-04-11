@@ -34,7 +34,7 @@ return (
             <p className={styles.description}>{description}</p>
           </div>
           <div className={styles.playerContainer}>
-            <video ref={videoRef} className={styles.video} poster={image} src="./../../public/inter.mp4">
+            <video ref={videoRef} className={styles.video} controls poster={image} src="./../../public/inter.mp4">
                 <source  src="./../../public/inter.mp4" type="video/mp4"/>
             </video>
             <div className={styles.playerControls}>
