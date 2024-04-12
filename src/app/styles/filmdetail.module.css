@@ -166,20 +166,19 @@
   .p {
     margin-top: 10px;
   }
-  .containerFixed{
+  .containerFixed {
     position: absolute;
     z-index: 999;
     margin-top: 10vh;
     margin-left: 5vw;
-    transition: ease-in-out 4s;
-    animation-delay: 4s;
+    opacity: 1;
+    visibility: visible;
+    transition: opacity 4s ease-in-out, visibility 0s linear 4s; /* Delay la visibilité */
+}
 
-
-  }
-  .videoPlaying{
-    transition: ease-in-out 4s;
-    display: none;
-    animation-delay: 4s;
-  }
-  
+.videoPlaying {
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 4s ease-in-out, visibility 0s linear 0s; /* Changez immédiatement la visibilité après l'opacity */
+}
     
