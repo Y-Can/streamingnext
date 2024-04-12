@@ -173,12 +173,12 @@
     margin-left: 5vw;
     opacity: 1;
     visibility: visible;
-    transition: opacity 4s ease-in-out 4s, visibility 0s; /* Delay la visibilité */
+    transition: opacity 4s ease-in-out 4s, visibility 0s linear 2s; /* Delay la visibilité */
 }
 
 .videoPlaying {
     opacity: 0;
     visibility: hidden;
-    transition: opacity 4s ease-in-out 4s, visibility 0s; /* Changez immédiatement la visibilité après l'opacity */
+    transition: opacity 4s ease-in-out 4s, visibility 0s linear 2s; /* Changez immédiatement la visibilité après l'opacity */
 }
     
