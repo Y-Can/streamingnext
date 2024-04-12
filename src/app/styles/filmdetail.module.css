@@ -171,9 +171,11 @@
     z-index: 999;
     margin-top: 10vh;
     margin-left: 5vw;
+    transition: ease-in-out 2s;
+
   }
   .videoPlaying{
     display: none;
-    transition: ease-in-out 1s;
+    transition: ease-in-out 2s;
   }
     
