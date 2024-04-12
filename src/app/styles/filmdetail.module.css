@@ -173,6 +173,7 @@
     margin-left: 5vw;
     opacity: 1;
     visibility: visible;
+    height: 150px;
     transition: opacity 4s ease-in-out 4s, visibility 0s linear 2s; /* Delay la visibilité */
 }
 
