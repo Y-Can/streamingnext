@@ -3,14 +3,18 @@ import React, { useEffect, useState, useRef  } from "react";
 import axios from "axios";
 import styles from "../../styles/filmdetail.module.css";
 import Link from 'next/link';
+import playIcon from '/icons/play-button.png'; 
+import pauseIcon from '/icons/pause-button.png';
 
 const FilmDetail = ({ params }) => {
 	console.log(params.id);
 	const videoContainerRef = useRef(null);
 	const timeoutRef = useRef(null);
 	const [isPlaying, setIsPlaying] = useState(false);
-
 	const [showControls, setShowControls] = useState(true);
+	
+	const [showIcon, setShowIcon] = useState(false);
+    const [iconSrc, setIconSrc] = useState(playIcon);
 
 	useEffect(() => {
 		// Assurez-vous que l'élément video est monté
@@ -29,6 +33,19 @@ const FilmDetail = ({ params }) => {
 			video.removeEventListener('pause', handlePause);
 		  };
 		}
+		if (videoRef.current) {
+            if (videoRef.current.paused) {
+                videoRef.current.play();
+                setIsPlaying(true);
+                setIconSrc(pauseIcon);
+            } else {
+                videoRef.current.pause();
+                setIsPlaying(false);
+                setIconSrc(playIcon);
+            }
+            setShowIcon(true);
+            setTimeout(() => setShowIcon(false), 1000); // L'icône disparaît après 1 seconde
+        }
 	  }, []);
 	
   const [film, setFilm] = useState(null);
@@ -136,6 +153,7 @@ const FilmDetail = ({ params }) => {
 										<h1 className={styles.titre}>{film?.titre}</h1>
 										<p className={styles.p}>{film?.description}</p>
 									</div>
+									{showIcon && <img src={iconSrc} className={styles.iconCenter} alt="Play/Pause" />}
 									<video controls
 									ref={videoContainerRef}
 									poster="/icons/posterimitation.webp"
