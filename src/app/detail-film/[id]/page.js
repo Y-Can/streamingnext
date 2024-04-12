@@ -18,7 +18,7 @@ const FilmDetail = ({ params }) => {
 		if (video) {
 		  const handlePlay = () => setIsPlaying(true);
 		  const handlePause = () => setIsPlaying(false);
-	
+			console.log(isPlaying);
 		  // Ajout des écouteurs d'événements
 		  video.addEventListener('play', handlePlay);
 		  video.addEventListener('pause', handlePause);
