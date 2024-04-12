@@ -130,7 +130,9 @@ const FilmDetail = ({ params }) => {
 								<img src={film?.image} className={styles.img} alt="" />
 								</div> */}
 								
-									<div className={styles.containerFixed}>
+									<div 
+									 className={`${styles.containerFixed} ${isPlaying ? styles.videoPlaying : styles.containerFixed}`}
+									>
 										<h1 className={styles.titre}>{film?.titre}</h1>
 										<p className={styles.p}>{film?.description}</p>
 									</div>
