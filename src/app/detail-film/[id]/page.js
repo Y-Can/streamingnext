@@ -44,7 +44,7 @@ const FilmDetail = ({ params }) => {
                 setIconSrc(playIcon);
             }
             setShowIcon(true);
-            setTimeout(() => setShowIcon(false), 1000); // L'icône disparaît après 1 seconde
+            setTimeout(() => setShowIcon(false), 1000);
         }
 	  }, []);
 	
@@ -153,7 +153,9 @@ const FilmDetail = ({ params }) => {
 										<h1 className={styles.titre}>{film?.titre}</h1>
 										<p className={styles.p}>{film?.description}</p>
 									</div>
+									
 									{showIcon && <img src={iconSrc} className={styles.iconCenter} alt="Play/Pause" />}
+									
 									<video controls
 									ref={videoContainerRef}
 									poster="/icons/posterimitation.webp"
