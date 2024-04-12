@@ -137,8 +137,9 @@ const FilmDetail = ({ params }) => {
 										<p className={styles.p}>{film?.description}</p>
 									</div>
 									<video controls
+									ref={videoContainerRef}
 									poster="/icons/posterimitation.webp"
-									  className={`${styles.video} ${isPlaying ? styles.videoPlaying : styles.videoPaused}`}
+									  className={`${styles.video} `}
 									>
 										<source src="/inter.mp4" type="video/mp4" />
 									</video>
