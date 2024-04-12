@@ -3,8 +3,8 @@ import React, { useEffect, useState, useRef  } from "react";
 import axios from "axios";
 import styles from "../../styles/filmdetail.module.css";
 import Link from 'next/link';
-import playIcon from '/icons/play-button.png'; 
-import pauseIcon from '/icons/pause-button.png';
+import playIcon from './../../../../public/icons/play-button.png'; 
+import pauseIcon from './../../../../public/icons/pause-button.png';
 
 const FilmDetail = ({ params }) => {
 	console.log(params.id);
