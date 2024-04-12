@@ -171,11 +171,14 @@
     z-index: 999;
     margin-top: 10vh;
     margin-left: 5vw;
-    transition: ease-in-out 2s;
+    transition: ease-in-out 4s;
+    animation-delay: 4s;
+
 
   }
   .videoPlaying{
+    transition: ease-in-out 4s;
     display: none;
-    transition: ease-in-out 2s;
+    animation-delay: 4s;
   }
     
