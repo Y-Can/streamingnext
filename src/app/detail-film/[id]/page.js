@@ -33,16 +33,14 @@ const FilmDetail = ({ params }) => {
 			video.removeEventListener('pause', handlePause);
 		  };
 		}
-		if (videoRef.current) {
+		if (video) {
             if (videoRef.current.paused) {
                 videoRef.current.play();
                 setIsPlaying(true);
-				console.log(isPlaying);
                 setIconSrc(pauseIcon);
             } else {
                 videoRef.current.pause();
                 setIsPlaying(false);
-				console.log(isPlaying);
                 setIconSrc(playIcon);
             }
             setShowIcon(true);
