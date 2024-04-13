@@ -685,6 +685,7 @@ body {
   height: 100%;
 }
 .coverBlack{
+  z-index: 99;
   height: 100%;
   width: 100%;
   background-color: #000000;
