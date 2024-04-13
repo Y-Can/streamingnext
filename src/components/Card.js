@@ -30,7 +30,6 @@ const Card = ({ films, onMouseEnter = null, onMouseLeave = null }) => {
     }
   };
 
-
   return (
     <div className="containerRowUl">
       <div className="containerCol maxheight">
@@ -55,16 +54,16 @@ const Card = ({ films, onMouseEnter = null, onMouseLeave = null }) => {
               {hoveredItemId === film.id && trailerUrl && (
                 <div className="coverBlack">
                   <video
-                  src={trailerUrl}
-                  autoPlay
-                  loop
-                  muted
-                  controls={false}
-                  style={{ position: 'absolute', top: 0, left: 0, width: '100%', height: '100%',  objectFit: 'cover' }}
-                  allowFullScreen
-                >
-                </video>
-              </div>
+                    src={trailerUrl}
+                    autoPlay
+                    loop
+                    controls // Changed to show controls
+                    style={{ position: 'absolute', top: 0, left: 0, width: '100%', height: '100%', objectFit: 'cover' }}
+                    allowFullScreen
+                  >
+                    Votre navigateur ne supporte pas la balise vidéo.
+                  </video>
+                </div>
               )}
             </div>
           ))}
@@ -75,7 +74,6 @@ const Card = ({ films, onMouseEnter = null, onMouseLeave = null }) => {
 };
 
 export default Card;
-
 
 function getTrailerUrl(filmId) {
   // Implémentez cette fonction pour retourner l'URL de la bande-annonce basée sur l'ID du film
