@@ -59,7 +59,7 @@ const Card = ({ films, onMouseEnter = null, onMouseLeave = null }) => {
                 loop
                 muted
                 controls={false}
-                style={{ position: 'absolute', top: 0, left: 0, width: '100%', height: '100%' }}
+                style={{ position: 'absolute', top: 0, left: 0, width: '100%', height: '100%',  objectFit: 'cover' }}
                 allowFullScreen
               >
               </video>
