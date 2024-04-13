@@ -685,8 +685,8 @@ body {
   height: 100%;
 }
 .coverBlack{
-  height: 150%;
-  width: 150%;
+  height: 100%;
+  width: 100%;
   background-color: #000000;
 }
 .news-card::before {
@@ -796,8 +796,10 @@ card__excerpt
 }
 
 @media (min-width: 900px) {
+  
   .news-card {
     height: var(--card-height-large-screen);
+    scale: 1.5;
   }
 
   .news-card:hover .news-card__details-wrapper {
