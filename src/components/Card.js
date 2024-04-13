@@ -42,9 +42,7 @@ const Card = ({ films, onMouseEnter = null, onMouseLeave = null }) => {
                  id={`li-${film.id}`}>
               <Link href={`/detail-film/${film.id}`}>
                 <a href="#" className="news-card__card-link"></a>
-                <img src={film.image} alt={film.titre} className="news-card__image"
-                  style={{  transform: 'translateY(+80px)' }}
-                 />
+                <img src={film.image} alt={film.titre} className="news-card__image" />
                 <div className="news-card__text-wrapper">
                   <h2 className="news-card__title">{film.titre}</h2>
                   <div className="news-card__details-wrapper">
