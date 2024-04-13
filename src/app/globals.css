@@ -793,9 +793,6 @@ card__excerpt
 
 /* Media Queries */
 @media (min-width: 600px) {
-  .news-card:hover{
-    scale: 1.5;
-  }
 }
 
 @media (min-width: 900px) {
