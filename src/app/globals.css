@@ -687,7 +687,7 @@ body {
 .coverBlack{
   z-index: 99;
   height: 100%;
-  width: 100%;
+  width: 450px;
   background-color: #000000;
 }
 .news-card::before {
