@@ -52,7 +52,7 @@ const Card = ({ films, onMouseEnter = null, onMouseLeave = null }) => {
                 </div>
               </Link>
               {hoveredItemId === film.id && trailerUrl && (
-                <div className="coverBlack" style={{ width: '120%', height: '120%', position: 'relative', }}>
+                <div className="coverBlack">
                   <video
                     src={trailerUrl}
                     autoPlay
