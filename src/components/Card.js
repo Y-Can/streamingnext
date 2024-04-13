@@ -54,7 +54,7 @@ const Card = ({ films, onMouseEnter = null, onMouseLeave = null }) => {
               </Link>
               {hoveredItemId === film.id && trailerUrl && (
                 <iframe
-                  src={`${trailerUrl}?controls=0`}
+                  src={trailerUrl}
                   frameBorder="0"
                   allow="autoplay; encrypted-media"
                   allowFullScreen
