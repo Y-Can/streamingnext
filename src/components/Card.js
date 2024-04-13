@@ -53,13 +53,16 @@ const Card = ({ films, onMouseEnter = null, onMouseLeave = null }) => {
                 </div>
               </Link>
               {hoveredItemId === film.id && trailerUrl && (
-                <iframe
-                  src={trailerUrl}
-                  frameBorder="0"
-                  allow="autoplay; encrypted-media"
-                  allowFullScreen
-                  style={{ position: 'absolute', top: 0, left: 0, width: '100%', height: '100%' }}
-                ></iframe>
+                <video
+                src={trailerUrl}
+                autoPlay
+                loop
+                muted
+                controls={false}
+                style={{ position: 'absolute', top: 0, left: 0, width: '100%', height: '100%' }}
+                allowFullScreen
+              >
+              </video>
               )}
             </div>
           ))}
@@ -74,5 +77,5 @@ export default Card;
 
 function getTrailerUrl(filmId) {
   // Implémentez cette fonction pour retourner l'URL de la bande-annonce basée sur l'ID du film
-  return "https://www.youtube.com/watch?v=HsPP6xSzQoE&t=13s"; // Placeholder URL
+  return "/inter.mp4"; // Placeholder URL
 }
