@@ -53,16 +53,18 @@ const Card = ({ films, onMouseEnter = null, onMouseLeave = null }) => {
                 </div>
               </Link>
               {hoveredItemId === film.id && trailerUrl && (
-                <video
-                src={trailerUrl}
-                autoPlay
-                loop
-                muted
-                controls={false}
-                style={{ position: 'absolute', top: 0, left: 0, width: '100%', height: '100%',  objectFit: 'cover' }}
-                allowFullScreen
-              >
-              </video>
+                <div className="coverBlack">
+                  <video
+                  src={trailerUrl}
+                  autoPlay
+                  loop
+                  muted
+                  controls={false}
+                  style={{ position: 'absolute', top: 0, left: 0, width: '100%', height: '100%',  objectFit: 'cover' }}
+                  allowFullScreen
+                >
+                </video>
+              </div>
               )}
             </div>
           ))}
