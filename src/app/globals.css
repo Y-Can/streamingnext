@@ -124,7 +124,7 @@ code {
   display: flex;
   flex-direction: row;
   justify-content: start;
-  flex-wrap: wrap;
+  flex-wrap: nowrap;
 }
 .containerCol{
   left: 0;
