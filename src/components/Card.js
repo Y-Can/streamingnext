@@ -74,7 +74,7 @@ const Card = ({ films, onMouseEnter = null, onMouseLeave = null }) => {
   return (
     <div className="containerRowUl">
       <div className="containerCol maxheight">
-        {/* <div className="containerRowUl"> */}
+        <div className="containerRowUl">
           <Slider {...settings}>
           {films.map((film) => (
             <div className="news-card"
@@ -110,7 +110,7 @@ const Card = ({ films, onMouseEnter = null, onMouseLeave = null }) => {
             </div>
           ))}
           </Slider>
-        {/* </div> */}
+        </div>
       </div>
     </div>
   );
