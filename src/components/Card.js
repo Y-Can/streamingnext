@@ -79,5 +79,5 @@ export default Card;
 
 function getTrailerUrl(filmId) {
   // Implémentez cette fonction pour retourner l'URL de la bande-annonce basée sur l'ID du film
-  return "/inter.mp4"; // Placeholder URL
+  return "https://www.youtube.com/embed/VaOijhK3CRU?si=7Ovb51Wu0ZAnISc6"; // Placeholder URL
 }
