@@ -5,7 +5,7 @@ const PrevArrow = (props) => {
     return (
         <button
             className={className}
-            style={{ ...style, display: 'block', background: 'black', borderRadius: '50%' }}
+            style={{ ...style, display: 'block', background: 'black', borderRadius: '0%' }}
             onClick={onClick}
         >
             &lt;
@@ -18,7 +18,7 @@ const NextArrow = (props) => {
     return (
         <button
             className={className}
-            style={{ ...style, display: 'block', background: 'black', borderRadius: '50%' }}
+            style={{ ...style, display: 'block', background: 'black', borderRadius: '0%' }}
             onClick={onClick}
         >
             &gt;
