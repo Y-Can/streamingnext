@@ -79,7 +79,7 @@ function getTrailerUrl(filmId) {
   // Mock implementation, replace with actual API call if needed
   try {
     // Simulate fetching URL
-    const url = `https://www.example.com/trailer/${filmId}`;
+    const url = `https://www.youtube.com/embed/HsPP6xSzQoE?si=N9N8QGecL8Rp3ADw`;
     return url;
   } catch (error) {
     console.error('Failed to fetch trailer URL:', error);
