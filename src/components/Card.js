@@ -40,7 +40,7 @@ const Card = ({ films, onMouseEnter = null, onMouseLeave = null }) => {
                  onMouseEnter={() => handleMouseEnter(film.id)}
                  onMouseLeave={handleMouseLeave}
                  id={`li-${film.id}`}>
-              <Link rel="preload" href={`/detail-film/${film.id}`} as="style">
+              <Link href={`/detail-film/${film.id}`}>
                 <a href="#" className="news-card__card-link"></a>
                 <img src={film.image} alt={film.titre} className="news-card__image" />
                 <div className="news-card__text-wrapper">
@@ -54,7 +54,7 @@ const Card = ({ films, onMouseEnter = null, onMouseLeave = null }) => {
               {hoveredItemId === film.id && trailerUrl && (
                 <div className="coverBlack">
                   <video
-                    src={trailerUrl}
+                    blurDataURL={trailerUrl}
                     autoPlay
                     loop
                     controls // Changed to show controls
