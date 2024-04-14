@@ -846,3 +846,7 @@ card__excerpt
 .slick-next {
   right: 10px;
 }
+.prev-arrow::before, .next-arrow::before {
+  content: none; /* This effectively removes any content that might have been added */
+  display: none; /* This ensures it does not take up space */
+}
