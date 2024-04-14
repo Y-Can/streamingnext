@@ -687,7 +687,7 @@ body {
 }
 .news-card:hover{
 transition: 2s;
-width: 400px;
+width: 700px !important;
 scale: 1.4;
 z-index: 99;
 }
