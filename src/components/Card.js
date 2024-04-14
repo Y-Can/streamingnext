@@ -47,7 +47,7 @@ const Card = ({ films, onMouseEnter = null, onMouseLeave = null }) => {
                   <h2 className="news-card__title">{film.titre}</h2>
                   <div className="news-card__details-wrapper">
                     <p className="news-card__excerpt">{film.description}</p>
-                    <a href="#" className="news-card__read-more">Lire la suite <i className="fas fa-long-arrow-alt-right"></i></a>
+                    <a href={`/detail-film/${film.id}`} className="news-card__read-more">Lire la suite <i className="fas fa-long-arrow-alt-right"></i></a>
                   </div>
                 </div>
               </Link>
