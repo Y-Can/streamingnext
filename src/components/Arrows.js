@@ -1,5 +1,4 @@
 import React from 'react';
-import "../app/globals.css";
 
 const PrevArrow = (props) => {
     const { className, style, onClick } = props;
