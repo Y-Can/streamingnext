@@ -1,6 +1,8 @@
 import React, { useState } from "react";
 import "../app/globals.css";
 import Link from "next/link";
+import "slick-carousel/slick/slick.css"; 
+import "slick-carousel/slick/slick-theme.css";
 
 const Card = ({ films, onMouseEnter = null, onMouseLeave = null }) => {
   const [hoveredItemId, setHoveredItemId] = useState(null);
@@ -30,8 +32,41 @@ const Card = ({ films, onMouseEnter = null, onMouseLeave = null }) => {
     }
   };
 
+
+
+    // Settings for the slider
+    const settings = {
+      dots: true,
+      infinite: true,
+      speed: 500,
+      slidesToShow: 3,
+      slidesToScroll: 1,
+      autoplay: true,
+      autoplaySpeed: 2000,
+      cssEase: "linear",
+      responsive: [
+        {
+          breakpoint: 1024,
+          settings: {
+            slidesToShow: 2,
+            slidesToScroll: 1,
+            infinite: true,
+            dots: true
+          }
+        },
+        {
+          breakpoint: 600,
+          settings: {
+            slidesToShow: 1,
+            slidesToScroll: 1
+          }
+        }
+      ]
+    };
+
   return (
     <div className="containerRowUl">
+        <Slider {...settings}>
       <div className="containerCol maxheight">
         <div className="containerRowUl">
           {films.map((film) => (
@@ -69,6 +104,7 @@ const Card = ({ films, onMouseEnter = null, onMouseLeave = null }) => {
           ))}
         </div>
       </div>
+      </Slider>
     </div>
   );
 };
@@ -79,7 +115,7 @@ function getTrailerUrl(filmId) {
   // Mock implementation, replace with actual API call if needed
   try {
     // Simulate fetching URL
-    const url = `https://www.youtube.com/embed/HsPP6xSzQoE?si=N9N8QGecL8Rp3ADw`;
+    const url = `/inter.mp4`;
     return url;
   } catch (error) {
     console.error('Failed to fetch trailer URL:', error);
