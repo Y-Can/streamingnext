@@ -825,3 +825,22 @@ card__excerpt
     z-index: -1;
   }
 }
+
+/* slick */
+
+.slick-prev,
+.slick-next {
+  z-index: 1;
+  top: 50%;
+  width: 30px;
+  height: 30px;
+  transform: translate(0, -50%);
+}
+
+.slick-prev {
+  left: 10px;
+}
+
+.slick-next {
+  right: 10px;
+}

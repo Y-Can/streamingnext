@@ -4,6 +4,8 @@ import Link from "next/link";
 import Slider from "react-slick"; // Import the Slider component
 import "slick-carousel/slick/slick.css"; 
 import "slick-carousel/slick/slick-theme.css";
+import {SampleNextArrow,SamplePrevArrow} from "./Arrows.js"
+
 
 const Card = ({ films, onMouseEnter = null, onMouseLeave = null }) => {
   const [hoveredItemId, setHoveredItemId] = useState(null);
@@ -45,6 +47,8 @@ const Card = ({ films, onMouseEnter = null, onMouseLeave = null }) => {
       autoplay: false,
       autoplaySpeed: 2000,
       cssEase: "linear",
+      nextArrow: <SampleNextArrow />,
+      prevArrow: <SamplePrevArrow />,
       responsive: [
         {
           breakpoint: 1024,
