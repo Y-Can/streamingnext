@@ -40,7 +40,7 @@ const Card = ({ films, onMouseEnter = null, onMouseLeave = null }) => {
                  onMouseEnter={() => handleMouseEnter(film.id)}
                  onMouseLeave={handleMouseLeave}
                  id={`li-${film.id}`}>
-              <Link href={`/detail-film/${film.id}`}>
+              <Link rel="preload" href={`/detail-film/${film.id}`} as="style">
                 <a href="#" className="news-card__card-link"></a>
                 <img src={film.image} alt={film.titre} className="news-card__image" />
                 <div className="news-card__text-wrapper">
