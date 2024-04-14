@@ -41,15 +41,16 @@ const Card = ({ films, onMouseEnter = null, onMouseLeave = null }) => {
                  onMouseLeave={handleMouseLeave}
                  id={`li-${film.id}`}>
               <Link href={`/detail-film/${film.id}`}>
-                <a href="#" className="news-card__card-link"></a>
-                <img src={film.image} alt={film.titre} className="news-card__image" />
-                <div className="news-card__text-wrapper">
-                  <h2 className="news-card__title">{film.titre}</h2>
-                  <div className="news-card__details-wrapper">
-                    <p className="news-card__excerpt">{film.description}</p>
-                    <a href={`/detail-film/${film.id}`} className="news-card__read-more">Lire la suite <i className="fas fa-long-arrow-alt-right"></i></a>
+                <a className="news-card__card-link">
+                  <img src={film.image} alt={film.titre} className="news-card__image" />
+                  <div className="news-card__text-wrapper">
+                    <h2 className="news-card__title">{film.titre}</h2>
+                    <div className="news-card__details-wrapper">
+                      <p className="news-card__excerpt">{film.description}</p>
+                      <span className="news-card__read-more">Lire la suite <i className="fas fa-long-arrow-alt-right"></i></span>
+                    </div>
                   </div>
-                </div>
+                </a>
               </Link>
               {hoveredItemId === film.id && trailerUrl && (
                 <div className="coverBlack">
@@ -76,6 +77,14 @@ const Card = ({ films, onMouseEnter = null, onMouseLeave = null }) => {
 export default Card;
 
 function getTrailerUrl(filmId) {
-  // Implémentez cette fonction pour retourner l'URL de la bande-annonce basée sur l'ID du film
-  return "https://www.youtube.com/embed/HsPP6xSzQoE?si=XgRO7GfMyp4hnmvN"; // Placeholder URL
+  // Mock implementation, replace with actual API call if needed
+  try {
+    // Simulate fetching URL
+    const url = `https://www.example.com/trailer/${filmId}`;
+    return url;
+  } catch (error) {
+    console.error('Failed to fetch trailer URL:', error);
+    return '';  // Return an empty string or fallback URL if the fetch fails
+  }
 }
+
