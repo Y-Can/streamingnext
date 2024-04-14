@@ -1,22 +1,29 @@
-function SampleNextArrow(props) {
+import React from 'react';
+
+const PrevArrow = (props) => {
     const { className, style, onClick } = props;
     return (
-      <div
-        className={className}
-        style={{ ...style, display: "block", background: "red" }}
-        onClick={onClick}
-      />
+        <button
+            className={className}
+            style={{ ...style, display: 'block', background: 'black', borderRadius: '50%' }}
+            onClick={onClick}
+        >
+            &lt;
+        </button>
     );
-  }
-  
-  function SamplePrevArrow(props) {
+};
+
+const NextArrow = (props) => {
     const { className, style, onClick } = props;
     return (
-      <div
-        className={className}
-        style={{ ...style, display: "block", background: "green" }}
-        onClick={onClick}
-      />
+        <button
+            className={className}
+            style={{ ...style, display: 'block', background: 'black', borderRadius: '50%' }}
+            onClick={onClick}
+        >
+            &gt;
+        </button>
     );
-  }
-  
+};
+
+export { PrevArrow, NextArrow };

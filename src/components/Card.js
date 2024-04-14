@@ -4,8 +4,8 @@ import Link from "next/link";
 import Slider from "react-slick"; // Import the Slider component
 import "slick-carousel/slick/slick.css"; 
 import "slick-carousel/slick/slick-theme.css";
-import SamplePrevArrow from "./Arrows.js"
-import SampleNextArrow from "./Arrows.js"
+import { PrevArrow, NextArrow } from './Arrows';
+
 
 
 
@@ -49,8 +49,8 @@ const Card = ({ films, onMouseEnter = null, onMouseLeave = null }) => {
       autoplay: false,
       autoplaySpeed: 2000,
       cssEase: "linear",
-      nextArrow: <SampleNextArrow />,
-      prevArrow: <SamplePrevArrow />,
+      nextArrow: <NextArrow />,
+      prevArrow: <PrevArrow />,
       responsive: [
         {
           breakpoint: 1024,
