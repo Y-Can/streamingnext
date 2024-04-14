@@ -41,16 +41,15 @@ const Card = ({ films, onMouseEnter = null, onMouseLeave = null }) => {
                  onMouseLeave={handleMouseLeave}
                  id={`li-${film.id}`}>
               <Link href={`/detail-film/${film.id}`}>
-                <a className="news-card__card-link">
-                  <img src={film.image} alt={film.titre} className="news-card__image" />
-                  <div className="news-card__text-wrapper">
-                    <h2 className="news-card__title">{film.titre}</h2>
-                    <div className="news-card__details-wrapper">
-                      <p className="news-card__excerpt">{film.description}</p>
-                      <span className="news-card__read-more">Lire la suite <i className="fas fa-long-arrow-alt-right"></i></span>
-                    </div>
+                <a href="#" className="news-card__card-link"></a>
+                <img src={film.image} alt={film.titre} className="news-card__image" />
+                <div className="news-card__text-wrapper">
+                  <h2 className="news-card__title">{film.titre}</h2>
+                  <div className="news-card__details-wrapper">
+                    <p className="news-card__excerpt">{film.description}</p>
+                    <a href={`/detail-film/${film.id}`} className="news-card__read-more">Lire la suite <i className="fas fa-long-arrow-alt-right"></i></a>
                   </div>
-                </a>
+                </div>
               </Link>
               {hoveredItemId === film.id && trailerUrl && (
                 <div className="coverBlack">
