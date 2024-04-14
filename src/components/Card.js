@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import "../app/globals.css";
 import Link from "next/link";
+import Slider from "react-slick"; // Import the Slider component
 import "slick-carousel/slick/slick.css"; 
 import "slick-carousel/slick/slick-theme.css";
 
