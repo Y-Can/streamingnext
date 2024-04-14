@@ -9,10 +9,10 @@ const Card = ({ films, onMouseEnter = null, onMouseLeave = null }) => {
 
   const handleMouseEnter = (filmId) => {
     setHoveredItemId(filmId);
-    const url = getTrailerUrl(filmId);  // Assurez-vous d'implémenter cette fonction pour récupérer les URLs des bandes-annonces
+    const url = getTrailerUrl(filmId);
     const newTimer = setTimeout(() => {
       setTrailerUrl(url);
-    }, 2000); // Set a timeout for 2 seconds
+    }, 2000);
     setTimer(newTimer);
     if (onMouseEnter) {
       onMouseEnter();
@@ -21,9 +21,9 @@ const Card = ({ films, onMouseEnter = null, onMouseLeave = null }) => {
 
   const handleMouseLeave = () => {
     if (timer) {
-      clearTimeout(timer); // Clear the timer if the user leaves before 2 seconds
+      clearTimeout(timer);
     }
-    setTrailerUrl(''); // Clear the trailer URL
+    setTrailerUrl('');
     setHoveredItemId(null);
     if (onMouseLeave) {
       onMouseLeave();
@@ -59,7 +59,7 @@ const Card = ({ films, onMouseEnter = null, onMouseLeave = null }) => {
                     src={trailerUrl}
                     autoPlay
                     loop
-                    controls // Changed to show controls
+                    controls
                     style={{ position: 'absolute', top: 0, left: 0, width: '100%', height: '100%', objectFit: 'cover' }}
                     allowFullScreen
                   >
@@ -78,6 +78,5 @@ const Card = ({ films, onMouseEnter = null, onMouseLeave = null }) => {
 export default Card;
 
 function getTrailerUrl(filmId) {
-  // Implémentez cette fonction pour retourner l'URL de la bande-annonce basée sur l'ID du film
-  return "https://www.youtube.com/embed/VaOijhK3CRU?si=7Ovb51Wu0ZAnISc6"; // Placeholder URL
+  return "/inter.mp4";
 }
