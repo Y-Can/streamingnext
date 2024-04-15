@@ -121,6 +121,15 @@ code {
 .containerRowUl{
   min-width: 100%;
   max-width: 100%;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  flex-wrap: nowrap;
+}
+.containerRowUlCards{
+  min-width: 100%;
+  max-width: 100%;
   min-height: 400px; max-height: 400px;
 background-color: #000000;
 
