@@ -134,7 +134,9 @@ code {
   min-height: 400px; max-height: 400px;
 background-color: #000000;
 margin: auto;
-
+display: flex;
+flex-direction: column;
+justify-content: center;
 
 }
 .containerCol{
