@@ -228,7 +228,7 @@ p {
   /* Hauteur suffisamment grande pour afficher toute la description */
   overflow: auto;
   white-space: normal;
-  z-index: 999;
+  z-index: 1400;
   overflow-y: hidden;
 
 }
