@@ -858,3 +858,6 @@ card__excerpt
 .slick-next {
   right: 10px;
 }
+.slick-slide{
+  margin: auto;
+}
