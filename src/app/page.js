@@ -63,10 +63,6 @@ const Home = () => {
 	return (
 
 			<div className="containerCol">
-				<div className="rowCenter">
-					
-					<h1>Liste des Films</h1>
-				</div>
 				<div className="containerRow">
 					<Card films={films} />
 				</div>
