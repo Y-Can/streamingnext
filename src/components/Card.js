@@ -91,7 +91,7 @@ const Card = ({ films, onMouseEnter = null, onMouseLeave = null }) => {
                  onMouseEnter={() => handleMouseEnter(film.id)}
                  onMouseLeave={handleMouseLeave}
                  id={`li-${film.id}`}
-                 styles={'display:flex'}
+                 style={{ display: 'block' }} 
                  >
               <Link href={`/detail-film/${film.id}`}>
                 <a href="#" className="news-card__card-link"></a>
