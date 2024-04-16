@@ -69,3 +69,6 @@
 // 		res.status(401).json({ error: "Authentification échouée" });
 // 	}
 // });
+
+app.use(cors({   origin: 'localhost',   credentials: true, }));
+app.use(express.json());
