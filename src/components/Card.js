@@ -134,11 +134,12 @@ async function getTrailerUrl(filmId) {
   try {
     // Simulate fetching URL
     const url = `/inter.mp4`;
-    
+    setTrailerUrl(url)
     return url;
   } catch (error) {
     
     const url = `/inter.mp4`;
+    setTrailerUrl(url)
     console.error('Failed to fetch trailer URL:', error);
     return url;  // Return an empty string or fallback URL if the fetch fails
   }
