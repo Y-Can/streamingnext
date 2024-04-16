@@ -851,11 +851,11 @@ card__excerpt
 }
 
 .slick-prev {
-  left: 10px;
+  left: 80px;
 }
 
 .slick-next {
-  right: 10px;
+  right: 80px;
 }
 .slick-slide{
   margin: auto;
