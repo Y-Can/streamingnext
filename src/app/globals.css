@@ -667,7 +667,7 @@ body {
 
 .news-card {
   border: 0px solid aqua;
-  margin: 0.5rem;
+  margin: auto;
   position: relative;
   height: var(--card-height-mobile);
   overflow: hidden;
