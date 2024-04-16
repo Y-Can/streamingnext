@@ -683,7 +683,7 @@ body {
   -webkit-transform: translate3d(0, 0, 0);
   -moz-transform: translate3d(0, 0, 0);
   transform: translate3d(0, 0, 0);
-  
+  transition: 2s;
 }
 .news-card iframe {
   position: absolute;
@@ -702,11 +702,10 @@ body {
 .news-card:hover {
   transition: 2s;
   transform: scale(1.4) scaleX(1.1);  /* Cette ligne ajuste la largeur plus que la hauteur */
-  z-index: 99;
+  z-index: 999;
 }
 
 .coverBlack{
-  z-index: 99999;
   height: 100%;
   width: 100%;
   background-color: #000000;
