@@ -93,7 +93,7 @@ const Card = ({ films, onMouseEnter = null, onMouseLeave = null }) => {
                  id={`li-${film.id}`}
                  style={{ display: 'block' }} 
                  >
-              <Link href={`/detail-film/${film.id}`}>
+              <Link href={`/detail-film/${film.id}`}  className="margin">
                 <a href="#" className="news-card__card-link"></a>
                 <img src={film.image} alt={film.titre} className="news-card__image" />
                 <div className="news-card__text-wrapper">

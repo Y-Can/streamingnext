@@ -770,6 +770,9 @@ body {
   margin-bottom: .5rem;
   color: #CCC;
 }
+.margin{
+  margin: auto;
+}
 
 .news-card__details-wrapper {
   max-height: 0;
