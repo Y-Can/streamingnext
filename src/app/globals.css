@@ -863,8 +863,8 @@ card__excerpt
   padding: auto;
 }
 .slick-next:before {
-  content: none;
+  content: "";
 }
 .slick-prev:before {
-  content: none;
+  content: "";
 }
