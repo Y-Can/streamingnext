@@ -5,7 +5,7 @@ import Slider from "react-slick"; // Import the Slider component
 import "slick-carousel/slick/slick.css"; 
 import "slick-carousel/slick/slick-theme.css";
 import { PrevArrow, NextArrow } from './Arrows';
-
+import myvideo from "/inter.mp4"
 
 
 
@@ -132,7 +132,7 @@ export default Card;
  function getTrailerUrl(filmId) {
   // Mock implementation, replace with actual API call if needed
     // Simulate fetching URL
-    const url = `/inter.mp4`;
+    const url = myvideo;
     return url;
 }
 
