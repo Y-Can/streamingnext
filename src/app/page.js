@@ -19,43 +19,43 @@ const Home = () => {
 		
 	useEffect(() => {
 		
-		const fetchData = async () => {
-			try {
-				let apiUrl = "./api/films";
-				if (id !== null) {
-					apiUrl += `?id=${encodeURIComponent(id)}`;
-				} else if (searchTerm !== null) {
-					apiUrl += `?search=${encodeURIComponent(searchTerm)}`;
-				}
-				const res = await axios.get(apiUrl);
-				const data = res.data;
-				setFilms(data.films || []);
-			} catch (error) {
-				console.error("Erreur lors de la récupération des films", error);
-				setFilms([]);
-			}
-			
-		};
-			// test
-		// 	const fetchFilm = async () => {
-		// 		try {
-		// 			let apiUrl = "/../api/films";
-		// 			if (id !== null) {
-		// 				apiUrl += `?id=${encodeURIComponent(id)}`;
-		// 			} else if (searchTerm !== null) {
-		// 				apiUrl += `?search=${encodeURIComponent(searchTerm)}`;
-		// 			}
-		// 			const res = await axios.get(apiUrl);
-		// 			const data = res.data;
-		// 			setFilms(data.films || []);
-		// 		} catch (error) {
-		// 			console.error("Erreur lors de la récupération des films", error);
-		// 			setFilms([]);
+		// const fetchData = async () => {
+		// 	try {
+		// 		let apiUrl = "./api/films";
+		// 		if (id !== null) {
+		// 			apiUrl += `?id=${encodeURIComponent(id)}`;
+		// 		} else if (searchTerm !== null) {
+		// 			apiUrl += `?search=${encodeURIComponent(searchTerm)}`;
 		// 		}
+		// 		const res = await axios.get(apiUrl);
+		// 		const data = res.data;
+		// 		setFilms(data.films || []);
+		// 	} catch (error) {
+		// 		console.error("Erreur lors de la récupération des films", error);
+		// 		setFilms([]);
+		// 	}
+			
+		//};
+			// test
+			const fetchFilm = async () => {
+				try {
+					let apiUrl = "/../api/films";
+					if (id !== null) {
+						apiUrl += `?id=${encodeURIComponent(id)}`;
+					} else if (searchTerm !== null) {
+						apiUrl += `?search=${encodeURIComponent(searchTerm)}`;
+					}
+					const res = await axios.get(apiUrl);
+					const data = res.data;
+					setFilms(data.films || []);
+				} catch (error) {
+					console.error("Erreur lors de la récupération des films", error);
+					setFilms([]);
+				}
 				
-		// 	};
-		// fetchFilm()
-		fetchData();
+			};
+		fetchFilm()
+		// fetchData();
 	}, [id, searchTerm]);
 	const handleSearchTermChange = (newSearchTerm) => {
 		setSearchTerm(newSearchTerm);
