@@ -866,3 +866,8 @@ card__excerpt
   content: "";
   display: none;
 }
+.slick-slider {
+    display: flex;
+    align-items: center;  /* Centre verticalement */
+    justify-content: center; /* Centre horizontalement */
+}
