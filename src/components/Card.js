@@ -127,15 +127,18 @@ const Card = ({ films, onMouseEnter = null, onMouseLeave = null }) => {
 
 export default Card;
 
-function getTrailerUrl(filmId) {
+async function getTrailerUrl(filmId) {
   // Mock implementation, replace with actual API call if needed
   try {
     // Simulate fetching URL
     const url = `/inter.mp4`;
+    
     return url;
   } catch (error) {
+    
+    const url = `/inter.mp4`;
     console.error('Failed to fetch trailer URL:', error);
-    return '';  // Return an empty string or fallback URL if the fetch fails
+    return url;  // Return an empty string or fallback URL if the fetch fails
   }
 }
 
