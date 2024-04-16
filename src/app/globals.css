@@ -60,7 +60,6 @@
 html,
 body {
   max-width: 100vw;
-  overflow-x: hidden;
 }
 
 body {
@@ -103,7 +102,7 @@ code {
   padding: 15px;
 }
 .rowcenter{
-  min-width: 100vw;
+  min-width: 100%;
   min-height: 100vh;
   display: flex;
   flex-direction: row;
@@ -112,7 +111,7 @@ code {
   padding: 15px;
 }
 .containerRow{
-  min-width: 100vw;
+  min-width: 100%;
   min-height: 100vh;
   display: flex;
   flex-direction: row;
