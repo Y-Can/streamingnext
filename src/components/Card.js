@@ -41,7 +41,7 @@ const Card = ({ films, onMouseEnter = null, onMouseLeave = null }) => {
 
     // Settings for the slider
     const settings = {
-      dots: true,
+      dots: false,
       infinite: true,
       speed: 500,
       slidesToShow: 4,
@@ -58,7 +58,7 @@ const Card = ({ films, onMouseEnter = null, onMouseLeave = null }) => {
             slidesToShow: 3,
             slidesToScroll: 3,
             infinite: true,
-            dots: true
+            dots: false
           }
         },
         {
@@ -67,7 +67,7 @@ const Card = ({ films, onMouseEnter = null, onMouseLeave = null }) => {
             slidesToShow: 2,
             slidesToScroll: 2,
             infinite: true,
-            dots: true
+            dots: false
           }
         },
         {
