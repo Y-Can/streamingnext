@@ -129,8 +129,8 @@ code {
   flex-wrap: nowrap;
 }
 .containerRowUlCards{
-  min-width: 92%;
-  max-width: 92%;
+  min-width: 100%;
+  max-width: 100%;
   min-height: 400px; max-height: 400px;
 background-color: #000000;
 margin: auto;

@@ -48,7 +48,7 @@ const Card = ({ films, onMouseEnter = null, onMouseLeave = null }) => {
       slidesToScroll: 4,
       autoplay: false,
       autoplaySpeed: 2000,
-      cssEase: "300ms ease-in-out",
+      cssEase: "ease-in-out",
       nextArrow: <NextArrow />,
       prevArrow: <PrevArrow />,
       responsive: [

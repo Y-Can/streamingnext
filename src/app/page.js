@@ -63,9 +63,7 @@ const Home = () => {
 	return (
 
 			<div className="containerCol">
-				<div className="containerRow">
 					<Card films={films} />
-				</div>
 			</div>
 
 	);
