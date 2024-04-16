@@ -702,7 +702,7 @@ body {
 .news-card:hover {
   transition: 2s;
   transform: scale(1.4) scaleX(1.1);  /* Cette ligne ajuste la largeur plus que la hauteur */
-  z-index: 9999;
+  z-index: 99999;
 }
 
 .coverBlack{
