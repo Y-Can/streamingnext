@@ -675,6 +675,7 @@ body {
   flex: 1;
   min-width: 290px;
   max-width: 290px;
+  display: flex !important;
   box-shadow: 0 0 1rem rgba(0, 0, 0, 0.5);
   -webkit-backface-visibility: hidden;
   -moz-backface-visibility: hidden;
