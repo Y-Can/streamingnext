@@ -107,7 +107,7 @@ const Card = ({ films, onMouseEnter = null, onMouseLeave = null }) => {
               {hoveredItemId === film.id && (
                 <div className="coverBlack">
                   <video
-                    blurDataURL={trailerUrl}
+                    src={trailerUrl}
                     autoPlay
                     loop
                     controls // Changed to show controls
