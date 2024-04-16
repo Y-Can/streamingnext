@@ -104,7 +104,7 @@ const Card = ({ films, onMouseEnter = null, onMouseLeave = null }) => {
                   </div>
                 </div>
               </Link>
-              {hoveredItemId === film.id && trailerUrl && (
+              {hoveredItemId === film.id && (
                 <div className="coverBlack">
                   <video
                     blurDataURL={trailerUrl}
@@ -129,19 +129,10 @@ const Card = ({ films, onMouseEnter = null, onMouseLeave = null }) => {
 
 export default Card;
 
-async function getTrailerUrl(filmId) {
+ function getTrailerUrl(filmId) {
   // Mock implementation, replace with actual API call if needed
-  try {
     // Simulate fetching URL
     const url = `/inter.mp4`;
-    setTrailerUrl(url)
     return url;
-  } catch (error) {
-    
-    const url = `/inter.mp4`;
-    setTrailerUrl(url)
-    console.error('Failed to fetch trailer URL:', error);
-    return url;  // Return an empty string or fallback URL if the fetch fails
-  }
 }
 
