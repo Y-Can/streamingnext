@@ -9,10 +9,11 @@ import { PrevArrow, NextArrow } from './Arrows';
 
 
 
-const Card = ({ films, series, onMouseEnter = null, onMouseLeave = null }) => {
+const Card = ({ films, series,type, onMouseEnter = null, onMouseLeave = null }) => {
   if(!films){
     films = series
   } 
+  
   const [hoveredItemId, setHoveredItemId] = useState(null);
   const [trailerUrl, setTrailerUrl] = useState('');
   const [timer, setTimer] = useState(null);
