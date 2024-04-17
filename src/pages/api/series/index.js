@@ -44,6 +44,7 @@ export default async function handler(req, res) {
         }
     } else if (req.method === "POST") {
         try {
+            console.log('la req body',req.body);
             const { user } = req.body;
             const userId = user
             const puser = await pool.query("SELECT type FROM users where id = $1", [
