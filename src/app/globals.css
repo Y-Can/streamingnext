@@ -886,7 +886,8 @@ card__excerpt
   .videoPlayer {
     position: relative;
     width: 100%;
-    max-width: 640px; /* Ajustez selon la largeur désirée */
+    max-width: 100%;
+    min-width: 100%; /* Ajustez selon la largeur désirée */
     margin: auto;
   }
   
