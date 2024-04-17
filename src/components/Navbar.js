@@ -144,7 +144,14 @@ const Navbar = () => {
                                                 <a onClick={toggleClass}>Add film</a>
                                             </Link>
                                             </li>
-                                        )}                           
+                                        )}
+                                        {user && user.type === "ADMIN" && (
+                                            <li>
+                                            <Link href="/add_serie">
+                                                <a onClick={toggleClass}>Add Serie</a>
+                                            </Link>
+                                            </li>
+                                        )}                     
                                     </ul>
                                 </li>
                                 <li className="menu-item " ><Link href="/" onClick={toggleClass} activeClassName='is-active' to={`/Contact`}> Contact </Link> </li>
