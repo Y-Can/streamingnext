@@ -45,6 +45,7 @@ export default async function handler(req, res) {
     } else if (req.method === "POST") {
         try {
             const { user } = req.body;
+            console.log(user);
             const userId = user.id
             if (user === "ADMIN") {
                 const { titre, description, image } = req.body;
