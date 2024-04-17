@@ -14,6 +14,7 @@ const Card = ({ films, series, onMouseEnter = null, onMouseLeave = null }) => {
 
   useEffect(() => {
     if (!films && series) {
+      films = series
       setType('Séries');
     } else {
       setType('Films');
