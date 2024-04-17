@@ -5,8 +5,8 @@ import { useSearchParams, useRouter } from "next/navigation";
 import axios from "axios";
 import Card from "./../components/Card";
 import "./globals.css";
-import playIcon from './../../../../public/icons/play-button.png'; 
-import pauseIcon from './../../../../public/icons/pause-button.png';
+import playIcon from '../../public/icons/play-button.png'; 
+import pauseIcon from '../../public/icons/pause-button.png';
 
 const Home = () => {
 	const router = useRouter();
