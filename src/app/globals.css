@@ -116,6 +116,7 @@ code {
   display: flex;
   flex-direction: row;
   justify-content: flex-start;
+  background-color: #000000;
 }
 .containerRowUl{
   min-width: 100%;
@@ -125,6 +126,7 @@ code {
   justify-content: center;
   align-items: center;
   flex-wrap: nowrap;
+  background-color: rgb(43, 43, 43);
 }
 .containerRowUlCards{
   min-width: 100%;
@@ -144,6 +146,7 @@ justify-content: center;
   max-width: 100%;
   min-height: 100%;
   display: flex;
+  background-color: #000000;
   flex-direction: column;
   justify-content: center;
 }
