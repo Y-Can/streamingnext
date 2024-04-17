@@ -5,7 +5,7 @@ export default async function handler(req, res) {
     try {
         // Assurez-vous que les types de données sont corrects et que la table et les colonnes existent
         const result = await pool.query(
-            'INSERT INTO series (image, description, titre, user_id) VALUES ($1, $2, $3, $4) RETURNING id, image, description, titre, user_id',
+            'INSERT INTO series (image, description, titre, user_id) VALUES ($1, $2, $3, $4) RETURNING image, description, titre, user_id',
             [image, description, titre, user]
         );
         const newSerie = result.rows[0]; // Obtient le premier enregistrement de résultat, qui est la nouvelle série
