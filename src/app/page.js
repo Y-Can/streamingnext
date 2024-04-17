@@ -21,7 +21,7 @@ const Home = () => {
 		
 	useEffect(() => {
 		
-		const fetchData = async () => {
+		const fetchSerie = async () => {
 			try {
 				let apiUrl = "/../api/series";
 				if (id !== null) {
@@ -57,7 +57,7 @@ const Home = () => {
 				
 			};
 		fetchFilm()
-		// fetchSerie();
+		fetchSerie();
 	}, [id, searchTerm]);
 	const handleSearchTermChange = (newSearchTerm) => {
 		setSearchTerm(newSearchTerm);
