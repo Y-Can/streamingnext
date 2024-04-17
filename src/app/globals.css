@@ -964,3 +964,6 @@ card__excerpt
   justify-content: flex-start;
   background-color: #000000;
 }
+.titre{
+  font-size: 7vw;
+}
