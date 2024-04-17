@@ -86,7 +86,7 @@ const Card = ({ films, series,type, onMouseEnter = null, onMouseLeave = null }) 
 
   return (
     <div className="containerRowUl">
-      <div className="containerCol ">
+      <div className="containerCol  col-top">
         <h3> Nos {type} </h3>
         <div className="containerRowUlCards">
           <Slider {...settings}>
