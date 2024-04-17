@@ -37,7 +37,10 @@ const NouvellePage = () => {
         formData.append('image', image);
         formData.append('description', description);
 
-        const response = await axios.post("../../../api/add_serie", formData, {
+        const response = await axios.post("../../../api/add_serie", {
+            titre : titre,
+            image : image,
+            description : description,
             headers: {
                 'Content-Type': 'multipart/form-data',
                 Authorization: `Bearer ${localStorage.getItem("token")}`,
