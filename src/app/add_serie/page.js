@@ -36,7 +36,9 @@ const NouvellePage = () => {
         formData.append('titre', titre);
         formData.append('image', image);
         formData.append('description', description);
-        console.log(formData);
+        formData.forEach((value, key) => {
+            console.log(`${key}: `, value);
+        });
         // const response = await axios.post("../../../api/add_serie", formData, {
         //     headers: {
         //         'Content-Type': 'multipart/form-data',
