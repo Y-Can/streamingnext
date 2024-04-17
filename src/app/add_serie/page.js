@@ -36,21 +36,19 @@ const NouvellePage = () => {
         formData.append('titre', titre);
         formData.append('image', image);
         formData.append('description', description);
-        formData.forEach((value, key) => {
-            console.log(`${key}: `, value);
-        });
-        // const response = await axios.post("../../../api/add_serie", formData, {
-        //     headers: {
-        //         'Content-Type': 'multipart/form-data',
-        //         Authorization: `Bearer ${localStorage.getItem("token")}`,
-        //     },
-        // });
 
-        // if (response.status === 201) {
-        //     console.log("Serie ajouté :", response.data);
-        // } else {
-        //     console.error("Erreur lors de l'ajout de la Serie");
-        // }
+        const response = await axios.post("../../../api/add_serie", formData, {
+            headers: {
+                'Content-Type': 'multipart/form-data',
+                Authorization: `Bearer ${localStorage.getItem("token")}`,
+            },
+        });
+
+        if (response.status === 201) {
+            console.log("Serie ajouté :", response.data);
+        } else {
+            console.error("Erreur lors de l'ajout de la Serie");
+        }
     };
 
     return (
