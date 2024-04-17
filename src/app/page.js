@@ -66,7 +66,7 @@ const Home = () => {
 
 			<div className="containerCol">
 					<Card films={films} />
-					{/* <Card series={series} /> */}
+					<Card series={series} />
 			</div>
 
 	);
