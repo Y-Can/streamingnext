@@ -11,12 +11,14 @@ import { PrevArrow, NextArrow } from './Arrows';
 
 const Card = ({ films, series, onMouseEnter = null, onMouseLeave = null }) => {
   const [videoType, setType] = useState(null);
-  if(!films){
-    films = series
-    setType('Séries')
-  } else{
-    setType('Films')
-  }
+
+  useEffect(() => {
+    if (!films && series) {
+      setType('Séries');
+    } else {
+      setType('Films');
+    }
+  }, [films, series]);
   
   const [hoveredItemId, setHoveredItemId] = useState(null);
   const [trailerUrl, setTrailerUrl] = useState('');
