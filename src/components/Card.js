@@ -10,6 +10,7 @@ import { PrevArrow, NextArrow } from './Arrows';
 
 
 const Card = ({ films, series, onMouseEnter = null, onMouseLeave = null }) => {
+  const [videoType, setType] = useState(null);
   if(!films){
     films = series
     setType('Séries')
@@ -18,7 +19,6 @@ const Card = ({ films, series, onMouseEnter = null, onMouseLeave = null }) => {
   }
   
   const [hoveredItemId, setHoveredItemId] = useState(null);
-  const [videoType, setType] = useState(null);
   const [trailerUrl, setTrailerUrl] = useState('');
   const [timer, setTimer] = useState(null);
 
