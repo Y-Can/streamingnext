@@ -86,7 +86,7 @@ const Card = ({ films, series, onMouseEnter = null, onMouseLeave = null }) => {
   return (
     <div className="containerRowUl">
       <div className="containerCol ">
-        {/* <h3> Nos {videoType} </h3> */}
+        <h3> Nos {type} </h3>
         <div className="containerRowUlCards">
           <Slider {...settings}>
           {films.map((film) => (

@@ -159,8 +159,8 @@ const Home = () => {
 										<source src="/inter.mp4" type="video/mp4" />
 									</video>
 							</div>
-					<Card films={films} />
-					<Card series={series} />
+					<Card films={films} type={"Films"} />
+					<Card series={series} type={"Séries"} />
 			</div>
 
 	);
