@@ -958,7 +958,7 @@ card__excerpt
 
 .containerRowUne{
   min-width: 100%;
-  min-height: 80vh;
+  max-height: 80vh;
   display: flex;
   flex-direction: row;
   justify-content: flex-start;
