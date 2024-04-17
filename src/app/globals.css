@@ -891,7 +891,7 @@ card__excerpt
   }
   
   .video {
-    width: 80%;
+    width: 100%;
     height: 80%;
     border-radius: 8px;
   }
