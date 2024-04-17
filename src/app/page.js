@@ -158,9 +158,6 @@ const Home = () => {
 									>
 										<source src="/inter.mp4" type="video/mp4" />
 									</video>
-									<div className={isPlaying ? "info playing" : "info"}>
-										{showIcon ? "Playing" : "Paused"}
-									</div>
 							</div>
 					<Card films={films} />
 					<Card series={series} />
