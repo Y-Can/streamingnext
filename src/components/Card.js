@@ -1,4 +1,4 @@
-import React, { useState,useEffect } from "react";
+import React, { useState } from "react";
 import "../app/globals.css";
 import Link from "next/link";
 import Slider from "react-slick"; // Import the Slider component
@@ -10,17 +10,12 @@ import { PrevArrow, NextArrow } from './Arrows';
 
 
 const Card = ({ films, series, onMouseEnter = null, onMouseLeave = null }) => {
-  const [videoType, setType] = useState(null);
-console.log('films',films, series);
-  useEffect(() => {
-    if (!films) {
-      console.log('serie non films');
-      films = series
-      setType('Séries');
-    } else {
-      setType('Films');
-    }
-  }, [films]);
+  if(!films){
+    films = series
+    setType('Séries')
+  } else{
+    setType('Films')
+  }
   
   const [hoveredItemId, setHoveredItemId] = useState(null);
   const [trailerUrl, setTrailerUrl] = useState('');
@@ -95,7 +90,7 @@ console.log('films',films, series);
   return (
     <div className="containerRowUl">
       <div className="containerCol ">
-        <h3> Nos {videoType} </h3>
+        {/* <h3> Nos {videoType} </h3> */}
         <div className="containerRowUlCards">
           <Slider {...settings}>
           {films.map((film) => (
