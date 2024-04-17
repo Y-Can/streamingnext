@@ -20,7 +20,7 @@ console.log('films',films, series);
     } else {
       setType('Films');
     }
-  }, [films, series]);
+  }, [films]);
   
   const [hoveredItemId, setHoveredItemId] = useState(null);
   const [trailerUrl, setTrailerUrl] = useState('');
