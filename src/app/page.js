@@ -139,7 +139,7 @@ const Home = () => {
 	return (
 
 			<div className="containerCol">
-											<div className={'containerRow'}>
+											<div className={'containerRowUne'}>
 							
 								
 									<div 

@@ -955,3 +955,12 @@ card__excerpt
   opacity: 1;
   z-index: 999;
 }
+
+.containerRowUne{
+  min-width: 100%;
+  min-height: 80vh;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  background-color: #000000;
+}
