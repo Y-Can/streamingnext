@@ -5,6 +5,10 @@ export default async function handler(req, res) {
    // Validation des données requises
    console.log(req.body);
 
+   if(!image){
+    return res.status(400).json({ error: 'L\'image est requis et ne peut pas être vide.' });
+
+   }
    if (!titre) {
     return res.status(400).json({ error: 'Le titre est requis et ne peut pas être vide.' });
 }
