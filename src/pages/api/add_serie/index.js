@@ -14,7 +14,7 @@ export default async function handler(req, res) {
             serie: newSerie
         });
     } catch (error) {
-        console.error('Erreur lors de l\'ajout de la série', error);
+        console.error('Erreur lors de l\'ajout de la série', error,req);
         res.status(500).json({
             error: 'Erreur interne du serveur',
             detail: error.message // Ajout de cette ligne pour plus de détails sur l'erreur
