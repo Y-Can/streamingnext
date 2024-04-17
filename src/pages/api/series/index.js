@@ -1,6 +1,8 @@
 import pool from "../db";
 
 export default async function handler(req, res) {
+    const { titre, description, image, user } = req.body;
+
     if (req.method === "GET") {
         try {
             let query = "SELECT * FROM series";
@@ -49,7 +51,6 @@ export default async function handler(req, res) {
             //     userId,
             // ]);
             // if (puser.type === "ADMIN") {
-                const { titre, description, image, user } = req.body;
                 const result = await pool.query(
                     "INSERT INTO series (titre, description, image, user_id) VALUES ($1, $2, $3, $4) RETURNING *",
                     [titre, description, image, user] // Make sure to include userId in the values array
