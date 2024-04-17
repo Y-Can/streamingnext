@@ -44,15 +44,13 @@ export default async function handler(req, res) {
         }
     } else if (req.method === "POST") {
         try {
-            const { userId } = req.body;
-            const user = await pool.query("SELECT type FROM users where id = $1", [
-                userId,
-            ]);
+            const { user } = req.body;
+            const userId = user.id
             if (user === "ADMIN") {
                 const { titre, description, image } = req.body;
                 const result = await pool.query(
                     "INSERT INTO series (titre, description, image, user_id) VALUES ($1, $2, $3, $4) RETURNING *",
-                    [titre, description, image, userId] // Make sure to include userId in the values array
+                    [titre, description, image, userId] 
                 );
                 const serieAjoutee = result.rows[0];
                 res.status(201).json(serieAjoutee);
