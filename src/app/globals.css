@@ -669,6 +669,7 @@ body {
 }
 
 .news-card {
+  background-color: #000000;
   border: 0px solid aqua;
   margin: auto;
   position: relative;
