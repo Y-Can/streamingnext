@@ -11,9 +11,9 @@ import { PrevArrow, NextArrow } from './Arrows';
 
 const Card = ({ films, series, onMouseEnter = null, onMouseLeave = null }) => {
   const [videoType, setType] = useState(null);
-console.log(films, series);
+console.log('films',films, series);
   useEffect(() => {
-    if (!films && series) {
+    if (!films) {
       console.log('serie non films');
       films = series
       setType('Séries');
