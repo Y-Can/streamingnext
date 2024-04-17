@@ -67,8 +67,8 @@ const NouvellePage = () => {
                         <div className={styles.label}>Image</div>
                         <input
                             className={styles.input}
-                            type="file"
-                            onChange={handleImageChange}
+                            type="text"
+                            onChange={(e) => setImage(e.target.value) }
                         />
                         <div className={styles.label}>Description</div>
                         <input
