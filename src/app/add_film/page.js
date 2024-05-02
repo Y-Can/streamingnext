@@ -44,10 +44,12 @@ const NouvellePage = () => {
         videoFormData.append('name', titre);
         videoFormData.append('description', description);
 
+        const token = '8835816b62f0f4fc06a438d43407348d'; // Replace with your actual access token
+
         // Envoyer la vidéo à Vimeo et obtenir l'URL
         const vimeoResponse = await axios.post("https://api.vimeo.com/me/videos", videoFormData, {
             headers: {
-                'Authorization': `8835816b62f0f4fc06a438d43407348d`,
+                'Authorization': `Bearer ${token}`,
                 'Content-Type': 'multipart/form-data'
             }
         });
