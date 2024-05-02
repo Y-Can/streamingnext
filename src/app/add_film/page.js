@@ -23,14 +23,16 @@ const NouvellePage = () => {
     const [titre, setTitre] = useState("");
     const [image, setImage] = useState("");
     const [description, setDescription] = useState("");
-    const [video, setVideo] = useState(null);
+    const [video, setVideo] = useState(null); // Ajout de l'état pour la vidéo
 
     const handleImageChange = (event) => {
-        setImage(event.target.files[0]);
+        const selectedImage = event.target.files[0];
+        setImage(selectedImage);
     };
 
     const handleVideoChange = (event) => {
-        setVideo(event.target.files[0]);
+        const selectedVideo = event.target.files[0];
+        setVideo(selectedVideo); // Gérer le changement de la vidéo
     };
 
     const handleFormSubmit = async (event) => {
@@ -106,33 +108,35 @@ const NouvellePage = () => {
         <div className={styles.container}>
             <div className={styles.form}>
                 <h1>Ajout de film</h1>
-                <form onSubmit={handleFormSubmit} encType="multipart/form-data">
-                    <label className={styles.label}>Titre</label>
-                    <input
-                        className={styles.input}
-                        type="text"
-                        value={titre}
-                        onChange={(e) => setTitre(e.target.value)}
-                    />
-                    <label className={styles.label}>Image</label>
-                    <input
-                        className={styles.input}
-                        type="file"
-                        onChange={handleImageChange}
-                    />
-                    <label className={styles.label}>Vidéo</label>
-                    <input
-                        className={styles.input}
-                        type="file"
-                        onChange={handleVideoChange}
-                    />
-                    <label className={styles.label}>Description</label>
-                    <input
-                        className={styles.input}
-                        type="text"
-                        value={description}
-                        onChange={(e) => setDescription(e.target.value)}
-                    />
+                <form className={styles.form} onSubmit={handleFormSubmit} encType="multipart/form-data">
+                    <div className={styles.form}>
+                        <div className={styles.label}>Titre</div>
+                        <input
+                            className={styles.input}
+                            type="text"
+                            value={titre}
+                            onChange={(e) => setTitre(e.target.value)}
+                        />
+                        <div className={styles.label}>Image</div>
+                        <input
+                            className={styles.input}
+                            type="text"
+                            onChange={handleImageChange}
+                        />
+                        <div className={styles.label}>Vidéo</div>
+                        <input
+                            className={styles.input}
+                            type="file"
+                            onChange={handleVideoChange}
+                        />
+                        <div className={styles.label}>Description</div>
+                        <input
+                            className={styles.input}
+                            type="text"
+                            value={description}
+                            onChange={(e) => setDescription(e.target.value)}
+                        />
+                    </div>
                     <button className={styles.button} type="submit">Ajouter</button>
                 </form>
             </div>
