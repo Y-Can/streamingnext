@@ -156,13 +156,15 @@ const FilmDetail = ({ params }) => {
 									
 									{showIcon && <img src={iconSrc} className={styles.iconCenter} alt="Play/Pause" />}
 									
-									<video controls
+									{/* <video controls
 									ref={videoContainerRef}
 									poster="/icons/posterimitation.webp"
 									  className={`${styles.video} `}
 									>
-										<source src="https://vimeo.com/924121008" type="video/mp4" />
-									</video>
+										<source src="/inter.mp4" type="video/mp4" />
+									</video> */}
+									<iframe src="https://player.vimeo.com/video/924121008?h=6d53bd3613" width="640" height="268" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>
+<p><a href="https://vimeo.com/924121008">@VoirSerieFilm Snowden (2016)</a> from <a href="https://vimeo.com/user216847670">Can Can</a> on <a href="https://vimeo.com">Vimeo</a>.</p>
 							</div>
 					</div>
 			
