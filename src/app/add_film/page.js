@@ -96,7 +96,7 @@ const NouvellePage = () => {
                         <div className={styles.label}>Image</div>
                         <input
                             className={styles.input}
-                            type="file"
+                            type="text"
                             onChange={handleImageChange}
                         />
                         <div className={styles.label}>Vidéo</div>
