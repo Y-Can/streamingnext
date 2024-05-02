@@ -161,7 +161,7 @@ const FilmDetail = ({ params }) => {
 									poster="/icons/posterimitation.webp"
 									  className={`${styles.video} `}
 									>
-										<source src="/inter.mp4" type="video/mp4" />
+										<source src="https://vimeo.com/924121008" type="video/mp4" />
 									</video>
 							</div>
 					</div>
