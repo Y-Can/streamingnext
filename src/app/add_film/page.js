@@ -37,7 +37,7 @@ const NouvellePage = () => {
 
     const handleFormSubmit = async (event) => {
         event.preventDefault();
-        const token_vimero = "vqQQXcplF7xgRW732eWIWjEv8aS7nvMOvxNsivwIF/IK7xakKUN+J3lBPTtPKmf38akwKxtGqn+69eYDH10pX4KGLGWSTNxYmiEizy/y/GEapo4bka1wooG7Mh3I5akE" // Utiliser le token depuis le localStorage
+        const token_vimero = "0940fd0d436df8ffb6ce2a4885c1f1f8d1c825d4" // Utiliser le token depuis le localStorage
         const fileSize = video.size; // Obtenir la taille du fichier vidéo
 
         // Créer un placeholder pour la vidéo sur Vimeo
