@@ -25,10 +25,10 @@ const NouvellePage = () => {
     const [description, setDescription] = useState("");
     const [video, setVideo] = useState(null); // Ajout de l'état pour la vidéo
 
-    const handleImageChange = (event) => {
-        const selectedImage = event.target.files[0];
-        setImage(selectedImage);
-    };
+    // const handleImageChange = (event) => {
+    //     const selectedImage = event.target.files[0];
+    //     setImage(selectedImage);
+    // };
 
     const handleVideoChange = (event) => {
         const selectedVideo = event.target.files[0];
@@ -121,7 +121,7 @@ const NouvellePage = () => {
                         <input
                             className={styles.input}
                             type="text"
-                            onChange={handleImageChange}
+                            onChange={ (e) => setImage(e.target.value)}
                         />
                         <div className={styles.label}>Vidéo</div>
                         <input
