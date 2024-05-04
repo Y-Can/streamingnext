@@ -137,7 +137,9 @@ export default Card;
  function getTrailerUrl(filmId) {
   // Mock implementation, replace with actual API call if needed
     // Simulate fetching URL
-    const url = `/inter.mp4`;
+    
+    console.log('filmId', filmId);
+    const url = filmId.ba;
     return url;
 }
 
