@@ -23,7 +23,7 @@ const Card = ({ films, series,type, onMouseEnter = null, onMouseLeave = null }) 
     const url = getTrailerUrl(filmId);  
     const newTimer = setTimeout(() => {
       setTrailerUrl(url);
-    }, 1000); 
+    }, 3000); 
     setTimer(newTimer);
     if (onMouseEnter) {
       onMouseEnter();
