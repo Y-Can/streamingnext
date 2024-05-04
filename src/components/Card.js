@@ -20,7 +20,7 @@ const Card = ({ films, series,type, onMouseEnter = null, onMouseLeave = null }) 
 
   const handleMouseEnter = (filmId) => {
     setHoveredItemId(filmId);
-    const url = getTrailerUrl(filmId);  
+    const url = filmId.ba 
     const newTimer = setTimeout(() => {
       setTrailerUrl(url);
     }, 1000); 
@@ -138,7 +138,7 @@ export default Card;
   // Mock implementation, replace with actual API call if needed
     // Simulate fetching URL
     
-    console.log('filmId', filmId);
+    console.log('filmId', filmId.ba);
     const url = filmId.ba;
     return url;
 }
