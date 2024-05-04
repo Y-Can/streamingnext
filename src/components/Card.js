@@ -20,10 +20,10 @@ const Card = ({ films, series,type, onMouseEnter = null, onMouseLeave = null }) 
 
   const handleMouseEnter = (filmId) => {
     setHoveredItemId(filmId);
-    const url = getTrailerUrl(filmId);  // Assurez-vous d'implémenter cette fonction pour récupérer les URLs des bandes-annonces
+    const url = getTrailerUrl(filmId);  
     const newTimer = setTimeout(() => {
       setTrailerUrl(url);
-    }, 2000); // Set a timeout for 2 seconds
+    }, 1000); 
     setTimer(newTimer);
     if (onMouseEnter) {
       onMouseEnter();
@@ -93,7 +93,7 @@ const Card = ({ films, series,type, onMouseEnter = null, onMouseLeave = null }) 
           {films.map((film) => (
             <div className="news-card"
                  key={film.id}
-                 onMouseEnter={() => handleMouseEnter(film.id)}
+                 onMouseEnter={() => handleMouseEnter(film)}
                  onMouseLeave={handleMouseLeave}
                  id={`li-${film.id}`}
                  style={{ display: 'block' }} 
