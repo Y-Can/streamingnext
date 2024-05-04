@@ -19,8 +19,8 @@ const Card = ({ films, series,type, onMouseEnter = null, onMouseLeave = null }) 
   const [timer, setTimer] = useState(null);
 
   const handleMouseEnter = (filmId) => {
-    setHoveredItemId(filmId);
-    const url = filmId.ba 
+    setHoveredItemId(filmId.id);
+    const url = getTrailerUrl(filmId);  
     const newTimer = setTimeout(() => {
       setTrailerUrl(url);
     }, 1000); 
