@@ -156,14 +156,14 @@ const FilmDetail = ({ params }) => {
 									
 									{showIcon && <img src={iconSrc} className={styles.iconCenter} alt="Play/Pause" />}
 									
-									{/* <video controls
+									 <video controls
 									ref={videoContainerRef}
 									poster="/icons/posterimitation.webp"
 									  className={`${styles.video} `}
 									>
-										<source src="/inter.mp4" type="video/mp4" />
-									</video> */}
-									<iframe src="https://player.vimeo.com/video/924121008?h=6d53bd3613"  width="100%" height="100%" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>
+										<source src="https://player.vimeo.com/video/924121008?h=6d53bd3613" type="video/mp4" />
+									</video>
+									{/* <iframe src=""  width="100%" height="100%" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe> */}
 							</div>
 					</div>
 			
