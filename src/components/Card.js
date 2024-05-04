@@ -41,8 +41,6 @@ const Card = ({ films, series,type, onMouseEnter = null, onMouseLeave = null }) 
     }
   };
 
-
-
     // Settings for the slider
     const settings = {
       dots: false,
@@ -112,7 +110,7 @@ const Card = ({ films, series,type, onMouseEnter = null, onMouseLeave = null }) 
               {hoveredItemId === film.id && (
                 <div className="coverBlack">
                   <video
-                    src={trailerUrl}
+                    src={"https://www.youtube.com/embed/39NngdKksJw?si=3XTBYxveG4Zrnc7O"}
                     autoPlay
                     loop
                     controls // Changed to show controls
