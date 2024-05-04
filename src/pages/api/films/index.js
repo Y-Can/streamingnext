@@ -33,6 +33,7 @@ export default async function handler(req, res) {
 				description: film.description,
 				url:film.url,
 				user_id: film.user_id,
+				ba: film.ba,
 			}));
 			res.status(200).json({ films: filmList });
 		} catch (error) {
