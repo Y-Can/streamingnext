@@ -5,4 +5,4 @@ export default function handler(req, res) {
     res.setHeader('Permissions-Policy', 'ch-ua-form-factor');
     res.end('Hello from the API');
   }
-  
+   
