@@ -122,7 +122,7 @@ const Card = ({ films, series,type, onMouseEnter = null, onMouseLeave = null }) 
             <iframe
               width="560"
               height="315"
-              src={`${getTrailerUrl(film)}`} 
+              src={`${getTrailerUrl(film)+'?autoplay=1'}`} 
               title={film.titre}
               frameBorder="0"
               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
@@ -146,7 +146,7 @@ export default Card;
   // Mock implementation, replace with actual API call if needed
     // Simulate fetching URL
     
-    const url = filmId.ba+'?autoplay=1';
+    const url = filmId.ba;
     console.log(url);
     return url;
 }
