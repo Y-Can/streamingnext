@@ -146,8 +146,8 @@ export default Card;
   // Mock implementation, replace with actual API call if needed
     // Simulate fetching URL
     
-    console.log('filmId', filmId);
     const url = filmId.ba+'?autoplay=1';
+    console.log(url);
     return url;
 }
 
