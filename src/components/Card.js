@@ -109,8 +109,8 @@ const Card = ({ films, series,type, onMouseEnter = null, onMouseLeave = null }) 
               </Link>
               {hoveredItemId === film.id && (
                 <div className="coverBlack">
-                  <video
-                    src={"https://www.youtube.com/embed/39NngdKksJw?si=3XTBYxveG4Zrnc7O"}
+                  {/* <video
+                    src={trailerUrl}
                     autoPlay
                     loop
                     controls // Changed to show controls
@@ -118,7 +118,16 @@ const Card = ({ films, series,type, onMouseEnter = null, onMouseLeave = null }) 
                     allowFullScreen
                   >
                     Votre navigateur ne supporte pas la balise vidéo.
-                  </video>
+                  </video> */}
+                                    <iframe
+                    width="560"
+                    height="315"
+                    src={getTrailerUrl(film)}
+                    title={film.titre}
+                    frameBorder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allowFullScreen
+                  ></iframe>
                 </div>
               )}
             </div>
