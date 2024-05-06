@@ -127,6 +127,7 @@ const Card = ({ films, series,type, onMouseEnter = null, onMouseLeave = null }) 
               frameBorder="0"
               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
               allowFullScreen
+              sandbox="allow-same-origin allow-scripts allow-popups allow-forms"
             ></iframe>
 
                 </div>
