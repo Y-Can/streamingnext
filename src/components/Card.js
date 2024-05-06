@@ -119,7 +119,7 @@ const Card = ({ films, series,type, onMouseEnter = null, onMouseLeave = null }) 
                   >
                     Votre navigateur ne supporte pas la balise vidéo.
                   </video> */}
-            <iframe
+            {/* <iframe
               width="560"
               height="315"
               src={`${getTrailerUrl(film)+'?autoplay=1'}`} 
@@ -128,7 +128,7 @@ const Card = ({ films, series,type, onMouseEnter = null, onMouseLeave = null }) 
               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
               allowFullScreen
               sandbox="allow-same-origin allow-scripts allow-popups allow-forms"
-            ></iframe>
+            ></iframe> */}
 
                 </div>
               )}
