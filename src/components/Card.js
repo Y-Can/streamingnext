@@ -119,7 +119,7 @@ const Card = ({ films, series,type, onMouseEnter = null, onMouseLeave = null }) 
                   >
                     Votre navigateur ne supporte pas la balise vidéo.
                   </video> */}
-            {/* <iframe
+            <iframe
               width="560"
               height="315"
               src={`${getTrailerUrl(film)+'?autoplay=1'}`} 
@@ -128,8 +128,8 @@ const Card = ({ films, series,type, onMouseEnter = null, onMouseLeave = null }) 
               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
               allowFullScreen
               sandbox="allow-same-origin allow-scripts allow-popups allow-forms"
-            ></iframe> */}
-<iframe allow="autoplay; fullscreen; picture-in-picture; web-share" class="dailymotion-player" frameborder="0" src={`${getTrailerUrl(film)}`}  title="Dailymotion video player - Cash Bande-annonce VF" referrerpolicy="no-referrer-when-downgrade" height="100%" width="100%" style="opacity: 1;" bis_size="{&quot;x&quot;:267,&quot;y&quot;:296,&quot;w&quot;:654,&quot;h&quot;:367,&quot;abs_x&quot;:267,&quot;abs_y&quot;:296}" bis_id="fr_rjgsfoql7bskbkb82svope" bis_depth="0" bis_chainid="1"></iframe>
+            ></iframe>
+
                 </div>
               )}
             </div>
