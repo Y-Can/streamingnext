@@ -4,7 +4,6 @@ import Link from "next/link";
 import Slider from "react-slick"; // Import the Slider component
 import "slick-carousel/slick/slick.css"; 
 import "slick-carousel/slick/slick-theme.css";
-import { PrevArrow, NextArrow } from './Arrows';
 
 
 
@@ -109,26 +108,7 @@ const Card = ({ films, series,type, onMouseEnter = null, onMouseLeave = null }) 
               </Link>
               {hoveredItemId === film.id && (
                 <div className="coverBlack">
-                  {/* <video
-                    src={trailerUrl}
-                    autoPlay
-                    loop
-                    controls // Changed to show controls
-                    style={{ position: 'absolute', top: 0, left: 0, width: '100%', height: '100%', objectFit: 'cover' }}
-                    allowFullScreen
-                  >
-                    Votre navigateur ne supporte pas la balise vidéo.
-                  </video> */}
-            {/* <iframe
-              width="560"
-              height="315"
-              src={`${getTrailerUrl(film)+'?autoplay=1'}`} 
-              title={film.titre}
-              frameBorder="0"
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-              allowFullScreen
-              sandbox="allow-same-origin allow-scripts allow-popups allow-forms"
-            ></iframe> */}
+ 
 
                 </div>
               )}

@@ -1,4 +1,3 @@
-/* eslint-disable no-undef */
 import { Pool } from "pg";
 
 const pool = new Pool({
@@ -6,7 +5,8 @@ const pool = new Pool({
   host: process.env.DATABASE_URL,
   database: process.env.DATABASE_NAME,
   password: process.env.DATABASE_PASS,
-  port: process.env.DATABASE_PORT,
-  ssl: { rejectUnauthorized: true },
+  port: parseInt(process.env.DATABASE_PORT, 10),
+  ssl: { rejectUnauthorized: false } // Activer SSL mais ignorer les certificats non autorisés
 });
+
 export default pool;
