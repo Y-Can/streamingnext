@@ -90,7 +90,7 @@ const Home = () => {
   useEffect(() => {
     const fetchFilms = async () => {
       try {
-        let apiUrl = "http://13.53.36.190:3000/movies";
+        let apiUrl = "https://13.53.36.190:3000/movies";
         if (id) {
           apiUrl += `?id=${encodeURIComponent(id)}`;
         } else if (searchTerm) {
@@ -108,7 +108,7 @@ const Home = () => {
 
     const fetchSeries = async () => {
       try {
-        let apiUrl = "http://13.53.36.190:3000/series"; // Remplace ceci si nécessaire
+        let apiUrl = "https://13.53.36.190:3000/series"; // Remplace ceci si nécessaire
         const res = await axios.get(apiUrl);
         const data = res.data;
         setSeries(data.series || []);
