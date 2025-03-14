@@ -15,6 +15,7 @@ const Home = () => {
   const search = searchParams.get("search");
 
   const [films, setFilms] = useState([]);
+  const [animes, setAnimes] = useState([])
   const [series, setSeries] = useState([]);
   const [searchTerm, setSearchTerm] = useState(search);
   const [user, setUser] = useState(null);
@@ -117,9 +118,24 @@ const Home = () => {
         setSeries([]);
       }
     };
+    
+    const fetchAnimes = async () => {
+      
+      try{
+        let apiUrl = "https://api.monapi.site/series";
+        const res = await axios.get(apiUrl)
+        const data = res.data
+        setAnimes(data.animes || []);
+        
+      } catch (error){
+        console.error("Erreur lors de la récupération des animes", error);
+        setAnimes([])
+      }
+    }
 
     fetchFilms();
     fetchSeries();
+    fetchAnimes();
   }, [id, searchTerm]);
 
   return (
@@ -149,6 +165,7 @@ const Home = () => {
       </div>
       <Card films={films} type={"Films"} />
       <Card series={series} type={"Séries"} />
+      <Card animes={animes} type={"Animes"} />
     </div>
   );
 };
