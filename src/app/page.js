@@ -92,33 +92,44 @@ const Home = () => {
   useEffect(() => {
     const fetchFilms = async () => {
       try {
-        let apiUrl = "https://api.monapi.site/movies";
-        if (id) {
-          apiUrl += `?id=${encodeURIComponent(id)}`;
-        } else if (searchTerm) {
-          apiUrl += `?search=${encodeURIComponent(searchTerm)}`;
-        }
-        const res = await axios.get(apiUrl);
-        const data = res.data;
-        setFilms(data || []);
-        setFilm(data[0] || null);
+          let apiUrl = "https://api.monapi.site/movies";
+          let queryParams = [];
+  
+          if (id) {
+              queryParams.push(`id=${encodeURIComponent(id)}`);
+          } else if (searchTerm) {
+              queryParams.push(`search=${encodeURIComponent(searchTerm)}`);
+          }
+  
+          queryParams.push("limit=10"); // Ajouter une limite par défaut
+          apiUrl += queryParams.length ? `?${queryParams.join("&")}` : "";
+  
+          const res = await axios.get(apiUrl);
+          const data = res.data;
+          
+          setFilms(data.movies || []); // Corrigé
+          setFilm(data.movies?.[0] || null);
       } catch (error) {
-        console.error("Erreur lors de la récupération des films", error);
-        setFilms([]);
+          console.error("Erreur lors de la récupération des films", error);
+          setFilms([]);
       }
-    };
+  };
+  
 
-    const fetchSeries = async () => {
-      try {
-        let apiUrl = "https://api.monapi.site/series"; // Remplace ceci si nécessaire
+  const fetchSeries = async () => {
+    try {
+        let apiUrl = "https://api.monapi.site/series?limit=10"; // Ajouter une limite
+
         const res = await axios.get(apiUrl);
         const data = res.data;
+
         setSeries(data.series || []);
-      } catch (error) {
+    } catch (error) {
         console.error("Erreur lors de la récupération des séries", error);
         setSeries([]);
-      }
-    };
+    }
+};
+
     
     const fetchAnimes = async (newPage) => {
       if (loading) return;
