@@ -120,16 +120,16 @@ const Home = () => {
       }
     };
     
-    const fetchAnimes = async () => {
+    const fetchAnimes = async (newPage) => {
       if (loading) return;
       setLoading(true);
   
       try {
-          const res = await axios.get(`https://api.monapi.site/animes?page=${page}&limit=20`);
+          const res = await axios.get(`https://api.monapi.site/animes?page=${newPage}&limit=20`);
           const data = res.data;
-  
-          setAnimes((prevAnimes) => [...prevAnimes, ...data.animes]); // Ajoute les nouveaux animes à la liste
-          setPage(page + 1); // Augmente le numéro de page pour la prochaine requête
+          
+          setAnimes(data.animes); // On remplace par la nouvelle page au lieu de concaténer
+          setPage(newPage); // Met à jour la page actuelle
       } catch (error) {
           console.error("Erreur lors de la récupération des animes", error);
       } finally {
