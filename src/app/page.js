@@ -126,6 +126,7 @@ const Home = () => {
         const res = await axios.get(apiUrl)
         const data = res.data
         setAnimes(data.animes || []);
+        console.log(data);
         
       } catch (error){
         console.error("Erreur lors de la récupération des animes", error);
