@@ -10,6 +10,8 @@ import { PrevArrow, NextArrow } from './Arrows';
 
 
 const Card = ({ films, series,type, onMouseEnter = null, onMouseLeave = null }) => {
+  console.log('les films =>',films);
+  
   if(!films){
     films = series
   } 
