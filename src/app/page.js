@@ -122,7 +122,7 @@ const Home = () => {
     const fetchAnimes = async () => {
       
       try{
-        let apiUrl = "https://api.monapi.site/series";
+        let apiUrl = "https://api.monapi.site/animes";
         const res = await axios.get(apiUrl)
         const data = res.data
         setAnimes(data.animes || []);
