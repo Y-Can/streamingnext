@@ -11,7 +11,7 @@ import { PrevArrow, NextArrow } from './Arrows';
 
 const Card = ({animes, films, series,type, onMouseEnter = null, onMouseLeave = null }) => {
   
-  const items = films?.length ? films : series?.length ? series : animes;
+  const items = films ? films : series ? series : animes;
 
   
   const [hoveredItemId, setHoveredItemId] = useState(null);
