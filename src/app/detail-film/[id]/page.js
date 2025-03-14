@@ -5,7 +5,7 @@ import styles from "../../styles/filmdetail.module.css";
 import Link from 'next/link';
 import playIcon from './../../../../public/icons/play-button.png'; 
 import pauseIcon from './../../../../public/icons/pause-button.png';
-import VideoPlayer from "./../../components/VideoPlayer"; // Ajuste le chemin si nécessaire
+import VideoPlayer from "../../../../components/VideoPlayer"; // Ajuste le chemin si nécessaire
 
 const FilmDetail = ({ params }) => {
 	console.log(params.id);
