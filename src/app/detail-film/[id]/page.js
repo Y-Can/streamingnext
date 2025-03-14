@@ -5,6 +5,7 @@ import styles from "../../styles/filmdetail.module.css";
 import Link from 'next/link';
 import playIcon from './../../../../public/icons/play-button.png'; 
 import pauseIcon from './../../../../public/icons/pause-button.png';
+import VideoPlayer from "../../components/VideoPlayer"; // Ajuste le chemin si nécessaire
 
 const FilmDetail = ({ params }) => {
 	console.log(params.id);
@@ -156,13 +157,10 @@ const FilmDetail = ({ params }) => {
 									
 									{showIcon && <img src={iconSrc} className={styles.iconCenter} alt="Play/Pause" />}
 									
-									<video controls
-									ref={videoContainerRef}
-									poster="/icons/posterimitation.webp"
-									  className={`${styles.video} `}
-									>
-										<source src="/inter.mp4" type="video/mp4" />
-									</video>
+									
+ 								<VideoPlayer src={"/inter.mp4"} />
+
+
 							</div>
 					</div>
 			
