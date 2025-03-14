@@ -108,7 +108,7 @@ const Home = () => {
 
     const fetchSeries = async () => {
       try {
-        let apiUrl = "https://api.monapi.site/movies"; // Remplace ceci si nécessaire
+        let apiUrl = "https://api.monapi.site/series"; // Remplace ceci si nécessaire
         const res = await axios.get(apiUrl);
         const data = res.data;
         setSeries(data.series || []);
