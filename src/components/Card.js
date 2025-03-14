@@ -102,9 +102,9 @@ const Card = ({ films, series,type, onMouseEnter = null, onMouseLeave = null }) 
                  >
               <Link href={`/detail-film/${film.id}`}  className="margin">
                 <a href="#" className="news-card__card-link"></a>
-                <img src={film.image} alt={film.titre} className="news-card__image" />
+                <img src={film.image_url} alt={film.title} className="news-card__image" />
                 <div className="news-card__text-wrapper">
-                  <h2 className="news-card__title">{film.titre}</h2>
+                  <h2 className="news-card__title">{film.title}</h2>
                   <div className="news-card__details-wrapper">
                     <p className="news-card__excerpt">{film.description}</p>
                     <a href={`/detail-film/${film.id}`} className="news-card__read-more">Lire la suite <i className="fas fa-long-arrow-alt-right"></i></a>
