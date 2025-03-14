@@ -11,13 +11,8 @@ import { PrevArrow, NextArrow } from './Arrows';
 
 const Card = ({animes, films, series,type, onMouseEnter = null, onMouseLeave = null }) => {
   
-  if(!films){
-    if(!series){
-      films = animes
-    } else {
-      films = series
-    }
-  } 
+  const items = films?.length ? films : series?.length ? series : animes;
+
   
   const [hoveredItemId, setHoveredItemId] = useState(null);
   const [trailerUrl, setTrailerUrl] = useState('');
@@ -95,7 +90,7 @@ const Card = ({animes, films, series,type, onMouseEnter = null, onMouseLeave = n
         <h3> Nos {type} </h3>
         <div className="containerRowUlCards">
           <Slider {...settings}>
-          {films.map((film) => (
+          {items.map((film) => (
             <div className="news-card"
                  key={film.id}
                  onMouseEnter={() => handleMouseEnter(film.id)}

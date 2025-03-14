@@ -28,6 +28,7 @@ const Home = () => {
   const [showControls, setShowControls] = useState(true);
   const [showIcon, setShowIcon] = useState(false);
   const [iconSrc, setIconSrc] = useState(playIcon);
+  const [loading, setLoading] = useState(false);
 
   useEffect(() => {
     const video = videoContainerRef.current;
@@ -119,24 +120,26 @@ const Home = () => {
       }
     };
     
-    const fetchAnimes = async () => {
-      
-      try{
-        let apiUrl = "https://api.monapi.site/animes";
-        const res = await axios.get(apiUrl)
-        const data = res.data
-        setAnimes(data.animes || []);
-        console.log(data);
-        
-      } catch (error){
-        console.error("Erreur lors de la récupération des animes", error);
-        setAnimes([])
+    const fetchAnimes = async (newPage) => {
+      if (loading) return;
+      setLoading(true);
+  
+      try {
+          const res = await axios.get(`https://api.monapi.site/animes?page=${newPage}&limit=20`);
+          const data = res.data;
+          
+          setAnimes(data.animes); // On remplace par la nouvelle page au lieu de concaténer
+          setPage(newPage); // Met à jour la page actuelle
+      } catch (error) {
+          console.error("Erreur lors de la récupération des animes", error);
+      } finally {
+          setLoading(false);
       }
-    }
+  };
 
     fetchFilms();
     fetchSeries();
-    fetchAnimes();
+    fetchAnimes(1);
   }, [id, searchTerm]);
 
   return (
