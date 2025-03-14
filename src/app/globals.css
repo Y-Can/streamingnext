@@ -933,22 +933,21 @@ card__excerpt
   max-height: 400px;
 }
 
-.controls {
-  display: flex;
-  justify-content: space-between;
-  width: 100%;
-  padding: 10px;
-  background: rgba(0, 0, 0, 0.8);
-}
-
-.controls button {
-  background: none;
-  border: none;
+.play-button {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: rgba(0, 0, 0, 0.6);
   color: white;
-  font-size: 18px;
+  border: none;
+  padding: 20px 30px;
+  font-size: 30px;
   cursor: pointer;
+  border-radius: 50%;
 }
 
-.controls input {
-  width: 100px;
+.play-button:hover {
+  background-color: rgba(255, 255, 255, 0.5);
+  color: black;
 }

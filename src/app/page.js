@@ -125,7 +125,7 @@ const Home = () => {
       setLoading(true);
   
       try {
-          const res = await axios.get(`https://api.monapi.site/animes?page=${newPage}&limit=20`);
+          const res = await axios.get(`https://api.monapi.site/animes`);
           const data = res.data;
           
           setAnimes(data.animes); // On remplace par la nouvelle page au lieu de concaténer

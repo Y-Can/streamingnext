@@ -5,21 +5,26 @@ const VideoPlayer = ({ src }) => {
   const [isPlaying, setIsPlaying] = useState(false);
   const [progress, setProgress] = useState(0);
   const [volume, setVolume] = useState(1);
+  const [showPlayButton, setShowPlayButton] = useState(true);
 
-  const togglePlay = () => {
-    if (isPlaying) {
-      videoRef.current.pause();
-    } else {
-      videoRef.current.play();
-    }
-    setIsPlaying(!isPlaying);
-  };
+
 
   const handleProgress = () => {
     const current = videoRef.current.currentTime;
     const duration = videoRef.current.duration;
     setProgress((current / duration) * 100);
   };
+  const togglePlay = () => {
+    if (videoRef.current.paused) {
+        videoRef.current.play();
+        setIsPlaying(true);
+        setShowPlayButton(false); // Cacher le bouton Play en mode lecture
+    } else {
+        videoRef.current.pause();
+        setIsPlaying(false);
+        setShowPlayButton(true); // Afficher le bouton Play quand c'est en pause
+    }
+};
 
   const handleSeek = (e) => {
     const newTime = (e.target.value / 100) * videoRef.current.duration;
@@ -45,8 +50,15 @@ const VideoPlayer = ({ src }) => {
         src={src}
         onTimeUpdate={handleProgress}
         className="video-player"
+        
       />
       <div className="controls">
+      {showPlayButton && (
+    <button className="play-button" onClick={togglePlay}>
+        ▶️
+    </button>
+)}
+
         <button onClick={togglePlay}>{isPlaying ? "⏸" : "▶️"}</button>
         <input type="range" value={progress} onChange={handleSeek} />
         <input type="range" min="0" max="1" step="0.1" value={volume} onChange={handleVolume} />
