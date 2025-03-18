@@ -116,7 +116,7 @@ const Home = () => {
   };
   
 
-  const fetchSeries = async (newPage) => {
+  const fetchSeries = async () => {
     try {
         let apiUrl = "https://api.monapi.site/series"; // Ajouter une limite
 
@@ -124,10 +124,9 @@ const Home = () => {
         const data = res.data;
         setPage(newPage);
         setSeries(data.series || []);
-      } catch (error) {
-        console.error("Erreur lors de la récupération des animes", error);
-    } finally {
-        setLoading(false);
+    } catch (error) {
+        console.error("Erreur lors de la récupération des séries", error);
+        setSeries([]);
     }
 };
 
