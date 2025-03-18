@@ -116,17 +116,18 @@ const Home = () => {
   };
   
 
-  const fetchSeries = async () => {
+  const fetchSeries = async (newPage) => {
     try {
-        let apiUrl = "https://api.monapi.site/series?limit=10"; // Ajouter une limite
+        let apiUrl = "https://api.monapi.site/series"; // Ajouter une limite
 
         const res = await axios.get(apiUrl);
         const data = res.data;
-
+        setPage(newPage);
         setSeries(data.series || []);
-    } catch (error) {
-        console.error("Erreur lors de la récupération des séries", error);
-        setSeries([]);
+      } catch (error) {
+        console.error("Erreur lors de la récupération des animes", error);
+    } finally {
+        setLoading(false);
     }
 };
 
